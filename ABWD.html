@@ -1,0 +1,844 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<link rel="stylesheet" href="ABWDStyle.css"/>
+		<title>AB Developpeur Web</title>
+	</head>
+	
+	<body> 
+	<!-- Chargement de la fonction Ini permettant le scroll sur 'bouton' avec les compatibilité des différents Nav -->	
+<div id="block"><!--balise permettant de conserver les propotions dans le navigateur-->
+	<section>
+	<img id="angusPower" src="angusPower.png" alt="angusPower"/><!--Image d'aide sur le bouton power-->
+	<img id="angusBouton1" src="angusBouton1.png" alt="angusBouton1"/> <!--Image d'aide sur sélectionner un bouton-->
+	<img id="angusBouton2" src="angusBouton2.png" alt="angusBouton2"/> <!--Image d'aide sur l'utilisation du bouton-->
+	<h1 id="titreP">Andermann Boris Web Development</h1>
+	<article id="console" > <!-- Définition physique de la console des boutons avec son id -->
+	<input id="angus_help" type="image" src="angus_help.png" alt="angusTete" onclick="demandeAide()"> <!--Icone d'aide--> 
+	<img id="haloAngus" src="haloAngus.png" alt="haloangus" /><!--eclairage Aide "on"-->
+	<input id="bouton1" type="image" src="Bouton_selection.png" alt="boutonMarshall1" onmousedown="selection1()" /> <!-- Image du bouton + id et fonction click-->
+	<input id="bouton2" type="image" src="Bouton_selection.png" alt="boutonMarshall2" onmousedown="selection2()" /> <!-- Image du bouton + id et fonction click-->
+	<input id="bouton3" type="image" src="Bouton_selection.png" alt="boutonMarshall3" onmousedown="selection3()" /> <!-- Image du bouton + id et fonction click-->
+	<input id="bouton4" type="image" src="Bouton_selection.png" alt="boutonMarshall4" onmousedown="selection4()" /> <!-- Image du bouton + id et fonction click-->
+	<input id="boutonPower" type="image" src="Power2.png" alt="boutonPower" onclick="power()" /> <!-- Image du bouton POWER + id et fonction click -->
+	<div id="halo1"><img  src="halo_Rouge.png" alt="halorouge1"/></div><!--Image du halo qui apparaitra quand le bouton est fonctionnel-->
+	<div id="halo2"><img  src="halo_Rouge.png" alt="halorouge2"/></div><!--Image du halo qui apparaitra quand le bouton est fonctionnel-->
+	<div id="halo3"><img  src="halo_Rouge.png" alt="halorouge3"/></div><!--Image du halo qui apparaitra quand le bouton est fonctionnel-->
+	<div id="halo4"><img  src="halo_Rouge.png" alt="halorouge4"/></div><!--Image du halo qui apparaitra quand le bouton est fonctionnel-->
+	<div id="haloPower"><img src="haloPower3.png" alt="haloPower"/></div><!--Eclairage power "on"-->
+	<audio id='bruitBouton' src="interupteur_off.mp3"></audio><!--Son de l'action sur le bouton-->
+	<audio id="angusPowerSon" src="angusPower.mp3"></audio><!--Rift qui tue-->
+	</article>
+	
+	<article id="doc" ><!--Bloc de documentation-->
+	
+	<img id="angusguitare" src="Angus Guitare.png" alt="angus guitare" />
+	<img id="introD" src="cone.png" alt="cone" />
+	
+	</article >
+	<article id="text"><!--Bloc de contenu-->
+	<img id="bienvenue" src="bienvenue.png" alt="bienvenue" />
+	<h1 id="intro">Avant propos :</h1>
+	<img id="angusChantier" src="AngusChantier.png" alt="chantier"/><figcaption id="titreChantier" >Site en Construction 1B1</figcaption>
+	
+	
+	
+	
+		<h2 id="pourquoi">Pourquoi devenir développeur :</h2>
+			<!--Le choix d'une passion-->
+			<img id="angusChantier" src="AngusChantier.png" alt="chantier"/><figcaption id="titreChantier" >Site en Construction 2B1</figcaption>
+		<h2 id="comment">Les opportunités actuelles d'apprentissage</h2>
+		<img id="angusChantier" src="AngusChantier.png" alt="chantier"/><figcaption id="titreChantier" >Site en Construction 3B1</figcaption>
+			<!--Apprendre à 40 passé</h3>
+						<a href="https://www.youtube.com/watch?v=zsd4WML7CNE" target="_blank">message positif</a>
+						
+			<h3>Apprendre en 2021</h3>
+						<a href="https://www.coursera.org/learn/learning-how-to-learn/home/welcome" target="_blank">apprendre à apprendre</a>-->
+						
+		<h2 id="metier">Le metier et ses perspectives</h2>
+		<img id="angusChantier" src="AngusChantier.png" alt="chantier"/><figcaption id="titreChantier" >Site en Construction 4B1</figcaption>				
+			<!--<a href="https://www.youtube.com/channel/UC3aAsFMXnMttILqRZuSGnTQ" target="_blank">Coder c'est cool</a>-->			
+			
+			
+	<h1 id="formation">Formation</h1>
+	<img id="angusChantier" src="AngusChantier.png" alt="chantier"/><figcaption id="titreChantier" >Site en Construction 1B2</figcaption>	
+		<h2 id="diplomes">Formation de developpeur Front-End</h2>
+		<img id="angusChantier" src="AngusChantier.png" alt="chantier"/><figcaption id="titreChantier" >Site en Construction 2B2</figcaption>	
+		<h2 id="certificas">Formation autodidacte et certificas</h2>
+		<img id="angusChantier" src="AngusChantier.png" alt="chantier"/><figcaption id="titreChantier" >Site en Construction 3B2</figcaption>	
+		<h2 id="solo">Une base solide en Domotique et autodidacte</h2>
+		<img id="angusChantier" src="AngusChantier.png" alt="chantier"/><figcaption id="titreChantier" >Site en Construction 4B2</figcaption>
+		
+	<h1 id="competences">Compétences professionelles</h1>
+	<img id="angusChantier" src="AngusChantier.png" alt="chantier"/><figcaption id="titreChantier" >Site en Construction 1B3</figcaption>	
+		<h2 id ="savoir">Savoirs</h2>
+		<img id="angusChantier" src="AngusChantier.png" alt="chantier"/><figcaption id="titreChantier" >Site en Construction 2B3</figcaption>		
+			<!--<h3>Expériences professionelles et acquis</h3>-->
+		<h2 id="savoirfaire">Savoir-faire</h2>
+		<img id="angusChantier" src="AngusChantier.png" alt="chantier"/><figcaption id="titreChantier" >Site en Construction 3B3</figcaption>	
+			<!--<h3>Connaissances</h3>
+			<h3>Réalisations</h3>-->
+		<h2 id="refrain">Soft Skill</h2>
+		<img id="angusChantier" src="AngusChantier.png" alt="chantier"/><figcaption id="titreChantier" >Site en Construction 4B3</figcaption>	
+		
+
+	<h1 id="contact">Contact</h1>
+	<img id="angusChantier" src="AngusChantier.png" alt="chantier"/><figcaption id="titreChantier" >Site en Construction 1B4</figcaption>
+		<!--<p><a href="mailto:andermannboris@yahoo.fr">Envoyez-moi un mail</a></p>-->
+		<h2 id="telechargement">Telechargements</h2>
+		<img id="angusChantier" src="AngusChantier.png" alt="chantier"/><figcaption id="titreChantier" >Site en Construction 2B4</figcaption>
+		<!--<h2 id="cv" >CV</h2>
+		<p><a href="CV AFPA dev.pdf" target="_blank">Mon cv</a></p>-->
+		<h2 id="savoirPlus">Pour en Savoir plus</h2>
+		<img id="angusChantier" src="AngusChantier.png" alt="chantier"/><figcaption id="titreChantier" >Site en Construction 3B4</figcaption>
+		<h2 id="final">Final</h2>
+		<img id="angusChantier" src="AngusChantier.png" alt="chantier"/><figcaption id="titreChantier" >Site en Construction 4B4</figcaption>
+	</article>
+
+	
+	<footer ><!--Bloc bas de page-->
+	<div id="angusText" >Angus est un taureau sympa !<br /> si vous avez des difficultés pour naviguer<br /> demandez lui son aide en cliquant dessus.</div>
+	<div id="iconeMail">
+	<a href="mailto:andermannboris@yahoo.fr"> <img src="Mail-icon7.png" alt="iconeMail" title="Envoyer un mail"/><figcaption>Mail</figcaption></a>
+	</div>
+	<div id="iconeFacebook">
+	<a href="http://www.facebook.fr"> <img src="iconeFacebook.png" alt="iconeFacebook" title="Facebook"/><figcaption>Facebook</figcaption></a>
+	</div>
+	<div id="iconeLinkedin">
+	<a href="http://www.linkedin.fr"> <img src="iconeLinkedin.png" alt="iconeLinkedin" title="Linkedin"/><figcaption>Linkedin</figcaption></a>
+	</div>
+	</footer>
+	<script name="boutons">
+	window.onload = Init1 ();
+	window.onload = Init2 ();
+	window.onload = Init3 ();
+	window.onload = Init4 ();
+	
+	bouton1.oncontextmenu = function() { // Suppression du menu droit pour bouton, qui permettra un deffilement bouton droit/gauche
+	return false;
+	}
+	bouton2.oncontextmenu = function() { // Suppression du menu droit pour bouton, qui permettra un deffilement bouton droit/gauche
+	return false;
+	}
+	bouton3.oncontextmenu = function() { // Suppression du menu droit pour bouton, qui permettra un deffilement bouton droit/gauche
+	return false;
+	}
+	bouton4.oncontextmenu = function() { // Suppression du menu droit pour bouton, qui permettra un deffilement bouton droit/gauche
+	return false;
+	}
+	
+	
+	
+	var cBo1=-10;// Variable de départ de la position de sélection supérieur au nombre de positions
+	var cBo2=-10;// Variable de départ de la position de sélection supérieur au nombre de positions
+	var cBo3=-10;// Variable de départ de la position de sélection supérieur au nombre de positions
+	var cBo4=-10;// Variable de départ de la position de sélection supérieur au nombre de positions
+	var cBom1=0;// Variable de mémoire de la position du bouton 1
+	var cBom2=0;// Variable de mémoire de la position du bouton 2
+	var cBom3=0;// Variable de mémoire de la position du bouton 3
+	var cBom4=0;// Variable de mémoire de la position du bouton 4
+	var rolled = 0;// Initialisation de la variable qui quatifiera le scroll souris
+	var etatPower=0;//Permet de savoir si Power est on ou off
+	var etatAngus=0;//Permet de savoir si Angus est utilliser
+	var helpb=0;//Permet de savoir si Angus vous a déja expliquer la sélection du bouton
+	var opacite=0;//variable permettant de faire des "fondu"
+
+	function power() {//Fonction permettant l'actionnement du bouton power et d'identifier son état
+		if ( etatPower == 0 ) {//test pour la procédure "Allumage"
+		text.scrollTo({
+			top: bienvenue.offsetTop,
+		});
+		doc.scrollTo({
+			top: angusguitare.offsetTop,
+		});
+		document.getElementById('angusPowerSon').play();
+		document.getElementById('boutonPower').style.transform = "rotate(180deg)";
+		document.getElementById('boutonPower').style.opacity = 1;
+		document.getElementById('haloPower').style.opacity = 1;
+		fade();
+		etatPower= 1;
+			if ( etatAngus == 1 ) {//Bascule sur l'aide Bouton après l'allumage
+				document.getElementById('angusPower').style.opacity= 0;
+				document.getElementById('angusBouton1').style.opacity= 1;
+				document.getElementById('angusBouton2').style.opacity= 0;
+			}
+		}
+		else {// Eteindre
+		document.getElementById('halo1').style.opacity='0';
+		document.getElementById('halo2').style.opacity='0';
+		document.getElementById('halo3').style.opacity='0';
+		document.getElementById('halo4').style.opacity='0';
+		document.getElementById('bruitBouton').play();
+		document.getElementById('boutonPower').style.transform = "rotate(0deg)";
+		document.getElementById('boutonPower').style.opacity = 0.6;
+		document.getElementById('haloPower').style.opacity = 0;
+		text.style.opacity= 0;
+		doc.style.opacity= 0;
+		if ( etatAngus == 1 ) {//Conserve l'aide sur le bouton Power
+				document.getElementById('angusPower').style.opacity= 1;
+				document.getElementById('angusBouton1').style.opacity= 0;
+				document.getElementById('angusBouton2').style.opacity= 0;
+			}		
+		etatPower= 0;
+		cBo1=-10;
+		cBo2=-10;
+		cBo3=-10;
+		cBo4=-10;
+		helpb=0;
+		opacite=0;
+		}
+	console.log (etatPower);
+	}
+	
+	function fade() {//fonction permettant un affichage progressif a l'allumage
+		setTimeout( function () {
+			text.style.opacity= opacite*0.025;
+			doc.style.opacity= opacite*0.025;
+			opacite++;
+			if ( opacite<41 ) {
+				fade();
+			}
+		},100)
+	}
+	
+	function MouseScroll1 (event) { // Fonction permettant de définir lors d'un scroll si il est positif ou négatif modifiant la variable de position du bouton1
+            if ('wheelDelta' in event) {
+                rolled = event.wheelDelta;// soit 120 soit -120
+            }
+            else {  // Firefox
+                rolled = -40 * event.detail;
+            }
+			if ( rolled == 120 && cBo1 > -10 ) { //Condition pour obliger un click avant de scroll
+			cBo1 = cBo1-1;// -1 en position
+			}
+			if ( rolled == -120 && cBo1 > -10 ) { //Condition pour obliger un click avant de scroll
+			cBo1 = cBo1+1;// +1 en position
+			}
+			document.getElementById('bruitBouton').play();
+			helpb= helpb + 1;// pour l'état de l'aide	
+			menu1();// Appel de la fonction affichant la position
+			console.log(cBo1); 
+	}
+	function MouseScroll2 (event) { // Fonction permettant de définir lors d'un scroll si il est positif ou négatif modifiant la variable de position du bouton2
+            if ('wheelDelta' in event) {
+                rolled = event.wheelDelta;// soit 120 soit -120
+            }
+            else {  // Firefox
+                rolled = -40 * event.detail;
+            }
+			if ( rolled == 120 && cBo2 > -10 ) { //Condition pour obliger un click avant de scroll
+			cBo2 = cBo2-1;// -1 en position
+			}
+			if ( rolled == -120 && cBo2 > -10 ) { //Condition pour obliger un click avant de scroll
+			cBo2 = cBo2+1;// +1 en position
+			}
+			document.getElementById('bruitBouton').play();	
+			menu2();// Appel de la fonction affichant la position
+			console.log(cBo2); 
+	}
+	function MouseScroll3 (event) { // Fonction permettant de définir lors d'un scroll si il est positif ou négatif modifiant la variable de position du bouton3
+            if ('wheelDelta' in event) {
+                rolled = event.wheelDelta;// soit 120 soit -120
+            }
+            else {  // Firefox
+                rolled = -40 * event.detail;
+            }
+			if ( rolled == 120 && cBo3 > -10 ) { //Condition pour obliger un click avant de scroll
+			cBo3 = cBo3-1;// -1 en position
+			}
+			if ( rolled == -120 && cBo3 > -10 ) { //Condition pour obliger un click avant de scroll
+			cBo3 = cBo3+1;// +1 en position
+			}
+			document.getElementById('bruitBouton').play();	
+			menu3();// Appel de la fonction affichant la position
+			console.log(cBo3); 
+	}
+	function MouseScroll4 (event) { // Fonction permettant de définir lors d'un scroll si il est positif ou négatif modifiant la variable de position du bouton4
+            if ('wheelDelta' in event) {
+                rolled = event.wheelDelta;// soit 120 soit -120
+            }
+            else {  // Firefox
+                rolled = -40 * event.detail;
+            }
+			if ( rolled == 120 && cBo4 > -10 ) { //Condition pour obliger un click avant de scroll
+			cBo4 = cBo4-1;// -1 en position
+			}
+			if ( rolled == -120 && cBo4 > -10 ) { //Condition pour obliger un click avant de scroll
+			cBo4 = cBo4+1;// +1 en position
+			}
+			document.getElementById('bruitBouton').play();	
+			menu4();// Appel de la fonction affichant la position
+			console.log(cBo4); 
+	}
+	
+	function selection1() { // Fonction permettant de définir lors d'un clic si il est droit/centre  ou gauche modifiant la variable de position du bouton1
+		if ( etatPower == 1 ) {	//Test si l'ampli est sur "on"
+			let mouseClick = window.event;
+			if ( cBo1 < -9 ) {// Initialisation de la position en forçant un clic 
+				if ( mouseClick.button == 2 ) {// Initialisation de la position en forçant un clic gauche
+					cBo1=-10;
+				}
+				else {
+				cBo1=cBom1-1;// Rappel de la position en mémoire
+				document.getElementById('halo2').style.opacity="0";	//initialisation des 3 autres boutons
+				document.getElementById('halo3').style.opacity="0";	
+				document.getElementById('halo4').style.opacity="0";	
+				cBo2 = -10;
+				cBo3 = -10;
+				cBo4 = -10;
+				}
+			}
+			if ( mouseClick.button == 2 ) {// Click gauche
+				cBo1 = cBo1-1;// -1 en position
+				
+			}
+			else {
+				cBo1 = cBo1+1;// +1 en position
+			
+			}
+			document.getElementById('bruitBouton').play();
+			helpb= helpb + 1;// incrémente l'état de l'aide à chaque click
+			if ( etatAngus == 1 && helpb == 1) {//Permet d'afficher la suite de l'aide
+				document.getElementById('angusPower').style.opacity= 0;
+				document.getElementById('angusBouton1').style.opacity= 0;
+				document.getElementById('angusBouton2').style.opacity= 1;
+				
+
+			}	
+			menu1();// Appel de la fonction affichant la position
+			console.log(cBo1);
+			
+						
+		}
+		
+	}
+	  
+    function selection2() { // Fonction permettant de définir lors d'un clic si il est droit/centre  ou gauche modifiant la variable de position du bouton2
+		if ( etatPower == 1 ) {	
+			let mouseClick = window.event;
+			if ( cBo2 < -9 ) {// Initialisation de la position en forçant un clic 
+				if ( mouseClick.button == 2 ) {// Initialisation de la position en forçant un clic gauche
+					cBo2=-10;
+				}
+				else {
+				cBo2=cBom2-1;// Rappel de la position en mémoire
+				document.getElementById('halo1').style.opacity="0";	
+				document.getElementById('halo3').style.opacity="0";	
+				document.getElementById('halo4').style.opacity="0";	
+				cBo1 = -10;
+				cBo3 = -10;
+				cBo4 = -10;
+				}
+			}
+			if ( mouseClick.button == 2 ) {// Click gauche
+				cBo2 = cBo2-1;// -1 en position				
+			}
+			else {
+				cBo2 = cBo2+1;// +1 en position
+			}
+			document.getElementById('bruitBouton').play();	
+			menu2();// Appel de la fonction affichant la position
+			console.log(cBo2);
+		}
+		
+	}
+
+    function selection3() { // Fonction permettant de définir lors d'un clic si il est droit/centre  ou gauche modifiant la variable de position du bouton3
+		if ( etatPower == 1 ) {	
+			let mouseClick = window.event;
+			if ( cBo3 < -9 ) {// Initialisation de la position en forçant un clic 
+				if ( mouseClick.button == 2 ) {// Initialisation de la position en forçant un clic gauche
+					cBo3=-10;
+				}
+				else {
+				cBo3=cBom3-1;// Rappel de la position en mémoire
+				document.getElementById('halo1').style.opacity="0";	
+				document.getElementById('halo2').style.opacity="0";	
+				document.getElementById('halo4').style.opacity="0";	
+				cBo1 = -10;
+				cBo2 = -10;
+				cBo4 = -10;
+				}
+			}
+			if ( mouseClick.button == 2 ) {// Click gauche
+				cBo3 = cBo3-1;// -1 en position
+			}
+			else {
+				cBo3 = cBo3+1;// +1 en position
+			}
+			document.getElementById('bruitBouton').play();	
+			menu3();// Appel de la fonction affichant la position
+			console.log(cBo3);
+		}
+		
+	}
+	
+	function selection4() { // Fonction permettant de définir lors d'un clic si il est droit/centre  ou gauche modifiant la variable de position du bouton4
+		if ( etatPower == 1 ) {	
+			let mouseClick = window.event;
+			if ( cBo4 < -9 ) {// Initialisation de la position en forçant un clic 
+				if ( mouseClick.button == 2 ) {// Initialisation de la position en forçant un clic gauche
+					cBo4=-10;
+				}
+				else {
+				cBo4=cBom4-1;// Rappel de la position en mémoire
+				document.getElementById('halo1').style.opacity="0";	
+				document.getElementById('halo2').style.opacity="0";	
+				document.getElementById('halo3').style.opacity="0";	
+				cBo1 = -10;
+				cBo2 = -10;
+				cBo3 = -10;
+				}
+			}
+			if ( mouseClick.button == 2 ) {// Click gauche
+				cBo4 = cBo4-1;// -1 en position
+			}
+			else {
+				cBo4 = cBo4+1;// +1 en position
+			}
+			document.getElementById('bruitBouton').play();	
+			menu4();// Appel de la fonction affichant la position
+			console.log(cBo4);
+		}
+		
+	}
+	
+	function menu1() {//Fonction permettant l'affichage avec une rotation et un bruit en fonction de la position du bouton 1
+	if ( helpb == 3 && etatAngus == 1){//desactive l'aide après 2 clicks ou scrolls
+					demandeAide();
+					helpb=1;
+				}
+	if ( etatAngus == 0 ) {//maintient le compteur d'aide à 1 si l'aide est désactivée
+		helpb=1;
+	}
+	switch ( cBo1 ) {//affiche le bouton et le contenu des textes et documents en fonction de la position
+		case 0 :
+			document.getElementById('halo1').style.opacity="1";	
+			document.getElementById('bouton1').style.transform = "rotate(0deg)";
+			text.scrollTo({
+							top: intro.offsetTop,
+							behavior: 'smooth',
+							});
+			doc.scrollTo({
+							top: introD.offsetTop,
+							behavior: 'smooth',
+							});				
+			cBom1=cBo1;				
+			break;
+		case 1 :
+			document.getElementById('halo1').style.opacity="1";
+			document.getElementById('bouton1').style.transform = "rotate(45deg)";
+			text.scrollTo({
+							top: pourquoi.offsetTop,
+							behavior: 'smooth',
+							});
+			doc.scrollTo({
+							top: introD.offsetTop,
+							behavior: 'smooth',
+							});			
+			cBom1=cBo1;				
+			break;
+		case 2 :
+			document.getElementById('halo1').style.opacity="1";
+			document.getElementById('bouton1').style.transform = "rotate(180deg)";
+			text.scrollTo({
+							top: comment.offsetTop,
+							behavior: 'smooth',
+							});
+			doc.scrollTo({
+							top: introD.offsetTop,
+							behavior: 'smooth',
+							});					
+			cBom1=cBo1;		
+			break;
+		case 3 :
+			document.getElementById('halo1').style.opacity="1";
+			document.getElementById('bouton1').style.transform = "rotate(270deg)";
+			text.scrollTo({
+							top: metier.offsetTop,
+							behavior: 'smooth',
+							});
+			doc.scrollTo({
+							top: introD.offsetTop,
+							behavior: 'smooth',
+							});					
+			cBom1=cBo1;		
+			break;			
+		case 4 :
+			document.getElementById('halo1').style.opacity="1";	
+			document.getElementById('bouton1').style.transform = "rotate(0deg)";
+			cBo1 = 0;// fin de boucle pour case n = nombre de positions possibles
+			cBom1=cBo1;		
+			menu1();// Rappel de la fonction pour l'affichage du texte après la remise à 0
+			break;
+		case -2 : // en cas de click gauche à l'initialisation
+			document.getElementById('halo1').style.opacity="1";		
+			document.getElementById('bouton1').style.transform = "rotate(0deg)";
+			cBo1 = 0;
+			cBom1=cBo1;	
+			menu1();// Rappel de la fonction pour l'affichage du texte après la remise à 0
+			break;	
+		case -1 :// en cas de clic gauche à la position initiale 0
+			document.getElementById('halo1').style.opacity="1";
+			document.getElementById('bouton1').style.transform = "rotate(270deg)";
+			cBo1=3;
+			cBom1=cBo1;	
+			menu1();// Rappel de la fonction pour l'affichage du texte après la remise à 0
+			break;
+			
+		}
+	
+	}
+		
+	function menu2() {//Fonction permettant l'affichage avec une rotation et un bruit en fonction de la position du bouton 2
+	switch ( cBo2 ) {
+		case 0 :
+			document.getElementById('halo2').style.opacity="1";	
+			document.getElementById('bouton2').style.transform = "rotate(0deg)";
+			text.scrollTo({
+							top: formation.offsetTop,
+							behavior: 'smooth',
+							});
+			doc.scrollTo({
+							top: introD.offsetTop,
+							behavior: 'smooth',
+							});				
+			cBom2=cBo2;
+			break;
+		case 1 :
+			document.getElementById('halo2').style.opacity="1";
+			document.getElementById('bouton2').style.transform = "rotate(45deg)";
+			text.scrollTo({
+							top: diplomes.offsetTop,
+							behavior: 'smooth',
+							});
+			doc.scrollTo({
+							top: introD.offsetTop,
+							behavior: 'smooth',
+							});									
+			cBom2=cBo2;
+			break;
+		case 2 :
+			document.getElementById('halo2').style.opacity="1";
+			document.getElementById('bouton2').style.transform = "rotate(180deg)";
+			text.scrollTo({
+							top: certificas.offsetTop,
+							behavior: 'smooth',
+							});
+			doc.scrollTo({
+							top: angusguitare.offsetTop,
+							behavior: 'smooth',
+							});	
+			cBom2=cBo2;
+			break;
+		case 3 :
+			document.getElementById('halo2').style.opacity="1";
+			document.getElementById('bouton2').style.transform = "rotate(225deg)";
+			text.scrollTo({
+							top: solo.offsetTop,
+							behavior: 'smooth',
+							});
+			doc.scrollTo({
+							top: introD.offsetTop,
+							behavior: 'smooth',
+							});	
+			cBom2=cBo2;
+			break;			
+		case 4 :
+			document.getElementById('halo2').style.opacity="1";	
+			document.getElementById('bouton2').style.transform = "rotate(0deg)";
+			cBo2 = 0;// fin de boucle pour case n = nombre de positions possibles
+			cBom2=cBo2;
+			menu2();// Rappel de la fonction pour l'affichage du texte après la remise à 0
+			break;
+		case -2 : // en cas de click gauche à l'initialisation
+			document.getElementById('halo2').style.opacity="1";		
+			document.getElementById('bouton2').style.transform = "rotate(0deg)";
+			cBo2 = 0;
+			cBom2=cBo2;
+			menu2();// Rappel de la fonction pour l'affichage du texte après la remise à 0
+			break;	
+		case -1 :// en cas de clic gauche à la position initiale 0
+			document.getElementById('halo2').style.opacity="1";
+			document.getElementById('bouton2').style.transform = "rotate(225deg)";
+			cBo2=3;
+			cBom2=cBo2;
+			menu2();// Rappel de la fonction pour l'affichage du texte après la remise à 0
+			break;
+			
+		}
+	
+	}
+	
+	function menu3() {//Fonction permettant l'affichage avec une rotation et un bruit en fonction de la position du bouton 3
+	switch ( cBo3 ) {
+		case 0 :
+			document.getElementById('halo3').style.opacity="1";	
+			document.getElementById('bouton3').style.transform = "rotate(0deg)";
+			text.scrollTo({
+							top: competences.offsetTop,
+							behavior: 'smooth',
+							});
+			doc.scrollTo({
+							top: introD.offsetTop,
+							behavior: 'smooth',
+							});									
+			cBom3=cBo3;				
+			break;
+		case 1 :
+			document.getElementById('halo3').style.opacity="1";
+			document.getElementById('bouton3').style.transform = "rotate(45deg)";
+			text.scrollTo({
+							top: savoir.offsetTop,
+							behavior: 'smooth',
+							});
+			doc.scrollTo({
+							top: introD.offsetTop,
+							behavior: 'smooth',
+							});									
+			cBom3=cBo3;						
+			break;
+		case 2 :
+			document.getElementById('halo3').style.opacity="1";
+			document.getElementById('bouton3').style.transform = "rotate(180deg)";
+			text.scrollTo({
+							top: savoirfaire.offsetTop,
+							behavior: 'smooth',
+							});
+			doc.scrollTo({
+							top: introD.offsetTop,
+							behavior: 'smooth',
+							});				
+			cBom3=cBo3;		
+			break;
+		case 3 :
+			document.getElementById('halo3').style.opacity="1";
+			document.getElementById('bouton3').style.transform = "rotate(225deg)";
+			text.scrollTo({
+							top: refrain.offsetTop,
+							behavior: 'smooth',
+							});
+			doc.scrollTo({
+							top: introD.offsetTop,
+							behavior: 'smooth',
+							});				
+			cBom3=cBo3;
+			break;
+		case 4 :
+			document.getElementById('halo3').style.opacity="1";	
+			document.getElementById('bouton3').style.transform = "rotate(0deg)";
+			cBo3 = 0;// fin de boucle pour case n = nombre de positions possibles
+			cBom3=cBo3;		
+			menu3();// Rappel de la fonction pour l'affichage du texte après la remise à 0
+			break;
+		case -2 : // en cas de click gauche à l'initialisation
+			document.getElementById('halo3').style.opacity="1";		
+			document.getElementById('bouton3').style.transform = "rotate(0deg)";
+			cBo3 = 0;
+			cBom3=cBo3;
+			menu3();// Rappel de la fonction pour l'affichage du texte après la remise à 0
+			break;	
+		case -1 :// en cas de clic gauche à la position initiale 0
+			document.getElementById('halo3').style.opacity="1";
+			document.getElementById('bouton3').style.transform = "rotate(225deg)";
+			cBo3=3;
+			cBom3=cBo3;	
+			menu3();// Rappel de la fonction pour l'affichage du texte après la remise à 0
+			break;
+			
+		}
+	
+	}
+	
+	function menu4() {//Fonction permettant l'affichage avec une rotation et un bruit en fonction de la position du bouton4
+	switch ( cBo4 ) {
+		case 0 :
+			document.getElementById('halo4').style.opacity="1";	
+			document.getElementById('bouton4').style.transform = "rotate(0deg)";
+			text.scrollTo({
+							top: contact.offsetTop,
+							behavior: 'smooth',
+							});
+			doc.scrollTo({
+							top: introD.offsetTop,
+							behavior: 'smooth',
+							});									
+			cBom4=cBo4;						
+			break;
+		case 1 :
+			document.getElementById('halo4').style.opacity="1";
+			document.getElementById('bouton4').style.transform = "rotate(90deg)";
+			text.scrollTo({
+							top: telechargement.offsetTop,
+							behavior: 'smooth',
+							});
+			doc.scrollTo({
+							top: introD.offsetTop,
+							behavior: 'smooth',
+							});						
+			cBom4=cBo4;					
+			break;
+		case 2 :
+			document.getElementById('halo4').style.opacity="1";
+			document.getElementById('bouton4').style.transform = "rotate(180deg)";
+			text.scrollTo({
+							top: savoirPlus.offsetTop,
+							behavior: 'smooth',
+							});
+			doc.scrollTo({
+							top: introD.offsetTop,
+							behavior: 'smooth',
+							});				
+			cBom4=cBo4;	
+			break;
+		case 3 :
+			document.getElementById('halo4').style.opacity="1";
+			document.getElementById('bouton4').style.transform = "rotate(225deg)";
+			text.scrollTo({
+							top: final.offsetTop,
+							behavior: 'smooth',
+							});
+			doc.scrollTo({
+							top: introD.offsetTop,
+							behavior: 'smooth',
+							});				
+			cBom4=cBo4;	
+			break;			
+		case 4 :
+			document.getElementById('halo4').style.opacity="1";	
+			document.getElementById('bouton4').style.transform = "rotate(0deg)";
+			cBo4 = 0;// fin de boucle pour case n = nombre de positions possibles
+			cBom4=cBo4;	
+			menu4();// Rappel de la fonction pour l'affichage du texte après la remise à 0
+			break;
+		case -2 : // en cas de click gauche à l'initialisation
+			document.getElementById('halo4').style.opacity="1";		
+			document.getElementById('bouton4').style.transform = "rotate(0deg)";
+			cBo4 = 0;
+			cBom4=cBo4;	
+			menu4();// Rappel de la fonction pour l'affichage du texte après la remise à 0
+			break;	
+		case -1 :// en cas de clic gauche à la position initiale 0
+			document.getElementById('halo4').style.opacity="1";
+			document.getElementById('bouton4').style.transform = "rotate(225deg)";
+			cBo4=3;
+			cBom4=cBo4;	
+			menu4();// Rappel de la fonction pour l'affichage du texte après la remise à 0
+			break;
+			
+		}
+	
+	}
+	
+	function Init1 () {//fonction initialisant le scroll du bouton1
+                // Firefox
+        var elem = document.getElementById ("bouton1");
+        if (elem.addEventListener) {   
+                    // Internet Explorer, Opera, Google Chrome and Safari
+            elem.addEventListener ("mousewheel", MouseScroll1, false);
+                    // Firefox
+            elem.addEventListener ("DOMMouseScroll", MouseScroll1, false);
+        }
+        else {
+            if (elem.attachEvent) { // IE avant version 9
+                    elem.attachEvent ("onmousewheel", MouseScroll1);
+            }
+        }
+    }
+	
+	function Init2 () {//fonction initialisant le scroll du bouton2
+                // Firefox
+        var elem = document.getElementById ("bouton2");
+        if (elem.addEventListener) {   
+                    // Internet Explorer, Opera, Google Chrome and Safari
+            elem.addEventListener ("mousewheel", MouseScroll2, false);
+                    // Firefox
+            elem.addEventListener ("DOMMouseScroll", MouseScroll2, false);
+        }
+        else {
+            if (elem.attachEvent) { // IE avant version 9
+                    elem.attachEvent ("onmousewheel", MouseScroll2);
+            }
+        }
+    }	
+	
+	function Init3 () {//fonction initialisant le scroll du bouton3
+                // Firefox
+        var elem = document.getElementById ("bouton3");
+        if (elem.addEventListener) {   
+                    // Internet Explorer, Opera, Google Chrome and Safari
+            elem.addEventListener ("mousewheel", MouseScroll3, false);
+                    // Firefox
+            elem.addEventListener ("DOMMouseScroll", MouseScroll3, false);
+        }
+        else {
+            if (elem.attachEvent) { // IE avant version 9
+                    elem.attachEvent ("onmousewheel", MouseScroll3);
+            }
+        }
+    }	
+	
+	function Init4 () {//fonction initialisant le scroll du bouton4
+                // Firefox
+        var elem = document.getElementById ("bouton4");
+        if (elem.addEventListener) {   
+                    // Internet Explorer, Opera, Google Chrome and Safari
+            elem.addEventListener ("mousewheel", MouseScroll4, false);
+                    // Firefox
+            elem.addEventListener ("DOMMouseScroll", MouseScroll4, false);
+        }
+        else {
+            if (elem.attachEvent) { // IE avant version 9
+                    elem.attachEvent ("onmousewheel", MouseScroll4);
+            }
+        }
+    }	
+	
+	function demandeAide() {//Fonction de clic sur l'icone d'aide
+		if ( etatAngus == 0 ) {//Test de l'état de l'aide et affichage des image d'aide en fonction de l'avancement de l'utilisation 
+			etatAngus=1;
+			document.getElementById('haloAngus').style.opacity= 1;
+			if ( etatPower == 0 ) {
+				document.getElementById('angusPower').style.opacity= 1;
+				document.getElementById('angusBouton1').style.opacity= 0;
+				document.getElementById('angusBouton2').style.opacity=0;
+			}
+			else {
+				if (helpb == 1) {
+					document.getElementById('angusPower').style.opacity= 0;
+					document.getElementById('angusBouton1').style.opacity= 0;
+					document.getElementById('angusBouton2').style.opacity= 1;
+				}
+				else {
+					document.getElementById('angusPower').style.opacity= 0;
+					document.getElementById('angusBouton1').style.opacity= 1;
+					document.getElementById('angusBouton2').style.opacity= 0;
+				}	
+			}
+		}
+		else {// Interruption de l'aide
+			document.getElementById('angusPower').style.opacity= 0;
+			document.getElementById('angusBouton1').style.opacity= 0;
+			document.getElementById('angusBouton2').style.opacity= 0;
+			etatAngus= 0;
+			document.getElementById('haloAngus').style.opacity= 0;
+			}
+		console.log(helpb);	
+	}
+	</script>
+	
+	
+	
+	
+
+
+	</section>
+
+
+	</div>
+	
+	</body>
+</html>
+
+		
