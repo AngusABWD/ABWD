@@ -137,7 +137,7 @@ audio {
 	display: none;
 }
 
-#titreP
+h1
 {
 	display: none;
 }
@@ -210,30 +210,45 @@ footer
 	font-family: "Comic Sans MS",serif;
 	text-align: justify;
 	color: yellow;
-	width: 50%;
 }
 
 
-#iconeMail,#angusText,#iconeFacebook,#iconeLinkedin,#iconeTwitter
+#angusText
 {
-	display: inline-block;
-	vertical-align: top;
-	padding-right: 50px;
-	
-	
+	position: absolute;
+	top: 3px;
+	right: 1100px;
+}
+#iconeTwitter
+{
+	position: absolute;
+	top: 0px;
+	right: 450px;
+}
+#iconeLinkedin
+{
+	position: absolute;
+	top: 0px;
+	right: 300px;
+}
+#iconeFacebook
+{
+	position: absolute;
+	top: 0px;
+	right: 150px;
+}
+#iconeMail
+{
+	position: absolute;
+	top: 0px;
+	right: 600px;
 }
 
 figcaption
 {
+	font-size: 8;
 	text-align: center;
 	color: #E3C880;
-}
-
-#titreChantier
-{
-	text-align: center;
-	color: #E3C880;
-	font-size: 40px;
 }
 
 #bienvenue
@@ -248,13 +263,20 @@ figcaption
 	padding-bottom: 30px;
 	padding-top: 20px;
 }
-#angusChantier
+h1,h2,h3
+{
+		color: #E3C880;
+}
+.angusChantier
 {
 	position: relative;
 	left: 20%;
 	height: 80%;
+	padding-bottom: 30px;
 }
-h1,h2,h3
+.titreChantier
 {
-		color: #E3C880;
+	text-align: center;
+	color: #E3C880;
+	font-size: 40px;
 }
