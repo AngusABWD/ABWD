@@ -1,0 +1,177 @@
+
+body
+{
+	background: url("Baffle.png") no-repeat top center fixed black;
+	overflow:hidden;
+	color: white;
+
+}
+#block
+{
+	display: inline-block;
+	position: absolute;
+	top: 0px;
+	left: 50%; 
+	width: 1900;
+	height: 1000;
+}
+#console
+{
+
+}
+#bouton
+{
+	width: 100px;
+	height: 100px;
+	position: absolute;
+	top:125px;
+	right:0px;
+	z-index: 2;
+	
+}
+#boutonPower
+{
+	opacity: 0.6;
+	display: inline-block;
+	position: absolute;
+	top: 149px;
+	right: 760px;
+	z-index: 2;
+}
+
+#halo
+{
+	opacity: 0;
+	position: absolute;
+	top:125px;
+	right:0px;
+	z-index: 1;
+	
+}
+#haloPower
+{
+	opacity: 0;
+	position: absolute;
+	top:136px;
+	right:746px;
+	z-index: 1;
+}
+#angusPower
+{
+	position: absolute;
+	right: 280px;
+	opacity: 0;
+	z-index:1;
+}
+#angusBouton
+{
+position: absolute;
+	top: -160px;
+	right: 0px;
+	opacity: 0;
+	z-index:1;
+}	
+
+
+audio {
+	display: none;
+}
+
+#titreP
+{
+	display: none;
+}
+
+
+.cleDeSol
+{
+	float: left;
+}
+
+p
+{
+	color: blue;
+	text-align: justify;
+	
+	
+}
+a
+{
+	color: red;
+	text-decoration: none;
+}
+a:hover
+{
+	color: green;
+	text-decoration: underline;
+}
+a:visited 
+{
+	color: red;
+}
+#text
+{
+	display: inline-block;
+	border-radius: 20px;
+	border: 2px solid #E3C880;
+	box-shadow: 3px 3px 3px #E3C880;
+	width: 1200px;
+	position: absolute;
+	top:340px;
+	right: -360px;
+	overflow: hidden;
+	height:410px;
+	padding:15px;
+	
+}
+#console
+{
+		display: inline-block;
+}
+
+#doc
+{
+	display: inline-block;
+	border-radius: 20px;
+	border: 2px solid #E3C880;
+	box-shadow: 3px 3px 3px #E3C880;
+	position:absolute;
+	left: 373px;
+	top: 340px;
+	overflow: hidden;
+	width: 460px;
+	height:410px;
+	padding:15px;
+}
+footer
+{
+	display: inline-block;
+	border-radius: 20px;
+	border: 2px solid #E3C880;
+	box-shadow: 3px 3px 3px #E3C880;
+	position:absolute;
+	left: -717px;
+	top: 800px;
+	overflow: auto;
+	width: 1550px;
+	height:50px;
+	padding:15px;
+}
+footer img
+{
+	width: 50%;
+}
+#angus_help
+{
+	position: absolute;
+	z-index: 2;
+}
+
+
+#haloAngus
+{
+	position: relative;
+	opacity: 1;
+	top: -20px;
+	z-index: 1;
+}
