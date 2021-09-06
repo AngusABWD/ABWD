@@ -7,16 +7,18 @@
 	</head>
 	
 	<body> 
-	<!-- Chargement de la fonction Ini permettant le scroll sur 'bouton' avec les compatibilité des différents Nav -->	
+	
 <div id="block"><!--balise permettant de conserver les propotions dans le navigateur-->
 	<section>
+	<h1 id="titreP">Andermann Boris Web Development</h1>
+	<div>
 	<img id="angusPower" src="Image/angusPower.png" alt="angusPower"/><!--Image d'aide sur le bouton power-->
 	<img id="angusBouton1" src="Image/angusBouton1.png" alt="angusBouton1"/> <!--Image d'aide sur sélectionner un bouton-->
 	<img id="angusBouton2" src="Image/angusBouton2.png" alt="angusBouton2"/> <!--Image d'aide sur l'utilisation du bouton-->
-	<h1 id="titreP">Andermann Boris Web Development</h1>
+	</div>
 	<article id="console" > <!-- Définition physique de la console des boutons avec son id -->
 	<input id="angus_help" type="image" src="Image/angus_help.png" alt="angusTete" onclick="demandeAide()"> <!--Icone d'aide--> 
-	<img id="haloAngus" src="Image/haloAngus.png" alt="haloangus" /><!--eclairage Aide "on"-->
+	<div ><img id="haloAngus" src="Image/haloAngus.png" alt="haloangus" /></div><!--eclairage Aide "on"-->
 	<input id="bouton1" type="image" src="Image/Bouton_selection.png" alt="boutonMarshall1" onmousedown="selection1()" /> <!-- Image du bouton + id et fonction click-->
 	<input id="bouton2" type="image" src="Image/Bouton_selection.png" alt="boutonMarshall2" onmousedown="selection2()" /> <!-- Image du bouton + id et fonction click-->
 	<input id="bouton3" type="image" src="Image/Bouton_selection.png" alt="boutonMarshall3" onmousedown="selection3()" /> <!-- Image du bouton + id et fonction click-->
@@ -32,13 +34,14 @@
 	</article>
 	
 	<article id="doc" ><!--Bloc de documentation-->
-	
+	<figure>
 	<img id="angusguitare" src="Image/Angus Guitare.png" alt="angus guitare" />
 	<img id="introD" src="Image/cone.png" alt="cone" />
-	
+	</figure>
+
 	</article >
 	<article id="text"><!--Bloc de contenu-->
-	<img id="bienvenue" src="Image/bienvenue.png" alt="bienvenue" />
+	<div><img id="bienvenue" src="Image/bienvenue.png" alt="bienvenue" /></div>
 	<h1 id="intro">Avant propos :</h1>
 	<img id="angusChantier" src="Image/AngusChantier.png" alt="chantier"/><figcaption id="titreChantier" >Site en Construction 1B1</figcaption>
 	
@@ -107,6 +110,9 @@
 	</div>
 	<div id="iconeLinkedin">
 	<a href="http://www.linkedin.fr"> <img src="Image/iconeLinkedin.png" alt="iconeLinkedin" title="Linkedin"/><figcaption>Linkedin</figcaption></a>
+	</div>
+	<div id="iconeTwitter">
+	<a href="http://www.twitter.fr"> <img src="Image/iconeTwitter.png" alt="iconeTwitter" title="Twitter"/><figcaption>Twitter</figcaption></a>
 	</div>
 	</footer>
 	<script name="boutons">
@@ -232,7 +238,6 @@
 			if ( rolled == -120 && cBo2 > -10 ) { //Condition pour obliger un click avant de scroll
 			cBo2 = cBo2+1;// +1 en position
 			}
-			document.getElementById('bruitBouton').play();	
 			menu2();// Appel de la fonction affichant la position
 			console.log(cBo2); 
 	}
@@ -249,7 +254,6 @@
 			if ( rolled == -120 && cBo3 > -10 ) { //Condition pour obliger un click avant de scroll
 			cBo3 = cBo3+1;// +1 en position
 			}
-			document.getElementById('bruitBouton').play();	
 			menu3();// Appel de la fonction affichant la position
 			console.log(cBo3); 
 	}
@@ -292,7 +296,6 @@
 			}
 			else {
 				cBo1 = cBo1+1;// +1 en position
-				document.getElementById('bruitBouton').play();
 			}			
 			helpb= helpb + 1;// incrémente l'état de l'aide à chaque click
 			if ( etatAngus == 1 && helpb == 1) {//Permet d'afficher la suite de l'aide
@@ -331,7 +334,6 @@
 			else {
 				cBo2 = cBo2+1;// +1 en position
 			}
-			document.getElementById('bruitBouton').play();	
 			menu2();// Appel de la fonction affichant la position
 			console.log(cBo2);
 		}
@@ -361,7 +363,6 @@
 			else {
 				cBo3 = cBo3+1;// +1 en position
 			}
-			document.getElementById('bruitBouton').play();	
 			menu3();// Appel de la fonction affichant la position
 			console.log(cBo3);
 		}
@@ -391,7 +392,6 @@
 			else {
 				cBo4 = cBo4+1;// +1 en position
 			}
-			document.getElementById('bruitBouton').play();	
 			menu4();// Appel de la fonction affichant la position
 			console.log(cBo4);
 		}
@@ -497,6 +497,7 @@
 		case 0 :
 			document.getElementById('halo2').style.opacity="1";	
 			document.getElementById('bouton2').style.transform = "rotate(0deg)";
+			document.getElementById('bruitBouton').play();	
 			text.scrollTo({
 							top: formation.offsetTop,
 							behavior: 'smooth',
@@ -510,6 +511,7 @@
 		case 1 :
 			document.getElementById('halo2').style.opacity="1";
 			document.getElementById('bouton2').style.transform = "rotate(45deg)";
+			document.getElementById('bruitBouton').play();	
 			text.scrollTo({
 							top: diplomes.offsetTop,
 							behavior: 'smooth',
@@ -523,6 +525,7 @@
 		case 2 :
 			document.getElementById('halo2').style.opacity="1";
 			document.getElementById('bouton2').style.transform = "rotate(180deg)";
+			document.getElementById('bruitBouton').play();	
 			text.scrollTo({
 							top: certificas.offsetTop,
 							behavior: 'smooth',
@@ -536,6 +539,7 @@
 		case 3 :
 			document.getElementById('halo2').style.opacity="1";
 			document.getElementById('bouton2').style.transform = "rotate(225deg)";
+			document.getElementById('bruitBouton').play();	
 			text.scrollTo({
 							top: solo.offsetTop,
 							behavior: 'smooth',
@@ -549,6 +553,7 @@
 		case 4 :
 			document.getElementById('halo2').style.opacity="1";	
 			document.getElementById('bouton2').style.transform = "rotate(0deg)";
+			document.getElementById('bruitBouton').play();	
 			cBo2 = 0;// fin de boucle pour case n = nombre de positions possibles
 			cBom2=cBo2;
 			menu2();// Rappel de la fonction pour l'affichage du texte après la remise à 0
@@ -556,6 +561,7 @@
 		case -2 : // en cas de click gauche à l'initialisation
 			document.getElementById('halo2').style.opacity="1";		
 			document.getElementById('bouton2').style.transform = "rotate(0deg)";
+			document.getElementById('bruitBouton').play();	
 			cBo2 = 0;
 			cBom2=cBo2;
 			menu2();// Rappel de la fonction pour l'affichage du texte après la remise à 0
@@ -563,6 +569,7 @@
 		case -1 :// en cas de clic gauche à la position initiale 0
 			document.getElementById('halo2').style.opacity="1";
 			document.getElementById('bouton2').style.transform = "rotate(225deg)";
+			document.getElementById('bruitBouton').play();	
 			cBo2=3;
 			cBom2=cBo2;
 			menu2();// Rappel de la fonction pour l'affichage du texte après la remise à 0
@@ -577,6 +584,7 @@
 		case 0 :
 			document.getElementById('halo3').style.opacity="1";	
 			document.getElementById('bouton3').style.transform = "rotate(0deg)";
+			document.getElementById('bruitBouton').play();	
 			text.scrollTo({
 							top: competences.offsetTop,
 							behavior: 'smooth',
@@ -590,6 +598,7 @@
 		case 1 :
 			document.getElementById('halo3').style.opacity="1";
 			document.getElementById('bouton3').style.transform = "rotate(45deg)";
+			document.getElementById('bruitBouton').play();	
 			text.scrollTo({
 							top: savoir.offsetTop,
 							behavior: 'smooth',
@@ -603,6 +612,7 @@
 		case 2 :
 			document.getElementById('halo3').style.opacity="1";
 			document.getElementById('bouton3').style.transform = "rotate(180deg)";
+			document.getElementById('bruitBouton').play();	
 			text.scrollTo({
 							top: savoirfaire.offsetTop,
 							behavior: 'smooth',
@@ -616,6 +626,7 @@
 		case 3 :
 			document.getElementById('halo3').style.opacity="1";
 			document.getElementById('bouton3').style.transform = "rotate(225deg)";
+			document.getElementById('bruitBouton').play();	
 			text.scrollTo({
 							top: refrain.offsetTop,
 							behavior: 'smooth',
@@ -629,6 +640,7 @@
 		case 4 :
 			document.getElementById('halo3').style.opacity="1";	
 			document.getElementById('bouton3').style.transform = "rotate(0deg)";
+			document.getElementById('bruitBouton').play();	
 			cBo3 = 0;// fin de boucle pour case n = nombre de positions possibles
 			cBom3=cBo3;		
 			menu3();// Rappel de la fonction pour l'affichage du texte après la remise à 0
@@ -636,6 +648,7 @@
 		case -2 : // en cas de click gauche à l'initialisation
 			document.getElementById('halo3').style.opacity="1";		
 			document.getElementById('bouton3').style.transform = "rotate(0deg)";
+			document.getElementById('bruitBouton').play();	
 			cBo3 = 0;
 			cBom3=cBo3;
 			menu3();// Rappel de la fonction pour l'affichage du texte après la remise à 0
@@ -643,6 +656,7 @@
 		case -1 :// en cas de clic gauche à la position initiale 0
 			document.getElementById('halo3').style.opacity="1";
 			document.getElementById('bouton3').style.transform = "rotate(225deg)";
+			document.getElementById('bruitBouton').play();	
 			cBo3=3;
 			cBom3=cBo3;	
 			menu3();// Rappel de la fonction pour l'affichage du texte après la remise à 0
@@ -657,6 +671,7 @@
 		case 0 :
 			document.getElementById('halo4').style.opacity="1";	
 			document.getElementById('bouton4').style.transform = "rotate(0deg)";
+			document.getElementById('bruitBouton').play();	
 			text.scrollTo({
 							top: contact.offsetTop,
 							behavior: 'smooth',
@@ -670,6 +685,7 @@
 		case 1 :
 			document.getElementById('halo4').style.opacity="1";
 			document.getElementById('bouton4').style.transform = "rotate(90deg)";
+			document.getElementById('bruitBouton').play();	
 			text.scrollTo({
 							top: telechargement.offsetTop,
 							behavior: 'smooth',
@@ -683,6 +699,7 @@
 		case 2 :
 			document.getElementById('halo4').style.opacity="1";
 			document.getElementById('bouton4').style.transform = "rotate(180deg)";
+			document.getElementById('bruitBouton').play();	
 			text.scrollTo({
 							top: savoirPlus.offsetTop,
 							behavior: 'smooth',
@@ -696,6 +713,7 @@
 		case 3 :
 			document.getElementById('halo4').style.opacity="1";
 			document.getElementById('bouton4').style.transform = "rotate(225deg)";
+			document.getElementById('bruitBouton').play();	
 			text.scrollTo({
 							top: final.offsetTop,
 							behavior: 'smooth',
@@ -709,6 +727,7 @@
 		case 4 :
 			document.getElementById('halo4').style.opacity="1";	
 			document.getElementById('bouton4').style.transform = "rotate(0deg)";
+			document.getElementById('bruitBouton').play();	
 			cBo4 = 0;// fin de boucle pour case n = nombre de positions possibles
 			cBom4=cBo4;	
 			menu4();// Rappel de la fonction pour l'affichage du texte après la remise à 0
@@ -716,6 +735,7 @@
 		case -2 : // en cas de click gauche à l'initialisation
 			document.getElementById('halo4').style.opacity="1";		
 			document.getElementById('bouton4').style.transform = "rotate(0deg)";
+			document.getElementById('bruitBouton').play();	
 			cBo4 = 0;
 			cBom4=cBo4;	
 			menu4();// Rappel de la fonction pour l'affichage du texte après la remise à 0
@@ -723,6 +743,7 @@
 		case -1 :// en cas de clic gauche à la position initiale 0
 			document.getElementById('halo4').style.opacity="1";
 			document.getElementById('bouton4').style.transform = "rotate(225deg)";
+			document.getElementById('bruitBouton').play();	
 			cBo4=3;
 			cBom4=cBo4;	
 			menu4();// Rappel de la fonction pour l'affichage du texte après la remise à 0
