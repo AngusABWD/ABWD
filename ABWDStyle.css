@@ -6,6 +6,10 @@ body
 	color: white;
 
 }
+figure
+{
+	margin: 0px;
+}
 #block
 {
 	position: absolute;
@@ -188,7 +192,8 @@ a:visited
 }
 footer
 {
-	display: inline-block;
+	display: flex;
+	justify-content: space-between;
 	border-radius: 20px;
 	border: 2px solid #E3C880;
 	box-shadow: 3px 3px 3px #E3C880;
@@ -196,10 +201,11 @@ footer
 	left: -717px;
 	top: 800px;
 	overflow: auto;
-	width: 1417px;
-	height:75px;
+	width: 1317px;
+	height: 77px;
 	padding-left: 160px;
-	padding-top: 5px;
+	padding-right: 100px;
+	padding-top: 3px;
 }
 
 #angusText
@@ -207,38 +213,6 @@ footer
 	font-family: "Comic Sans MS",serif;
 	text-align: justify;
 	color: yellow;
-}
-
-
-#angusText
-{
-	position: absolute;
-	top: 3px;
-	right: 1100px;
-}
-#iconeTwitter
-{
-	position: absolute;
-	top: 0px;
-	right: 450px;
-}
-#iconeLinkedin
-{
-	position: absolute;
-	top: 0px;
-	right: 300px;
-}
-#iconeFacebook
-{
-	position: absolute;
-	top: 0px;
-	right: 150px;
-}
-#iconeMail
-{
-	position: absolute;
-	top: 0px;
-	right: 600px;
 }
 
 figcaption
@@ -257,6 +231,7 @@ figcaption
 {
 	position: relative;
 	height: 400px;
+	left: 10%;
 	padding-bottom: 30px;
 	padding-top: 20px;
 }
