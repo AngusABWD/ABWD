@@ -1,120 +1,4 @@
-<!DOCTYPE html>
-<html lang="fr">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="stylesheet" href="ABWDStyle.css"/>
-		<title>AB Developpeur Web</title>
-	</head>
-	
-	<body> 
-<section id="block"><!--balise permettant de conserver les propotions dans le navigateur-->
-	
-	<h1>Andermann Boris Web Development</h1>
-	<figure>
-	<img id="angusPower" src="Image/angusPower.png" alt="angusPower"/><!--Image d'aide sur le bouton power-->
-	<img id="angusBouton1" src="Image/angusBouton1.png" alt="angusBouton1"/> <!--Image d'aide sur sélectionner un bouton-->
-	<img id="angusBouton2" src="Image/angusBouton2.png" alt="angusBouton2"/> <!--Image d'aide sur l'utilisation du bouton-->
-	</figure>
-	<header id="console" > <!-- Définition physique de la console des boutons avec son id -->
-	<input id="angus_help" type="image" src="Image/angus_help.png" alt="angusTete" onclick="demandeAide()"> <!--Icone d'aide--> 
-	<figure ><img id="haloAngus" src="Image/haloAngus.png" alt="haloangus" /></figure><!--eclairage Aide "on"-->
-	<input id="bouton1" type="image" src="Image/Bouton_selection.png" alt="boutonMarshall1" onmousedown="selection1()" /> <!-- Image du bouton + id et fonction click-->
-	<input id="bouton2" type="image" src="Image/Bouton_selection.png" alt="boutonMarshall2" onmousedown="selection2()" /> <!-- Image du bouton + id et fonction click-->
-	<input id="bouton3" type="image" src="Image/Bouton_selection.png" alt="boutonMarshall3" onmousedown="selection3()" /> <!-- Image du bouton + id et fonction click-->
-	<input id="bouton4" type="image" src="Image/Bouton_selection.png" alt="boutonMarshall4" onmousedown="selection4()" /> <!-- Image du bouton + id et fonction click-->
-	<input id="boutonPower" type="image" src="Image/Power2.png" alt="boutonPower" onclick="power()" /> <!-- Image du bouton POWER + id et fonction click -->
-	<figure id="halo1"><img  src="Image/halo_Rouge.png" alt="halorouge1"/></figure><!--Image du halo qui apparaitra quand le bouton est fonctionnel-->
-	<figure id="halo2"><img  src="Image/halo_Rouge.png" alt="halorouge2"/></figure><!--Image du halo qui apparaitra quand le bouton est fonctionnel-->
-	<figure id="halo3"><img  src="Image/halo_Rouge.png" alt="halorouge3"/></figure><!--Image du halo qui apparaitra quand le bouton est fonctionnel-->
-	<figure id="halo4"><img  src="Image/halo_Rouge.png" alt="halorouge4"/></figure><!--Image du halo qui apparaitra quand le bouton est fonctionnel-->
-	<figure id="haloPower"><img src="Image/haloPower3.png" alt="haloPower"/></figure><!--Eclairage power "on"-->
-	<audio id='bruitBouton' src="Son/interupteur_off.mp3"></audio><!--Son de l'action sur le bouton-->
-	<audio id="angusPowerSon" src="Son/angusPower.mp3"></audio><!--Rift qui tue-->
-	</header>
-	
-	<aside id="doc" ><!--Bloc de documentation-->
-	<h2>Bloc de documentation</h2>
-	<figure>
-	<img id="angusguitare" src="Image/AngusGuitare.png" alt="angus guitare" />
-	<img id="introD" src="Image/cone.png" alt="cone" />
-	</figure>
-	</aside >
 
-	<article id="text"><!--Bloc de contenu-->
-	<h2>Contenu du bloc text</h2>
-	<figure><img id="bienvenue" src="Image/bienvenue.png" alt="bienvenue" /></figure>
-		<h2 id="intro">Avant propos :</h2>
-		<figure><img class="angusChantier" src="Image/AngusChantier.png" alt="chantier"/><figcaption class="titreChantier" >Site en Construction 1B1</figcaption></figure>
-
-		<h2 id="pourquoi">Pourquoi devenir développeur :</h2>
-			<!--Le choix d'une passion-->
-		<figure><img class="angusChantier" src="Image/AngusChantier.png" alt="chantier"/><figcaption class="titreChantier" >Site en Construction 2B1</figcaption></figure>
-		<h2 id="comment">Les opportunités actuelles d'apprentissage</h2>
-		<figure><img class="angusChantier" src="Image/AngusChantier.png" alt="chantier"/><figcaption class="titreChantier" >Site en Construction 3B1</figcaption></figure>
-			<!--Apprendre à 40 passé</h3>
-						<a href="https://www.youtube.com/watch?v=zsd4WML7CNE" target="_blank">message positif</a>
-						
-			<h3>Apprendre en 2021</h3>
-						<a href="https://www.coursera.org/learn/learning-how-to-learn/home/welcome" target="_blank">apprendre à apprendre</a>-->
-						
-		<h2 id="metier">Le metier et ses perspectives</h2>
-		<figure><img class="angusChantier" src="Image/AngusChantier.png" alt="chantier"/><figcaption class="titreChantier" >Site en Construction 4B1</figcaption></figure>				
-			<!--<a href="https://www.youtube.com/channel/UC3aAsFMXnMttILqRZuSGnTQ" target="_blank">Coder c'est cool</a>-->			
-			
-			
-		<h2 id="formation">Formation</h2>
-		<figure><img class="angusChantier" src="Image/AngusChantier.png" alt="chantier"/><figcaption class="titreChantier" >Site en Construction 1B2</figcaption></figure>	
-		<h2 id="diplomes">Formation de developpeur Front-End</h2>
-		<figure><img class="angusChantier" src="Image/AngusChantier.png" alt="chantier"/><figcaption class="titreChantier" >Site en Construction 2B2</figcaption></figure>	
-		<h2 id="certificas">Formation autodidacte et certificas</h2>
-		<figure><img class="angusChantier" src="Image/AngusChantier.png" alt="chantier"/><figcaption class="titreChantier" >Site en Construction 3B2</figcaption></figure>	
-		<h2 id="solo">Une base solide en Domotique et autodidacte</h2>
-		<figure><img class="angusChantier" src="Image/AngusChantier.png" alt="chantier"/><figcaption class="titreChantier" >Site en Construction 4B2</figcaption></figure>
-		
-		<h2 id="competences">Compétences professionelles</h2>
-		<figure><img class="angusChantier" src="Image/AngusChantier.png" alt="chantier"/><figcaption class="titreChantier" >Site en Construction 1B3</figcaption></figure>	
-		<h2 id ="savoir">Savoirs</h2>
-		<figure><img class="angusChantier" src="Image/AngusChantier.png" alt="chantier"/><figcaption class="titreChantier" >Site en Construction 2B3</figcaption></figure>		
-			<!--<h3>Expériences professionelles et acquis</h3>-->
-		<h2 id="savoirfaire">Savoir-faire</h2>
-		<figure><img class="angusChantier" src="Image/AngusChantier.png" alt="chantier"/><figcaption class="titreChantier" >Site en Construction 3B3</figcaption></figure>	
-			<!--<h3>Connaissances</h3>
-			<h3>Réalisations</h3>-->
-		<h2 id="refrain">Soft Skill</h2>
-		<figure><img class="angusChantier" src="Image/AngusChantier.png" alt="chantier"/><figcaption class="titreChantier" >Site en Construction 4B3</figcaption></figure>	
-		
-
-		<h2 id="contact">Contact</h2>
-		<figure><img class="angusChantier" src="Image/AngusChantier.png" alt="chantier"/><figcaption class="titreChantier" >Site en Construction 1B4</figcaption></figure>
-		<!--<p><a href="mailto:andermannboris@yahoo.fr">Envoyez-moi un mail</a></p>-->
-		<h2 id="telechargement">Telechargements</h2>
-		<figure><img class="angusChantier" src="Image/AngusChantier.png" alt="chantier"/><figcaption class="titreChantier" >Site en Construction 2B4</figcaption></figure>
-		<!--<h2 id="cv" >CV</h2>
-		<p><a href="CV AFPA dev.pdf" target="_blank">Mon cv</a></p>-->
-		<h2 id="savoirPlus">Pour en Savoir plus</h2>
-		<figure><img class="angusChantier" src="Image/AngusChantier.png" alt="chantier"/><figcaption class="titreChantier" >Site en Construction 3B4</figcaption></figure>
-		<h2 id="final">Final</h2>
-		<figure><img class="angusChantier" src="Image/AngusChantier.png" alt="chantier"/><figcaption class="titreChantier" >Site en Construction 4B4</figcaption></figure>
-	</article>
-
-	
-	<footer ><!--Bloc bas de page-->
-	<div id="angusText" >Angus est un taureau sympa !<br /> si vous avez des difficultés pour naviguer<br /> demandez lui son aide en cliquant dessus.</div>
-	<figure id="iconeMail">
-	<a href="mailto:angusabwd@gmail.com"> <img src="Image/Mail-icon7.png" alt="iconeMail" title="Envoyer un mail"/></a><figcaption>Mail</figcaption>
-	</figure>
-	<figure id="iconeFacebook">
-	<a href="http://www.facebook.fr"> <img src="Image/iconeFacebook.png" alt="iconeFacebook" title="Facebook"/></a><figcaption>Facebook</figcaption>
-	</figure>
-	<figure id="iconeLinkedin">
-	<a href="http://www.linkedin.fr"> <img src="Image/iconeLinkedin.png" alt="iconeLinkedin" title="Linkedin"/></a><figcaption>Linkedin</figcaption>
-	</figure>
-	<figure id="iconeTwitter">
-	<a href="http://www.twitter.fr"> <img src="Image/iconeTwitter.png" alt="iconeTwitter" title="Twitter"/></a><figcaption>Twitter</figcaption>
-	</figure>
-	</footer>
-	
-	<script>
 	window.onload = Init1 ();
 	window.onload = Init2 ();
 	window.onload = Init3 ();
@@ -151,12 +35,7 @@
 
 	function power() {//Fonction permettant l'actionnement du bouton power et d'identifier son état
 		if ( etatPower == 0 ) {//test pour la procédure "Allumage"
-		text.scrollTo({
-			top: bienvenue.offsetTop,
-		});
-		doc.scrollTo({
-			top: angusguitare.offsetTop,
-		});
+        text.scrollTop= bienvenue.offsetTop;
 		document.getElementById('angusPowerSon').play();
 		document.getElementById('boutonPower').style.transform = "rotate(180deg)";
 		document.getElementById('boutonPower').style.opacity = 1;
@@ -275,7 +154,7 @@
 	
 	function selection1() { // Fonction permettant de définir lors d'un clic si il est droit/centre  ou gauche modifiant la variable de position du bouton1
 		if ( etatPower == 1 ) {	//Test si l'ampli est sur "on"
-			let mouseClick = window.event;
+			var mouseClick = window.event ;
 			if ( cBo1 < -9 ) {// Initialisation de la position en forçant un clic 
 				if ( mouseClick.button == 2 ) {// Initialisation de la position en forçant un clic gauche
 					cBo1=-10;
@@ -312,7 +191,7 @@
 	  
     function selection2() { // Fonction permettant de définir lors d'un clic si il est droit/centre  ou gauche modifiant la variable de position du bouton2
 		if ( etatPower == 1 ) {	
-			let mouseClick = window.event;
+			var mouseClick = window.event;
 			if ( cBo2 < -9 ) {// Initialisation de la position en forçant un clic 
 				if ( mouseClick.button == 2 ) {// Initialisation de la position en forçant un clic gauche
 					cBo2=-10;
@@ -341,7 +220,7 @@
 
     function selection3() { // Fonction permettant de définir lors d'un clic si il est droit/centre  ou gauche modifiant la variable de position du bouton3
 		if ( etatPower == 1 ) {	
-			let mouseClick = window.event;
+			var mouseClick = window.event;
 			if ( cBo3 < -9 ) {// Initialisation de la position en forçant un clic 
 				if ( mouseClick.button == 2 ) {// Initialisation de la position en forçant un clic gauche
 					cBo3=-10;
@@ -370,7 +249,7 @@
 	
 	function selection4() { // Fonction permettant de définir lors d'un clic si il est droit/centre  ou gauche modifiant la variable de position du bouton4
 		if ( etatPower == 1 ) {	
-			let mouseClick = window.event;
+			var mouseClick = window.event;
 			if ( cBo4 < -9 ) {// Initialisation de la position en forçant un clic 
 				if ( mouseClick.button == 2 ) {// Initialisation de la position en forçant un clic gauche
 					cBo4=-10;
@@ -847,17 +726,3 @@
 			}
 		console.log(helpb);	
 	}
-	</script>
-	
-	
-	
-	
-
-
-	</section>
-
-	
-	</body>
-</html>
-
-		
