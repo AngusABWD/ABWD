@@ -4,17 +4,28 @@ body
 	background: url("Image/Baffle.png") no-repeat top center fixed black;
 	overflow:hidden;
 	color: white;
+	background-size: var(--m-v);
 
 }
 figure
 {
 	margin: 0px;
 }
+#paysage 
+{
+	position: absolute;
+	top: 0px;
+	left: -950px;
+	opacity: 0;
+	z-index: 1;
+}
 #block
 {
 	position: absolute;
 	top: 0px;
 	left: 50%; 
+	-moz-transform:  scale(var(--zoom));
+	zoom: var(--zoom);
 }
 #bouton1
 {
@@ -252,16 +263,71 @@ h1,h2,h3
 	color: #E3C880;
 	font-size: 40px;
 }
-@media all and (max-device-height: 480px) 
+@media all and (max-width: 1800px )
 {
-	body
+	:root { --m-v: 1800px}
+	:root { --zoom: 0.947}
+
+}
+@media all and (max-width: 1700px )
+{
+	:root { --m-v: 1700px}
+	:root { --zoom: 0.895}
+
+}
+@media all and (max-width: 1600px )
+{
+	:root { --m-v: 1600px}
+	:root { --zoom: 0.842}
+
+}
+@media all and (max-width: 1500px )
+{
+	:root { --m-v: 1500px}
+	:root { --zoom: 0.789}
+
+}
+@media all and (max-width: 1400px )
+{
+	:root { --m-v: 1400px}
+	:root { --zoom: 0.737}
+
+}
+@media all and (max-width: 1300px )
+{
+	:root { --m-v: 1300px}
+	:root { --zoom: 0.684}
+
+}
+@media all and (max-width: 1200px )
+{
+	:root { --m-v: 1200px}
+	:root { --zoom: 0.631}
+
+}
+@media all and (max-width: 1100px )
+{
+	:root { --m-v: 1100px}
+	:root { --zoom: 0.579}
+
+}
+@media all and (max-width: 1000px )
+{
+	:root { --m-v: 1000px}
+	:root { --zoom: 0.526}
+
+}
+@media all and (max-width: 800px )
+{
+	:root { --m-v: 800px}
+	:root { --zoom: 0.421}
+
+}
+@media all and (max-device-width: 480px )
+{	
+#paysage
 	{
-		width: 1900px;
-		height: 1000px;
-	}
-	#block
-	{
-		left: 97.5%;
-		zoom: 100%;
+		opacity: 1;
+		z-index: 3;
 	}
 }

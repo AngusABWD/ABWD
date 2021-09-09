@@ -4,8 +4,6 @@
 		<meta charset="utf-8" />
 		<link rel="stylesheet" href="ABWDStyle.css"/>
 		<title>AB Developpeur Web</title>
-		<script>if(Function('/*@cc_on return document.documentMode===10@*/')()){document.documentElement.className+=' ie10';}</script>
-
 	</head>
 	
 	<body> 
@@ -13,6 +11,7 @@
 	
 	<h1>Andermann Boris Web Development</h1>
 	<figure>
+	<img id="paysage" src="Image/paysage.png" alt="paysage"/>
 	<img id="angusPower" src="Image/angusPower.png" alt="angusPower"/><!--Image d'aide sur le bouton power-->
 	<img id="angusBouton1" src="Image/angusBouton1.png" alt="angusBouton1"/> <!--Image d'aide sur sélectionner un bouton-->
 	<img id="angusBouton2" src="Image/angusBouton2.png" alt="angusBouton2"/> <!--Image d'aide sur l'utilisation du bouton-->
@@ -114,17 +113,35 @@
 	<figure id="iconeTwitter">
 	<a href="http://www.twitter.fr"> <img src="Image/iconeTwitter.png" alt="iconeTwitter" title="Twitter"/></a><figcaption>Twitter</figcaption>
 	</figure>
-	</footer>
-	
-	
-	
-	
-	
-
-
+	</footer>	
 	</section>
+	<script type="text/javascript">// Detection de internet explorer et de sa version et appel du script adapté
+		var trident=0;
+		var version=0;
+		var js = document.createElement('script');
+		trident=navigator.userAgent.indexOf("Trident");
+		console.log (trident);
 
-	<script type="text/javascript" src="boutonei.js"></script>
+		if ( trident > 0 ) {
+			version=navigator.userAgent.indexOf("5.0");
+			if ( version > 0 ) {
+				alert("Navigation optimisée pour Edge/Chrome/FireFox/Opera");
+				js.src = "boutonei.js" ;
+			}
+			else {
+				js.src = "boutonei_inf9.js"
+			}
+		}
+		else {
+			js.src = "bouton.js" ;
+		}
+		js.type = "text/javascript";
+		document.body.appendChild(js);
+	</script>
+
+
+
+	
 	</body>
 </html>
 

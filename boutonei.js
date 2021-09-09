@@ -36,6 +36,7 @@
 	function power() {//Fonction permettant l'actionnement du bouton power et d'identifier son état
 		if ( etatPower == 0 ) {//test pour la procédure "Allumage"
         text.scrollTop= bienvenue.offsetTop;
+		doc.scrollTop= angusguitare.offsetTop;
 		document.getElementById('angusPowerSon').play();
 		document.getElementById('boutonPower').style.transform = "rotate(180deg)";
 		document.getElementById('boutonPower').style.opacity = 1;
@@ -289,56 +290,31 @@
 			document.getElementById('halo1').style.opacity="1";	
 			document.getElementById('bouton1').style.transform = "rotate(0deg)";
 			document.getElementById('bruitBouton').play();
-			text.scrollTo({
-							top: intro.offsetTop,
-							behavior: 'smooth',
-							});
-			doc.scrollTo({
-							top: introD.offsetTop,
-							behavior: 'smooth',
-							});				
-			cBom1=cBo1;				
+			text.scrollTop= intro.offsetTop;
+			doc.scrollTop= introD.offsetTop;
 			break;
 		case 1 :
 			document.getElementById('halo1').style.opacity="1";
 			document.getElementById('bouton1').style.transform = "rotate(45deg)";
 			document.getElementById('bruitBouton').play();
-			text.scrollTo({
-							top: pourquoi.offsetTop,
-							behavior: 'smooth',
-							});
-			doc.scrollTo({
-							top: introD.offsetTop,
-							behavior: 'smooth',
-							});			
+			text.scrollTop= pourquoi.offsetTop;
+			doc.scrollTop= introD.offsetTop;		
 			cBom1=cBo1;				
 			break;
 		case 2 :
 			document.getElementById('halo1').style.opacity="1";
 			document.getElementById('bouton1').style.transform = "rotate(180deg)";
 			document.getElementById('bruitBouton').play();
-			text.scrollTo({
-							top: comment.offsetTop,
-							behavior: 'smooth',
-							});
-			doc.scrollTo({
-							top: introD.offsetTop,
-							behavior: 'smooth',
-							});					
+			text.scrollTop= comment.offsetTop;
+			doc.scrollTop= introD.offsetTop;				
 			cBom1=cBo1;		
 			break;
 		case 3 :
 			document.getElementById('halo1').style.opacity="1";
 			document.getElementById('bouton1').style.transform = "rotate(270deg)";
 			document.getElementById('bruitBouton').play();
-			text.scrollTo({
-							top: metier.offsetTop,
-							behavior: 'smooth',
-							});
-			doc.scrollTo({
-							top: introD.offsetTop,
-							behavior: 'smooth',
-							});					
+			text.scrollTop= metier.offsetTop;
+			doc.scrollTop= introD.offsetTop;				
 			cBom1=cBo1;		
 			break;			
 		case 4 :
@@ -376,56 +352,32 @@
 			document.getElementById('halo2').style.opacity="1";	
 			document.getElementById('bouton2').style.transform = "rotate(0deg)";
 			document.getElementById('bruitBouton').play();	
-			text.scrollTo({
-							top: formation.offsetTop,
-							behavior: 'smooth',
-							});
-			doc.scrollTo({
-							top: introD.offsetTop,
-							behavior: 'smooth',
-							});				
+			text.scrollTop= formation.offsetTop;
+			doc.scrollTop= introD.offsetTop;			
 			cBom2=cBo2;
 			break;
 		case 1 :
 			document.getElementById('halo2').style.opacity="1";
 			document.getElementById('bouton2').style.transform = "rotate(45deg)";
 			document.getElementById('bruitBouton').play();	
-			text.scrollTo({
-							top: diplomes.offsetTop,
-							behavior: 'smooth',
-							});
-			doc.scrollTo({
-							top: introD.offsetTop,
-							behavior: 'smooth',
-							});									
+			text.scrollTop= diplomes.offsetTop;
+			doc.scrollTop= introD.offsetTop;								
 			cBom2=cBo2;
 			break;
 		case 2 :
 			document.getElementById('halo2').style.opacity="1";
 			document.getElementById('bouton2').style.transform = "rotate(180deg)";
 			document.getElementById('bruitBouton').play();	
-			text.scrollTo({
-							top: certificas.offsetTop,
-							behavior: 'smooth',
-							});
-			doc.scrollTo({
-							top: angusguitare.offsetTop,
-							behavior: 'smooth',
-							});	
+			text.scrollTop= certificas.offsetTop;
+			doc.scrollTop= angusguitare.offsetTop;
 			cBom2=cBo2;
 			break;
 		case 3 :
 			document.getElementById('halo2').style.opacity="1";
 			document.getElementById('bouton2').style.transform = "rotate(225deg)";
 			document.getElementById('bruitBouton').play();	
-			text.scrollTo({
-							top: solo.offsetTop,
-							behavior: 'smooth',
-							});
-			doc.scrollTo({
-							top: introD.offsetTop,
-							behavior: 'smooth',
-							});	
+			text.scrollTop= solo.offsetTop;
+			doc.scrollTop= introD.offsetTop;
 			cBom2=cBo2;
 			break;			
 		case 4 :
@@ -463,56 +415,32 @@
 			document.getElementById('halo3').style.opacity="1";	
 			document.getElementById('bouton3').style.transform = "rotate(0deg)";
 			document.getElementById('bruitBouton').play();	
-			text.scrollTo({
-							top: competences.offsetTop,
-							behavior: 'smooth',
-							});
-			doc.scrollTo({
-							top: introD.offsetTop,
-							behavior: 'smooth',
-							});									
+			text.scrollTop= competences.offsetTop;
+			doc.scrollTop= introD.offsetTop;								
 			cBom3=cBo3;				
 			break;
 		case 1 :
 			document.getElementById('halo3').style.opacity="1";
 			document.getElementById('bouton3').style.transform = "rotate(45deg)";
 			document.getElementById('bruitBouton').play();	
-			text.scrollTo({
-							top: savoir.offsetTop,
-							behavior: 'smooth',
-							});
-			doc.scrollTo({
-							top: introD.offsetTop,
-							behavior: 'smooth',
-							});									
+			text.scrollTop= savoir.offsetTop;
+			doc.scrollTop= introD.offsetTop;								
 			cBom3=cBo3;						
 			break;
 		case 2 :
 			document.getElementById('halo3').style.opacity="1";
 			document.getElementById('bouton3').style.transform = "rotate(180deg)";
 			document.getElementById('bruitBouton').play();	
-			text.scrollTo({
-							top: savoirfaire.offsetTop,
-							behavior: 'smooth',
-							});
-			doc.scrollTo({
-							top: introD.offsetTop,
-							behavior: 'smooth',
-							});				
+			text.scrollTop= savoirfaire.offsetTop;
+			doc.scrollTop= introD.offsetTop;			
 			cBom3=cBo3;		
 			break;
 		case 3 :
 			document.getElementById('halo3').style.opacity="1";
 			document.getElementById('bouton3').style.transform = "rotate(225deg)";
 			document.getElementById('bruitBouton').play();	
-			text.scrollTo({
-							top: refrain.offsetTop,
-							behavior: 'smooth',
-							});
-			doc.scrollTo({
-							top: introD.offsetTop,
-							behavior: 'smooth',
-							});				
+			text.scrollTop= refrain.offsetTop;
+			doc.scrollTop= introD.offsetTop;			
 			cBom3=cBo3;
 			break;
 		case 4 :
@@ -550,56 +478,32 @@
 			document.getElementById('halo4').style.opacity="1";	
 			document.getElementById('bouton4').style.transform = "rotate(0deg)";
 			document.getElementById('bruitBouton').play();	
-			text.scrollTo({
-							top: contact.offsetTop,
-							behavior: 'smooth',
-							});
-			doc.scrollTo({
-							top: introD.offsetTop,
-							behavior: 'smooth',
-							});									
+			text.scrollTop= contact.offsetTop;
+			doc.scrollTop= introD.offsetTop;							
 			cBom4=cBo4;						
 			break;
 		case 1 :
 			document.getElementById('halo4').style.opacity="1";
 			document.getElementById('bouton4').style.transform = "rotate(90deg)";
 			document.getElementById('bruitBouton').play();	
-			text.scrollTo({
-							top: telechargement.offsetTop,
-							behavior: 'smooth',
-							});
-			doc.scrollTo({
-							top: introD.offsetTop,
-							behavior: 'smooth',
-							});						
+			text.scrollTop= telechargement.offsetTop;
+			doc.scrollTop= introD.offsetTop;					
 			cBom4=cBo4;					
 			break;
 		case 2 :
 			document.getElementById('halo4').style.opacity="1";
 			document.getElementById('bouton4').style.transform = "rotate(180deg)";
 			document.getElementById('bruitBouton').play();	
-			text.scrollTo({
-							top: savoirPlus.offsetTop,
-							behavior: 'smooth',
-							});
-			doc.scrollTo({
-							top: introD.offsetTop,
-							behavior: 'smooth',
-							});				
+			text.scrollTop= savoirPlus.offsetTop;
+			doc.scrollTop= introD.offsetTop;			
 			cBom4=cBo4;	
 			break;
 		case 3 :
 			document.getElementById('halo4').style.opacity="1";
 			document.getElementById('bouton4').style.transform = "rotate(225deg)";
 			document.getElementById('bruitBouton').play();	
-			text.scrollTo({
-							top: final.offsetTop,
-							behavior: 'smooth',
-							});
-			doc.scrollTo({
-							top: introD.offsetTop,
-							behavior: 'smooth',
-							});				
+			text.scrollTop= final.offsetTop;
+			doc.scrollTop= introD.offsetTop;			
 			cBom4=cBo4;	
 			break;			
 		case 4 :
