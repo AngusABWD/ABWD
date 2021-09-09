@@ -19,7 +19,7 @@ figure
 	opacity: 0;
 	z-index: 1;
 }
-#block
+.block
 {
 	position: absolute;
 	top: 0px;
@@ -51,8 +51,7 @@ figure
 
 #bouton1,#bouton2,#bouton3,#bouton4
 {
-	width: 100px;
-	height: 100px;
+
 	z-index: 2;
 	top: 125px;
 }
@@ -132,7 +131,7 @@ figure
 	width:150px;
 	top: 795px;
 	right: 560px;
-	z-index: 2;
+	z-index: 3;
 }
 #haloAngus
 {
@@ -156,7 +155,7 @@ h1
 
 a
 {
-	color: red;
+	color: yellow;
 	text-decoration: none;
 }
 a:hover
@@ -217,9 +216,10 @@ footer
 	padding-left: 160px;
 	padding-right: 100px;
 	padding-top: 3px;
+	z-index: 2;
 }
 
-#angusText
+.angusText
 { 
 	font-family: "Comic Sans MS",serif;
 	text-align: justify;
@@ -330,4 +330,16 @@ h1,h2,h3
 		opacity: 1;
 		z-index: 3;
 	}
+}
+
+.ie9 a, a:hover, a:visited
+{
+	color: transparent;
+}
+
+.ie9 .angusText,.iconeMail, .iconeFacebook, .iconeLinkedin, .iconeTwitter
+
+{
+	float: left;
+	margin-right: 100px;
 }
