@@ -55,8 +55,20 @@ figure
 	z-index: 2;
 	top: 125px;
 }
-
-
+#boutonText1
+{
+	position: absolute;
+	top: 95px;
+	right: -31px;
+	z-index: 1;
+}
+#boutonText2
+{
+	position: absolute;
+	top: 95px;
+	right:-281px;
+	z-index: 1;
+}
 #boutonPower
 {
 	opacity: 0.6;
