@@ -58,8 +58,12 @@
 		document.getElementById('boutonPower').style.transform = "rotate(0deg)";
 		document.getElementById('boutonPower').style.opacity = 0.6;
 		document.getElementById('haloPower').style.opacity = 0;
+		document.getElementById('angusExpress').style.opacity= 0;
 		text.style.opacity= 0;
 		doc.style.opacity= 0;
+		for (i=0;i<shadow.length;i++) {
+			shadow[i].style.textShadow = "0px 0px 0px transparent";
+			}
 		if ( etatAngus == 1 ) {//Conserve l'aide sur le bouton Power
 				document.getElementById('angusPower').style.opacity= 1;
 				document.getElementById('angusBouton1').style.opacity= 0;
@@ -94,15 +98,16 @@
             else {  // Firefox
                 rolled = -40 * event.detail;
             }
-			if ( rolled == 120 && cBo1 > -10 ) { //Condition pour obliger un click avant de scroll
-			cBo1 = cBo1-1;// -1 en position
+			if ( cBo1 > -9 ) {// controle pour ne pas lancer la fonction menu1 si le bouton n'est pas sélectionner
+				if ( rolled == 120 && cBo1 > -10 ) { //Condition pour obliger un click avant de scroll
+				cBo1 = cBo1-1;// -1 en position
+				}
+				if ( rolled == -120 && cBo1 > -10 ) { //Condition pour obliger un click avant de scroll
+				cBo1 = cBo1+1;// +1 en position
+				}
+				helpb= helpb + 1;// pour l'état de l'aide	
+				menu1();// Appel de la fonction affichant la position
 			}
-			if ( rolled == -120 && cBo1 > -10 ) { //Condition pour obliger un click avant de scroll
-			cBo1 = cBo1+1;// +1 en position
-			}
-			helpb= helpb + 1;// pour l'état de l'aide	
-			menu1();// Appel de la fonction affichant la position
-			console.log(cBo1); 
 	}
 	function MouseScroll2 (event) { // Fonction permettant de définir lors d'un scroll si il est positif ou négatif modifiant la variable de position du bouton2
             if ('wheelDelta' in event) {
@@ -111,14 +116,15 @@
             else {  // Firefox
                 rolled = -40 * event.detail;
             }
-			if ( rolled == 120 && cBo2 > -10 ) { //Condition pour obliger un click avant de scroll
-			cBo2 = cBo2-1;// -1 en position
+			if ( cBo2 > -9 ) {// controle pour ne pas lancer la fonction menu2 si le bouton n'est pas sélectionner
+				if ( rolled == 120 && cBo2 > -10 ) { //Condition pour obliger un click avant de scroll
+				cBo2 = cBo2-1;// -1 en position
+				}
+				if ( rolled == -120 && cBo2 > -10 ) { //Condition pour obliger un click avant de scroll
+				cBo2 = cBo2+1;// +1 en position
+				}
+				menu2();// Appel de la fonction affichant la position
 			}
-			if ( rolled == -120 && cBo2 > -10 ) { //Condition pour obliger un click avant de scroll
-			cBo2 = cBo2+1;// +1 en position
-			}
-			menu2();// Appel de la fonction affichant la position
-			console.log(cBo2); 
 	}
 	function MouseScroll3 (event) { // Fonction permettant de définir lors d'un scroll si il est positif ou négatif modifiant la variable de position du bouton3
             if ('wheelDelta' in event) {
@@ -127,14 +133,15 @@
             else {  // Firefox
                 rolled = -40 * event.detail;
             }
-			if ( rolled == 120 && cBo3 > -10 ) { //Condition pour obliger un click avant de scroll
-			cBo3 = cBo3-1;// -1 en position
+			if ( cBo3 > -9 ) {// controle pour ne pas lancer la fonction menu3 si le bouton n'est pas sélectionner
+				if ( rolled == 120 && cBo3 > -10 ) { //Condition pour obliger un click avant de scroll
+				cBo3 = cBo3-1;// -1 en position
+				}
+				if ( rolled == -120 && cBo3 > -10 ) { //Condition pour obliger un click avant de scroll
+				cBo3 = cBo3+1;// +1 en position
+				}
+				menu3();// Appel de la fonction affichant la position
 			}
-			if ( rolled == -120 && cBo3 > -10 ) { //Condition pour obliger un click avant de scroll
-			cBo3 = cBo3+1;// +1 en position
-			}
-			menu3();// Appel de la fonction affichant la position
-			console.log(cBo3); 
 	}
 	function MouseScroll4 (event) { // Fonction permettant de définir lors d'un scroll si il est positif ou négatif modifiant la variable de position du bouton4
             if ('wheelDelta' in event) {
@@ -143,14 +150,15 @@
             else {  // Firefox
                 rolled = -40 * event.detail;
             }
-			if ( rolled == 120 && cBo4 > -10 ) { //Condition pour obliger un click avant de scroll
-			cBo4 = cBo4-1;// -1 en position
+			if ( cBo4 > -9 ) {// controle pour ne pas lancer la fonction menu4 si le bouton n'est pas sélectionner
+				if ( rolled == 120 && cBo4 > -10 ) { //Condition pour obliger un click avant de scroll
+				cBo4 = cBo4-1;// -1 en position
+				}
+				if ( rolled == -120 && cBo4 > -10 ) { //Condition pour obliger un click avant de scroll
+				cBo4 = cBo4+1;// +1 en position
+				}
+				menu4();// Appel de la fonction affichant la position
 			}
-			if ( rolled == -120 && cBo4 > -10 ) { //Condition pour obliger un click avant de scroll
-			cBo4 = cBo4+1;// +1 en position
-			}
-			menu4();// Appel de la fonction affichant la position
-			console.log(cBo4); 
 	}
 	
 	function selection1() { // Fonction permettant de définir lors d'un clic si il est droit/centre  ou gauche modifiant la variable de position du bouton1
@@ -162,10 +170,7 @@
 				}
 				else {
 				cBo1=cBom1-1;// Rappel de la position en mémoire
-				document.getElementById('halo2').style.opacity="0";	//initialisation des 3 autres boutons
-				document.getElementById('halo3').style.opacity="0";	
-				document.getElementById('halo4').style.opacity="0";	
-				cBo2 = -10;
+				cBo2 = -10;//initialisation des 3 autres boutons
 				cBo3 = -10;
 				cBo4 = -10;
 				}
@@ -199,9 +204,6 @@
 				}
 				else {
 				cBo2=cBom2-1;// Rappel de la position en mémoire
-				document.getElementById('halo1').style.opacity="0";	
-				document.getElementById('halo3').style.opacity="0";	
-				document.getElementById('halo4').style.opacity="0";	
 				cBo1 = -10;
 				cBo3 = -10;
 				cBo4 = -10;
@@ -228,9 +230,6 @@
 				}
 				else {
 				cBo3=cBom3-1;// Rappel de la position en mémoire
-				document.getElementById('halo1').style.opacity="0";	
-				document.getElementById('halo2').style.opacity="0";	
-				document.getElementById('halo4').style.opacity="0";	
 				cBo1 = -10;
 				cBo2 = -10;
 				cBo4 = -10;
@@ -257,9 +256,6 @@
 				}
 				else {
 				cBo4=cBom4-1;// Rappel de la position en mémoire
-				document.getElementById('halo1').style.opacity="0";	
-				document.getElementById('halo2').style.opacity="0";	
-				document.getElementById('halo3').style.opacity="0";	
 				cBo1 = -10;
 				cBo2 = -10;
 				cBo3 = -10;
@@ -278,6 +274,7 @@
 	}
 	
 	function menu1() {//Fonction permettant l'affichage avec une rotation et un bruit en fonction de la position du bouton 1
+	document.getElementById('angusExpress').style.opacity= 1;//allumage du menu express
 	if ( helpb == 3 && etatAngus == 1){//desactive l'aide après 2 clicks ou scrolls
 					demandeAide();
 					helpb=1;
@@ -285,6 +282,10 @@
 	if ( etatAngus == 0 ) {//maintient le compteur d'aide à 1 si l'aide est désactivée
 		helpb=1;
 	}
+	document.getElementById('halo2').style.opacity="0";	//initialisation des 3 autres boutons
+	document.getElementById('halo3').style.opacity="0";	
+	document.getElementById('halo4').style.opacity="0";	
+
 	switch ( cBo1 ) {//affiche le bouton et le contenu des textes et documents en fonction de la position
 		case 0 :
 			document.getElementById('halo1').style.opacity="1";	
@@ -295,7 +296,7 @@
 			break;
 		case 1 :
 			document.getElementById('halo1').style.opacity="1";
-			document.getElementById('bouton1').style.transform = "rotate(45deg)";
+			document.getElementById('bouton1').style.transform = "rotate(60deg)";
 			document.getElementById('bruitBouton').play();
 			text.scrollTop= pourquoi.offsetTop;
 			doc.scrollTop= introD.offsetTop;		
@@ -347,6 +348,11 @@
 	}
 		
 	function menu2() {//Fonction permettant l'affichage avec une rotation et un bruit en fonction de la position du bouton 2
+	document.getElementById('angusExpress').style.opacity= 1;//allumage du menu express	
+	document.getElementById('halo1').style.opacity="0";	
+	document.getElementById('halo3').style.opacity="0";	
+	document.getElementById('halo4').style.opacity="0";	
+
 	switch ( cBo2 ) {
 		case 0 :
 			document.getElementById('halo2').style.opacity="1";	
@@ -358,7 +364,7 @@
 			break;
 		case 1 :
 			document.getElementById('halo2').style.opacity="1";
-			document.getElementById('bouton2').style.transform = "rotate(45deg)";
+			document.getElementById('bouton2').style.transform = "rotate(60deg)";
 			document.getElementById('bruitBouton').play();	
 			text.scrollTop= diplomes.offsetTop;
 			doc.scrollTop= introD.offsetTop;								
@@ -374,7 +380,7 @@
 			break;
 		case 3 :
 			document.getElementById('halo2').style.opacity="1";
-			document.getElementById('bouton2').style.transform = "rotate(225deg)";
+			document.getElementById('bouton2').style.transform = "rotate(240deg)";
 			document.getElementById('bruitBouton').play();	
 			text.scrollTop= solo.offsetTop;
 			doc.scrollTop= introD.offsetTop;
@@ -410,6 +416,11 @@
 	}
 	
 	function menu3() {//Fonction permettant l'affichage avec une rotation et un bruit en fonction de la position du bouton 3
+	document.getElementById('angusExpress').style.opacity= 1;//allumage du menu express
+	document.getElementById('halo1').style.opacity="0";	
+	document.getElementById('halo2').style.opacity="0";	
+	document.getElementById('halo4').style.opacity="0";	
+
 	switch ( cBo3 ) {
 		case 0 :
 			document.getElementById('halo3').style.opacity="1";	
@@ -421,7 +432,7 @@
 			break;
 		case 1 :
 			document.getElementById('halo3').style.opacity="1";
-			document.getElementById('bouton3').style.transform = "rotate(45deg)";
+			document.getElementById('bouton3').style.transform = "rotate(60deg)";
 			document.getElementById('bruitBouton').play();	
 			text.scrollTop= savoir.offsetTop;
 			doc.scrollTop= introD.offsetTop;								
@@ -437,7 +448,7 @@
 			break;
 		case 3 :
 			document.getElementById('halo3').style.opacity="1";
-			document.getElementById('bouton3').style.transform = "rotate(225deg)";
+			document.getElementById('bouton3').style.transform = "rotate(240deg)";
 			document.getElementById('bruitBouton').play();	
 			text.scrollTop= refrain.offsetTop;
 			doc.scrollTop= introD.offsetTop;			
@@ -473,6 +484,11 @@
 	}
 	
 	function menu4() {//Fonction permettant l'affichage avec une rotation et un bruit en fonction de la position du bouton4
+	document.getElementById('angusExpress').style.opacity= 1;//allumage du menu express
+	document.getElementById('halo1').style.opacity="0";	
+	document.getElementById('halo2').style.opacity="0";	
+	document.getElementById('halo3').style.opacity="0";	
+	
 	switch ( cBo4 ) {
 		case 0 :
 			document.getElementById('halo4').style.opacity="1";	
@@ -486,7 +502,7 @@
 			document.getElementById('halo4').style.opacity="1";
 			document.getElementById('bouton4').style.transform = "rotate(90deg)";
 			document.getElementById('bruitBouton').play();	
-			text.scrollTop= telechargement.offsetTop;
+			text.scrollTop= savoirPlus.offsetTop;
 			doc.scrollTop= introD.offsetTop;					
 			cBom4=cBo4;					
 			break;
@@ -494,13 +510,13 @@
 			document.getElementById('halo4').style.opacity="1";
 			document.getElementById('bouton4').style.transform = "rotate(180deg)";
 			document.getElementById('bruitBouton').play();	
-			text.scrollTop= savoirPlus.offsetTop;
+			text.scrollTop= telechargement.offsetTop;
 			doc.scrollTop= introD.offsetTop;			
 			cBom4=cBo4;	
 			break;
 		case 3 :
 			document.getElementById('halo4').style.opacity="1";
-			document.getElementById('bouton4').style.transform = "rotate(225deg)";
+			document.getElementById('bouton4').style.transform = "rotate(240deg)";
 			document.getElementById('bruitBouton').play();	
 			text.scrollTop= final.offsetTop;
 			doc.scrollTop= introD.offsetTop;			
@@ -630,3 +646,20 @@
 			}
 		console.log(helpb);	
 	}
+	
+document.onclick=function(event){//efface le menu déroulant pour tout autre click que le bouton angus Express
+    if (event.target.className !== 'EA') {
+        var menubtn=document.getElementsByClassName('angusExpressMenu');
+        for (i=0; i< menubtn.length; i++) {
+            var OpenMenu= menubtn[i];
+            if ( OpenMenu.classList.contains ('show')) {
+                OpenMenu.classList.remove('show');
+
+            }
+        }
+    }
+}
+
+function menuDeroulant() {// active/ désactive le menu déroulant
+    document.getElementById('angusExpressBtn').classList.toggle("show");
+}

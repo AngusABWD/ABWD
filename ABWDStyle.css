@@ -13,11 +13,10 @@ figure
 }
 #paysage 
 {
+	display: none;
 	position: absolute;
 	top: 0px;
-	left: -950px;
-	opacity: 0;
-	z-index: 1;
+	left: -950px;	
 }
 .block
 {
@@ -29,46 +28,141 @@ figure
 }
 #bouton1
 {
-	position: absolute;
 	right:0px;
 }
 
 #bouton2
 {
-	position: absolute;
 	left:150px;
 }
 #bouton3
 {
-	position: absolute;
 	left:400px;
 }
 #bouton4
 {
-	position: absolute;
 	left:650px;
 }
 
 #bouton1,#bouton2,#bouton3,#bouton4
 {
-
+	position: absolute;
 	z-index: 2;
-	top: 125px;
+	top: 123px;
 }
 #boutonText1
 {
-	position: absolute;
-	top: 95px;
-	right: -31px;
-	z-index: 1;
+	right: -83px;
 }
 #boutonText2
 {
+	right:-326px;
+}
+#boutonText3
+{
+	right:-558px;
+}
+#boutonText4
+{
+	right:-854px;
+}
+#boutonText1 ,#boutonText2 ,#boutonText3 ,#boutonText4
+{
 	position: absolute;
 	top: 95px;
-	right:-281px;
 	z-index: 1;
 }
+
+
+.bText
+{
+	position: absolute;
+	font-family: 'segoe-ui-semibold-regular', sans-serif;
+	font-size: 14px;
+	font-weight: bold;
+	color: black;
+}
+#hm1
+{
+	top: 79px;
+	right: 26px;
+}
+#hm2
+{
+	top: 120px;
+	right: -88px;
+}
+#hm3
+{
+	top: 220px;
+	right: 13px;
+}
+#hm4
+{
+	top: 150px;
+	right: 116px;
+}
+#hm5
+{
+	top: 79px;
+	right: -242px;
+}
+#hm6
+{
+	top: 120px;
+	right: -335px;
+}
+#hm7
+{
+	top: 220px;
+	right: -250px;
+}
+#hm8
+{
+	top: 186px;
+	right: -143px;
+}
+#hm9
+{
+	top: 79px;
+	right: -502px;
+}
+#hm10
+{
+	top: 120px;
+	right: -565px;
+}
+#hm11
+{
+	top: 220px;
+	right: -503px;
+}
+#hm12
+{
+	top: 186px;
+	right: -392px;
+}
+#hm13
+{
+	top: 79px;
+	right: -732px;
+}
+#hm14
+{
+	top: 153px;
+	right: -861px;
+}
+#hm15
+{
+	top: 220px;
+	right: -775px;
+}
+#hm16
+{
+	top: 186px;
+	right: -646px;
+}
+
 #boutonPower
 {
 	opacity: 0.6;
@@ -79,30 +173,27 @@ figure
 
 }
 #halo1
-{
-	position: absolute;
+{	
 	right:0px;
 }
 #halo2
 {
-	position: absolute;
 	left:150px;
 }
 #halo3
 {
-	position: absolute;
 	left:400px;
 }
 #halo4
 {
-	position: absolute;
 	left:650px;
 }
 	
 #halo1,#halo2,#halo3,#halo4
 {
+	position: absolute;
 	opacity: 0;
-	top:125px;
+	top: 123px;
 	z-index: 1;
 	
 }
@@ -116,26 +207,29 @@ figure
 }
 #angusPower
 {
-	position: absolute;
 	right: 280px;
-	opacity: 0;
-	z-index:1;
 }
 #angusBouton1
 {
-	position: absolute;
 	top: 80px;
 	right: 110px;
-	opacity: 0;
-	z-index:1;
 }
 #angusBouton2
-{
-	position: absolute;
+{	
 	top: 80px;
 	right: 110px;
+}
+#angusBouton3
+{
+	top: 410px;
+	left: 340px;
+	opacity: 1;	
+}
+#angusPower,#angusBouton1,#angusBouton2,#haloAngus,#angusBouton3
+{
+	position: absolute;
 	opacity: 0;
-	z-index:1;
+	z-index:2;
 }	
 #angus_help
 {
@@ -145,16 +239,52 @@ figure
 	right: 560px;
 	z-index: 3;
 }
-#haloAngus
+#angusExpress
 {
 	position: absolute;
+	z-index: 3;
+	left: 275px;
+	top: 720px;
 	opacity: 0;
+}
+.angusExpressMenu
+{
+ 	display: none;
+ 	position: absolute;
+	background-color: black;
+	border: solid #E3C880 2px;
+	top: 347px;
+	left: 240px;
+	z-index: 3;
+	border-radius: 10px;
+}
+.angusExpressMenu input
+{
+	border-radius: 8px;
+	color: black;
+	background-color: #E3C880;
+	border: solid black 2px;
+	padding: 2px;
+	font-family: 'segoe-ui-semibold-regular', sans-serif;
+	font-size: 13px;
+	font-weight: bold;
+	display: block;
+	width: 100%;
+}
+.angusExpressMenu input:hover
+{
+	text-shadow: 0px 0px 4px red;
+}
+.show
+{
+	display: block;
+}
+#haloAngus
+{
 	top: 800px;
 	right: 560px;
 	width:150px;
-	z-index: 1;
 }
-
 audio {
 	display: none;
 }
@@ -196,7 +326,6 @@ a:visited
 	word-wrap: break-word;
 	
 }
-
 #doc
 {
 	display: inline-block;
@@ -250,13 +379,19 @@ figcaption
 	position: relative;
 	left: 12%;
 }
-#angusguitare,#introD
+.docimage
 {
 	position: relative;
 	height: 400px;
 	left: 10%;
 	padding-bottom: 30px;
 	padding-top: 20px;
+}
+#hm1d
+{
+	width: 400px;
+	height: auto;
+	left: 7%;
 }
 h1,h2,h3
 {
@@ -337,10 +472,10 @@ h1,h2,h3
 }
 @media all and (max-device-width: 480px )
 {	
-#paysage
+	#paysage
 	{
-		opacity: 1;
-		z-index: 3;
+		display: block;
+		z-index: 4;
 	}
 }
 
