@@ -387,12 +387,16 @@ figcaption
 	padding-bottom: 30px;
 	padding-top: 20px;
 }
+
 #hm1d
 {
 	width: 400px;
 	height: auto;
+	padding-bottom: 80px;
+	padding-top: 100px;	
 	left: 7%;
 }
+
 h1,h2,h3
 {
 		color: #E3C880;
