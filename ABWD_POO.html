@@ -196,7 +196,7 @@
     var cBom2=0;// Variable de mémoire de la position du bouton 2
     var cBom3=0;// Variable de mémoire de la position du bouton 3
     var cBom4=0;// Variable de mémoire de la position du bouton 4
-    var cBoG=0;
+    var cBoG=0;// Variable de retour pour l'objet Selection
     var rolled = 0;// Initialisation de la variable qui quatifiera le scroll souris
     var etatPower=0;//Permet de savoir si Power est on ou off
     var etatAngus=0;//Permet de savoir si Angus est utilliser
@@ -380,88 +380,37 @@
         }
     }
     var selection_1 = new Selection(menu1);
+    var selection_2 = new Selection(menu2);
+    var selection_3 = new Selection(menu3);
+    var selection_4 = new Selection(menu4);
 
     function selection1() { // Fonction permettant de définir lors d'un clic si il est droit/centre  ou gauche modifiant la variable de position du bouton1           
         cBo2 = -10;//Initialisation des 3 autres boutons
         cBo3 = -10;
         cBo4 = -10;
-        selection_1.selectionner(cBo1, cBom1);
-    
+        selection_1.selectionner(cBo1, cBom1);   
     }
       
     function selection2() { // Fonction permettant de définir lors d'un clic si il est droit/centre  ou gauche modifiant la variable de position du bouton2
-        if ( etatPower == 1 ) {	
-            let mouseClick = window.event;
-            if ( cBo2 < -9 ) {// Initialisation de la position en forçant un clic 
-                if ( mouseClick.button == 2 ) {// Initialisation de la position en forçant un clic gauche
-                    cBo2=-10;
-                }
-                else {
-                cBo2=cBom2-1;// Rappel de la position en mémoire
-                cBo1 = -10;
-                cBo3 = -10;
-                cBo4 = -10;
-                }
-            }
-            if ( mouseClick.button == 2 ) {// Click gauche
-                cBo2 = cBo2-1;// -1 en position				
-            }
-            else {
-                cBo2 = cBo2+1;// +1 en position
-            }
-            menu2();// Appel de la fonction affichant la position
-        }
-        
+        cBo1 = -10;
+        cBo3 = -10;
+        cBo4 = -10;
+        selection_2.selectionner(cBo2, cBom2);       
     }
     
     function selection3() { // Fonction permettant de définir lors d'un clic si il est droit/centre  ou gauche modifiant la variable de position du bouton3
-        if ( etatPower == 1 ) {	
-            let mouseClick = window.event;
-            if ( cBo3 < -9 ) {// Initialisation de la position en forçant un clic 
-                if ( mouseClick.button == 2 ) {// Initialisation de la position en forçant un clic gauche
-                    cBo3=-10;
-                }
-                else {
-                cBo3=cBom3-1;// Rappel de la position en mémoire
-                cBo1 = -10;
-                cBo2 = -10;
-                cBo4 = -10;
-                }
-            }
-            if ( mouseClick.button == 2 ) {// Click gauche
-                cBo3 = cBo3-1;// -1 en position
-            }
-            else {
-                cBo3 = cBo3+1;// +1 en position
-            }
-            menu3();// Appel de la fonction affichant la position
-        }
-        
+        cBo1 = -10;
+        cBo2 = -10;
+        cBo4 = -10;
+        selection_3.selectionner(cBo3, cBom3);      
     }
     
     function selection4() { // Fonction permettant de définir lors d'un clic si il est droit/centre  ou gauche modifiant la variable de position du bouton4
-        if ( etatPower == 1 ) {	
-            let mouseClick = window.event;
-            if ( cBo4 < -9 ) {// Initialisation de la position en forçant un clic 
-                if ( mouseClick.button == 2 ) {// Initialisation de la position en forçant un clic gauche
-                    cBo4=-10;
-                }
-                else {
-                cBo4=cBom4-1;// Rappel de la position en mémoire
-                cBo1 = -10;
-                cBo2 = -10;
-                cBo3 = -10;
-                }
-            }
-            if ( mouseClick.button == 2 ) {// Click gauche
-                cBo4 = cBo4-1;// -1 en position
-            }
-            else {
-                cBo4 = cBo4+1;// +1 en position
-            }
-            menu4();// Appel de la fonction affichant la position
-        }
-        
+        cBo1 = -10;
+        cBo2 = -10;
+        cBo3 = -10; 
+        selection_4.selectionner(cBo4, cBom4);      
+
     }
     
     function menu1() {//Fonction permettant l'affichage avec une rotation et un bruit en fonction de la position du bouton 1
@@ -588,7 +537,7 @@
         document.getElementById('halo3').style.opacity="0";	
         document.getElementById('halo4').style.opacity="0";	
     }
-    
+    cBo2=cBoG;
     switch ( cBo2 ) {
         case 0 :
             document.getElementById('halo2').style.opacity="1";	
@@ -655,6 +604,7 @@
             document.getElementById('bouton2').style.transform = "rotate(0deg)";
             document.getElementById('bruitBouton').play();	
             cBo2 = 0;// fin de boucle pour case n = nombre de positions possibles
+            cBoG = 0;
             cBom2=cBo2;
             menu2();// Rappel de la fonction pour l'affichage du texte après la remise à 0
             break;
@@ -663,6 +613,7 @@
             document.getElementById('bouton2').style.transform = "rotate(0deg)";
             document.getElementById('bruitBouton').play();	
             cBo2 = 0;
+            cBoG = 0;
             cBom2=cBo2;
             menu2();// Rappel de la fonction pour l'affichage du texte après la remise à 0
             break;	
@@ -671,6 +622,7 @@
             document.getElementById('bouton2').style.transform = "rotate(225deg)";
             document.getElementById('bruitBouton').play();	
             cBo2=3;
+            cBoG=3;
             cBom2=cBo2;
             menu2();// Rappel de la fonction pour l'affichage du texte après la remise à 0
             break;
@@ -690,7 +642,7 @@
         document.getElementById('halo2').style.opacity="0";	
         document.getElementById('halo4').style.opacity="0";	
     }
-    
+    cBo3 = cBoG;
      switch ( cBo3 ) {
         case 0 :
             document.getElementById('halo3').style.opacity="1";	
@@ -757,6 +709,7 @@
             document.getElementById('bouton3').style.transform = "rotate(0deg)";
             document.getElementById('bruitBouton').play();	
             cBo3 = 0;// fin de boucle pour case n = nombre de positions possibles
+            cBoG = 0;
             cBom3=cBo3;		
             menu3();// Rappel de la fonction pour l'affichage du texte après la remise à 0
             break;
@@ -765,6 +718,7 @@
             document.getElementById('bouton3').style.transform = "rotate(0deg)";
             document.getElementById('bruitBouton').play();	
             cBo3 = 0;
+            cBoG = 0;
             cBom3=cBo3;
             menu3();// Rappel de la fonction pour l'affichage du texte après la remise à 0
             break;	
@@ -773,6 +727,7 @@
             document.getElementById('bouton3').style.transform = "rotate(225deg)";
             document.getElementById('bruitBouton').play();	
             cBo3=3;
+            cBoG=3;
             cBom3=cBo3;	
             menu3();// Rappel de la fonction pour l'affichage du texte après la remise à 0
             break;
@@ -792,7 +747,7 @@
         document.getElementById('halo2').style.opacity="0";	
         document.getElementById('halo3').style.opacity="0";	
     }
-    
+    cBo4=cBoG;
     switch ( cBo4 ) {
         case 0 :
             document.getElementById('halo4').style.opacity="1";	
@@ -859,6 +814,7 @@
             document.getElementById('bouton4').style.transform = "rotate(0deg)";
             document.getElementById('bruitBouton').play();	
             cBo4 = 0;// fin de boucle pour case n = nombre de positions possibles
+            cBoG = 0;
             cBom4=cBo4;	
             menu4();// Rappel de la fonction pour l'affichage du texte après la remise à 0
             break;
@@ -867,6 +823,7 @@
             document.getElementById('bouton4').style.transform = "rotate(0deg)";
             document.getElementById('bruitBouton').play();	
             cBo4 = 0;
+            cBoG = 0;
             cBom4=cBo4;	
             menu4();// Rappel de la fonction pour l'affichage du texte après la remise à 0
             break;	
@@ -875,6 +832,7 @@
             document.getElementById('bouton4').style.transform = "rotate(225deg)";
             document.getElementById('bruitBouton').play();	
             cBo4=3;
+            cBoG=3;
             cBom4=cBo4;	
             menu4();// Rappel de la fonction pour l'affichage du texte après la remise à 0
             break;
