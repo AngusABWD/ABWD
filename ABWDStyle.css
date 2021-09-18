@@ -82,82 +82,82 @@ figure
 	font-weight: bold;
 	color: black;
 }
-#hm1
+#hm11
 {
 	top: 79px;
 	right: 26px;
 }
-#hm2
+#hm12
 {
 	top: 120px;
 	right: -88px;
 }
-#hm3
+#hm13
 {
 	top: 220px;
 	right: 13px;
 }
-#hm4
+#hm14
 {
 	top: 150px;
 	right: 116px;
 }
-#hm5
+#hm21
 {
 	top: 79px;
 	right: -242px;
 }
-#hm6
+#hm22
 {
 	top: 120px;
 	right: -335px;
 }
-#hm7
+#hm23
 {
 	top: 220px;
 	right: -250px;
 }
-#hm8
+#hm24
 {
 	top: 186px;
 	right: -143px;
 }
-#hm9
+#hm31
 {
 	top: 79px;
 	right: -502px;
 }
-#hm10
+#hm32
 {
 	top: 120px;
 	right: -565px;
 }
-#hm11
+#hm33
 {
 	top: 220px;
 	right: -503px;
 }
-#hm12
+#hm34
 {
 	top: 186px;
 	right: -392px;
 }
-#hm13
+#hm41
 {
 	top: 79px;
 	right: -732px;
 }
-#hm14
+#hm42
 {
 	top: 153px;
 	right: -861px;
 }
-#hm15
+#hm43
 {
 	top: 220px;
 	right: -775px;
 }
-#hm16
+#hm44
 {
 	top: 186px;
 	right: -646px;
@@ -205,17 +205,12 @@ figure
 	right:746px;
 	z-index: 1;
 }
-#angusPower
+#angusBouton0
 {
 	right: 280px;
 }
-#angusBouton1
+#angusBouton1, #angusBouton2
 {
-	top: 80px;
-	right: 110px;
-}
-#angusBouton2
-{	
 	top: 80px;
 	right: 110px;
 }
@@ -225,7 +220,7 @@ figure
 	left: 340px;
 	opacity: 1;	
 }
-#angusPower,#angusBouton1,#angusBouton2,#haloAngus,#angusBouton3
+#angusBouton0,#angusBouton1,#angusBouton2,#haloAngus,#angusBouton3
 {
 	position: absolute;
 	opacity: 0;
@@ -388,7 +383,7 @@ figcaption
 	padding-top: 20px;
 }
 
-#hm1d
+#hm11d
 {
 	width: 400px;
 	height: auto;
