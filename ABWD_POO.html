@@ -13,10 +13,10 @@
 	<h1>Andermann Boris Web Development</h1>
 	<figure>
 	<img id="paysage" src="Image/paysage.png" alt="paysage"/>
-	<img id="angusBouton0" src="Image/angusPower.png" alt="angusPower"/><!--Image d'aide sur le bouton power-->
-	<img id="angusBouton1" src="Image/angusBouton1.png" alt="angusBouton1"/> <!--Image d'aide sur sélectionner un bouton-->
-	<img id="angusBouton2" src="Image/angusBouton2.png" alt="angusBouton2"/> <!--Image d'aide sur l'utilisation du bouton-->
-	<img id="angusBouton3" src="Image/angusBouton3.png" alt="angusBouton3"/> <!--Image d'aide sur l'utilisation du bouton Express-->
+	<img id="angusBouton1" src="Image/angusPower.png" alt="angusPower"/><!--Image d'aide sur le bouton power-->
+	<img id="angusBouton2" src="Image/angusBouton1.png" alt="angusBouton1"/> <!--Image d'aide sur sélectionner un bouton-->
+	<img id="angusBouton3" src="Image/angusBouton2.png" alt="angusBouton2"/> <!--Image d'aide sur l'utilisation du bouton-->
+	<img id="angusBouton4" src="Image/angusBouton3.png" alt="angusBouton3"/> <!--Image d'aide sur l'utilisation du bouton Express-->
 	<div class="menuDeroulant">
 		<div class="angusExpressMenu" id=angusExpressBtn>
 			<input type="button" value="Intro" onclick="menu1(cBoG=0)" />
@@ -158,7 +158,7 @@
 	<a href="mailto:angusabwd@gmail.com"> <img src="Image/Mail-icon7.png" alt="iconeMail" title="Envoyer un mail"/></a><figcaption>Mail</figcaption>
 	</figure>
 	<figure>
-	<a href="https://www.facebook.com/profile.php?id=100072865561758"> <img src="Image/iconeFacebook.png" alt="iconeFacebook" title="Facebook"/></a><figcaption>Facebook</figcaption>
+	<a href="https://github.com/AngusABWD"> <img src="Image/iconeGithub.png" alt="iconeGithub" title="Github"/></a><figcaption>Github</figcaption>
 	</figure>
 	<figure>
 	<a href="https://www.linkedin.com/in/boris-andermann-122086219/"> <img src="Image/iconeLinkedin.png" alt="iconeLinkedin" title="Linkedin"/></a><figcaption>Linkedin</figcaption>
@@ -170,28 +170,11 @@
 	</section>
     <script>
  
-    bouton1.oncontextmenu = function() { // Suppression du menu droit pour bouton, qui permettra un deffilement bouton droit/gauche
-    return false;
-    }
-    bouton2.oncontextmenu = function() { // Suppression du menu droit pour bouton, qui permettra un deffilement bouton droit/gauche
-    return false;
-    }
-    bouton3.oncontextmenu = function() { // Suppression du menu droit pour bouton, qui permettra un deffilement bouton droit/gauche
-    return false;
-    }
-    bouton4.oncontextmenu = function() { // Suppression du menu droit pour bouton, qui permettra un deffilement bouton droit/gauche
-    return false;
-    }
-    
+    bouton1.oncontextmenu = bouton2.oncontextmenu = bouton3.oncontextmenu = bouton4.oncontextmenu =function() { // Suppression du menu droit pour bouton, qui permettra un deffilement bouton droit/gauche
+    return false;}
     var shadow=document.getElementsByClassName('bText');//variable permettant de reinitialiser le text-shadow
-    var cBo1=-10;// Variable de départ de la position de sélection supérieur au nombre de positions
-    var cBo2=-10;// Variable de départ de la position de sélection supérieur au nombre de positions
-    var cBo3=-10;// Variable de départ de la position de sélection supérieur au nombre de positions
-    var cBo4=-10;// Variable de départ de la position de sélection supérieur au nombre de positions
-    var cBom1=0;// Variable de mémoire de la position du bouton 1
-    var cBom2=0;// Variable de mémoire de la position du bouton 2
-    var cBom3=0;// Variable de mémoire de la position du bouton 3
-    var cBom4=0;// Variable de mémoire de la position du bouton 4
+    var cBo1=cBo2=cBo3=cBo4=-10;// Variable de départ de la position de sélection supérieur au nombre de positions
+    var cBom1=cBom2=cBom3=cBom4=0;// Variable de mémoire de la position du bouton 1
     var cBoG=0;// Variable de retour pour l'objet Selection
     var cBomG=0;// Variable de retour pour la mémoire
     var rolled = 0;// Initialisation de la variable qui quatifiera le scroll souris
@@ -199,6 +182,28 @@
     var etatAngus=0;//Permet de savoir si Angus est utilliser
     var helpb=0;//Permet de savoir si Angus vous a déja expliquer la sélection du bouton
     var opacite=0;//variable permettant de faire des "fondu"
+
+    class Opacite {// Définition d'un Objet permettant d'opacifier une série d'elements
+        opacifier(num, element) {//opacifier tous les elements determinés sauf celui choisi
+            let tab = [1,2,3,4];// création d'un tableau pour la boucle permettant de les désactiver 
+            this.num = num;
+            this.elem = element;
+            if ( this.num == 0){// Permet si l'on souhaite d'effacer une liste complète 
+                for (i=0; i < tab.length; i++) {
+                document.getElementById(this.elem + tab[i]).style.opacity="0";
+                }
+            }
+            else {
+                document.getElementById(this.elem + this.num).style.opacity="1";
+                tab.splice( this.num-1, 1);// retrait de celui qui doit rester actif
+                for (i=0; i < tab.length; i++) {// boucle qui désactive les autres Halo
+                document.getElementById(this.elem + tab[i]).style.opacity="0";
+                }
+            }
+        }
+    }
+
+    var Opa = new Opacite();
     
     function power() {//Fonction permettant l'actionnement du bouton power et d'identifier son état
         if ( etatPower == 0 ) {//test pour la procédure "Allumage"
@@ -215,17 +220,11 @@
         fade();
         etatPower= 1;
             if ( etatAngus == 1 ) {//Bascule sur l'aide Bouton après l'allumage
-                document.getElementById('angusBouton0').style.opacity= 0;
-                document.getElementById('angusBouton1').style.opacity= 1;
-                document.getElementById('angusBouton2').style.opacity= 0;
-                document.getElementById('angusBouton3').style.opacity=0;
+            Opa.opacifier(2, "angusBouton");
             }
         }
         else {// Eteindre
-        document.getElementById('halo1').style.opacity='0';
-        document.getElementById('halo2').style.opacity='0';
-        document.getElementById('halo3').style.opacity='0';
-        document.getElementById('halo4').style.opacity='0';
+        Opa.opacifier(0, "halo");
         document.getElementById('bruitBouton').play();
         document.getElementById('boutonPower').style.transform = "rotate(0deg)";
         document.getElementById('boutonPower').style.opacity = 0.6;
@@ -237,16 +236,10 @@
             shadow[i].style.textShadow = "0px 0px 0px transparent";
             }
         if ( etatAngus == 1 ) {//Conserve l'aide sur le bouton Power
-                document.getElementById('angusBouton0').style.opacity= 1;
-                document.getElementById('angusBouton1').style.opacity= 0;
-                document.getElementById('angusBouton2').style.opacity= 0;
-                document.getElementById('angusBouton3').style.opacity=0;
+            Opa.opacifier(1, "angusBouton");
             }		
         etatPower= 0;
-        cBo1=-10;
-        cBo2=-10;
-        cBo3=-10;
-        cBo4=-10;
+        cBo1=cBo2=cBo3=cBo4=-10;
         helpb=0;
         opacite=0;
         }
@@ -289,10 +282,10 @@
             }
         }
     }
-        var mouseScroll1 = new MouseScroll(menu1);
-        var mouseScroll2 = new MouseScroll(menu2);
-        var mouseScroll3 = new MouseScroll(menu3);
-        var mouseScroll4 = new MouseScroll(menu4);
+    var mouseScroll1 = new MouseScroll(menu1);
+    var mouseScroll2 = new MouseScroll(menu2);
+    var mouseScroll3 = new MouseScroll(menu3);
+    var mouseScroll4 = new MouseScroll(menu4);
 
     function MouseScroll1 (event) { // Fonction permettant de définir le scroll du bouton1
         mouseScroll1.scroller(event, cBo1);
@@ -313,6 +306,7 @@
         this.menu = menu;
         }
         selectionner(cBo, cBom) {
+        cBo1=cBo2=cBo3=cBo4=-10; //initialisation des boutons
         this.cBo = cBo;
         this.cBom = cBom;
         if ( etatPower == 1 ) {	//Test si l'ampli est sur "on"
@@ -326,61 +320,49 @@
                 }
             }
             
-            if ( mouseClick.button == 2 ) {// Click gauche
-                this.cBo = this.cBo-1;// -1 en position				
+            if ( mouseClick.button == 2 && this.cBo != -10 ) {// Click gauche
+                this.cBo = this.cBo-1;// -1 en position	
+                cBoG=this.cBo;
+                this.menu(cBoG);// Appel de la fonction affichant la position  			
             }
             else {
+                if ( this.cBo == -10){
+                    this.cBo=-10;
+                }
+                else {
                 this.cBo = this.cBo+1;// +1 en position
+                cBoG=this.cBo;
+                this.menu(cBoG);// Appel de la fonction affichant la position  
+                }
             }	
             helpb= helpb + 1;// incrémente l'état de l'aide à chaque click
             if ( etatAngus == 1 && helpb == 1) {//Permet d'afficher la suite de l'aide
-                document.getElementById('angusBouton0').style.opacity= 0;
-                document.getElementById('angusBouton1').style.opacity= 0;
-                document.getElementById('angusBouton2').style.opacity= 1;
-                document.getElementById('angusBouton3').style.opacity=0;
+                Opa.opacifier(3, "angusBouton");
             }
             if ( etatAngus == 1 && helpb == 2) {//Permet d'afficher la suite de l'aide
-                document.getElementById('angusBouton0').style.opacity= 0;
-                document.getElementById('angusBouton1').style.opacity= 0;
-                document.getElementById('angusBouton2').style.opacity= 0;
-                document.getElementById('angusBouton3').style.opacity=1;
-            }
-        
-            cBoG=this.cBo;
-            this.menu(cBoG);// Appel de la fonction affichant la position                 
+                Opa.opacifier(4, "angusBouton");
+            }              
         }	
         }
     }
-        var selection_1 = new Selection(menu1);
-        var selection_2 = new Selection(menu2);
-        var selection_3 = new Selection(menu3);
-        var selection_4 = new Selection(menu4);
+    var selection_1 = new Selection(menu1);
+    var selection_2 = new Selection(menu2);
+    var selection_3 = new Selection(menu3);
+    var selection_4 = new Selection(menu4);
 
     function selection1() { // Fonction permettant de definir la selection par bouton du bouton1           
-        cBo2 = -10;//Initialisation des 3 autres boutons
-        cBo3 = -10;
-        cBo4 = -10;
         selection_1.selectionner(cBo1, cBom1);   
     }
       
     function selection2() { 
-        cBo1 = -10;
-        cBo3 = -10;
-        cBo4 = -10;
         selection_2.selectionner(cBo2, cBom2);       
     }
     
     function selection3() { 
-        cBo1 = -10;
-        cBo2 = -10;
-        cBo4 = -10;
         selection_3.selectionner(cBo3, cBom3);      
     }
     
     function selection4() { 
-        cBo1 = -10;
-        cBo2 = -10;
-        cBo3 = -10; 
         selection_4.selectionner(cBo4, cBom4);      
 
     }
@@ -393,15 +375,10 @@
         this.cBom = cBom;
         }
         menuf(cBo, cBom) {
-        let tab_halo = [1,2,3,4],// création d'un tableau des Halo pour la boucle permettant de les désactiver
-        removedItem = tab_halo.splice( this.num-1, 1);// retrait de celui qui doit rester actif
-
         this.cBo = cBo;
         let mouseClick = window.event;
         if ( mouseClick.button != 2 ) {
-            for (i=0; i < tab_halo.length; i++) {// boucle qui désactive les autres Halo
-                document.getElementById('halo' + tab_halo[i]).style.opacity="0";
-            }
+            Opa.opacifier(this.num, "halo");
         }
         document.getElementById('angusExpress').style.opacity= 1;//allumage du menu express
         if ( helpb == 3 && etatAngus == 1){//desactive l'aide après 2 clicks ou scrolls
@@ -411,16 +388,16 @@
         if ( etatAngus == 0 ) {//maintient le compteur d'aide à 1 si l'aide est désactivée
         helpb=1;
         }
-        if ( mouseClick.button !=2) {
-            for (i=0;i<shadow.length;i++) {//raz des text-shadows 
+        if ( document.getElementById("halo" + this.num).style.opacity == 1 ) {// Si le bouton est actif
+            for (i=0;i<shadow.length;i++) {//raz des text-shadows au changement d'état
             shadow[i].style.textShadow = "0px 0px 0px transparent";
             }
-        }    
+        }
+        document.getElementById('bruitBouton').play();
+            
         switch ( this.cBo ) {//affiche le bouton et le contenu des textes et documents en fonction de la position
         case 0 :
-            document.getElementById("halo"+this.num).style.opacity="1";	
-            document.getElementById("bouton"+this.num).style.transform = "rotate(0deg)";
-            document.getElementById('bruitBouton').play();
+            document.getElementById("bouton"+this.num).style.transform = "rotate(0deg)";           
             document.getElementById('hm'+ this.num + "1").style.textShadow = "0px 0px 4px red";
             text.scrollTo({
                             top: document.getElementById('doc'+ this.num + "1").offsetTop,
@@ -433,14 +410,12 @@
             cBomG= this.cBo;			
             break;
         case 1 :
-            document.getElementById("halo"+this.num).style.opacity="1";
             if ( this.cBo == cBo4) {
                 document.getElementById("bouton"+this.num).style.transform = "rotate(90deg)";
             }
             else {
             document.getElementById("bouton"+this.num).style.transform = "rotate(60deg)";
             }
-            document.getElementById('bruitBouton').play();
             document.getElementById('hm'+ this.num + "2").style.textShadow = "0px 0px 4px red";	
             text.scrollTo({
                             top: document.getElementById('doc'+ this.num + "2").offsetTop,
@@ -453,9 +428,7 @@
             cBomG= this.cBo;			
             break;
         case 2 :
-            document.getElementById("halo"+this.num).style.opacity="1";
             document.getElementById("bouton"+this.num).style.transform = "rotate(180deg)";
-            document.getElementById('bruitBouton').play();
             document.getElementById('hm'+ this.num + "3").style.textShadow = "0px 0px 4px red";	
             text.scrollTo({
                             top: document.getElementById('doc'+ this.num + "3").offsetTop,
@@ -468,14 +441,12 @@
             cBomG= this.cBo;	
             break;
         case 3 :
-            document.getElementById("halo"+this.num).style.opacity="1";
             if ( this.cBo == cBo1) {
                 document.getElementById("bouton"+this.num).style.transform = "rotate(270deg)";
             }
             else {
             document.getElementById("bouton"+this.num).style.transform = "rotate(240deg)";
             }
-            document.getElementById('bruitBouton').play();
             document.getElementById('hm'+ this.num + "4").style.textShadow = "0px 0px 4px red";	
             text.scrollTo({
                             top: document.getElementById('doc'+ this.num + "4").offsetTop,
@@ -488,32 +459,26 @@
             cBomG= this.cBo;	
             break;			
         case 4 :
-            document.getElementById("halo"+this.num).style.opacity="1";	
             document.getElementById("bouton"+this.num).style.transform = "rotate(0deg)";
-            document.getElementById('bruitBouton').play();	
             this.cBo = 0;
             cBoG = 0;// fin de boucle pour case n = nombre de positions possible
             cBomG= this.cBo;		
             this.menu();// Rappel de la fonction pour l'affichage du texte après la remise à 0
             break;
-        case -2 : // en cas de click gauche à l'initialisation
-            document.getElementById("halo"+this.num).style.opacity="1";		
+        case -2 : // en cas de click gauche à l'initialisation	
             document.getElementById("bouton"+this.num).style.transform = "rotate(0deg)";
-            document.getElementById('bruitBouton').play();
             this.cBo = 0;
             cBoG = 0;
             cBomG= this.cBo;	
             this.menu();// Rappel de la fonction pour l'affichage du texte après la remise à 0
             break;	
         case -1 :// en cas de clic gauche à la position initiale 0
-            document.getElementById("halo"+this.num).style.opacity="1";
             if ( this.cBo == cBo1) {
                 document.getElementById("bouton"+this.num).style.transform = "rotate(270deg)";
             }
             else {
             document.getElementById("bouton"+this.num).style.transform = "rotate(240deg)";
             }
-            document.getElementById('bruitBouton').play();
             this.cBo=3;
             cBoG=3;
             cBomG= this.cBo;	
@@ -523,10 +488,10 @@
     }
     }
 
-        var menu_1 = new Menu(cBo1, 1, menu1, cBom1);
-        var menu_2 = new Menu(cBo2, 2, menu2, cBom2);
-        var menu_3 = new Menu(cBo3, 3, menu3, cBom3);
-        var menu_4 = new Menu(cBo4, 4, menu4, cBom4);
+    var menu_1 = new Menu(cBo1, 1, menu1, cBom1);
+    var menu_2 = new Menu(cBo2, 2, menu2, cBom2);
+    var menu_3 = new Menu(cBo3, 3, menu3, cBom3);
+    var menu_4 = new Menu(cBo4, 4, menu4, cBom4);
 
     function menu1() {//Fonction permettant l'affichage avec une rotation et un bruit en fonction de la position du bouton 1
     cBo1=cBoG;  
@@ -580,51 +545,35 @@
     var init_3 = new Init(3, MouseScroll3);
     var init_4 = new Init(4, MouseScroll4);
 
-    window.onload = init_1.init(1);//fonction initialisant le scroll du bouton1
-    window.onload = init_2.init(2);
-    window.onload = init_3.init(3);
-    window.onload = init_4.init(4);
-
+    inittab = [init_1, init_2, init_3, init_4];//Boucle initialisant les scrolls
+    for ( i = 0 ; i<4 ; i++) {
+        window.onload = inittab[i].init(i+1);
+    }
 
     function demandeAide() {//Fonction de clic sur l'icone d'aide
         if ( etatAngus == 0 ) {//Test de l'état de l'aide et affichage des image d'aide en fonction de l'avancement de l'utilisation 
             etatAngus=1;
             document.getElementById('haloAngus').style.opacity= 1;
             if ( etatPower == 0 ) {
-                document.getElementById('angusBouton0').style.opacity= 1;
-                document.getElementById('angusBouton1').style.opacity= 0;
-                document.getElementById('angusBouton2').style.opacity=0;
-                document.getElementById('angusBouton3').style.opacity=0;
+                Opa.opacifier(1, "angusBouton")
             }
             else {
                 if (helpb == 1) {
-                    document.getElementById('angusBouton0').style.opacity= 0;
-                    document.getElementById('angusBouton1').style.opacity= 0;
-                    document.getElementById('angusBouton2').style.opacity= 1;
-                    document.getElementById('angusBouton3').style.opacity=0;
+                    Opa.opacifier(3, "angusBouton")   
                 }
                 else {
                     if (helpb == 2) {
-                    document.getElementById('angusBouton0').style.opacity= 0;
-                    document.getElementById('angusBouton1').style.opacity= 0;
-                    document.getElementById('angusBouton2').style.opacity= 0;
-                    document.getElementById('angusBouton3').style.opacity=1;
+                        Opa.opacifier(4, "angusBouton")
                     }
                     else {
-                    document.getElementById('angusBouton0').style.opacity= 0;
-                    document.getElementById('angusBouton1').style.opacity= 1;
-                    document.getElementById('angusBouton2').style.opacity= 0;
-                    document.getElementById('angusBouton3').style.opacity=0;    
+                        Opa.opacifier(2, "angusBouton")  
                     }
     
                 }	
             }
         }
         else {// Interruption de l'aide
-            document.getElementById('angusBouton0').style.opacity= 0;
-            document.getElementById('angusBouton1').style.opacity= 0;
-            document.getElementById('angusBouton2').style.opacity= 0;
-            document.getElementById('angusBouton3').style.opacity=0;
+        Opa.opacifier(0, "angusBouton")
             etatAngus= 0;
             document.getElementById('haloAngus').style.opacity= 0;
             }
@@ -648,7 +597,6 @@
         document.getElementById('angusExpressBtn').classList.toggle("show");
     }
     
-
 
     </script>
 	</body>

@@ -205,22 +205,22 @@ figure
 	right:746px;
 	z-index: 1;
 }
-#angusBouton0
+#angusBouton1
 {
 	right: 280px;
 }
-#angusBouton1, #angusBouton2
+#angusBouton2, #angusBouton3
 {
 	top: 80px;
 	right: 110px;
 }
-#angusBouton3
+#angusBouton4
 {
 	top: 410px;
 	left: 340px;
 	opacity: 1;	
 }
-#angusBouton0,#angusBouton1,#angusBouton2,#haloAngus,#angusBouton3
+#angusBouton4,#angusBouton1,#angusBouton2,#haloAngus,#angusBouton3
 {
 	position: absolute;
 	opacity: 0;
