@@ -486,6 +486,8 @@ h1,h2,h3
 .ie9 .angusText,.iconeMail, .iconeFacebook, .iconeLinkedin, .iconeTwitter
 
 {
-	float: left;
+	
 	margin-right: 100px;
+	display: inline;
+	zoom: 1;
 }

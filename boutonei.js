@@ -17,8 +17,6 @@
 	return false;
 	}
 	
-	
-	
 	var cBo1=-10;// Variable de départ de la position de sélection supérieur au nombre de positions
 	var cBo2=-10;// Variable de départ de la position de sélection supérieur au nombre de positions
 	var cBo3=-10;// Variable de départ de la position de sélection supérieur au nombre de positions
@@ -44,9 +42,9 @@
 		fade();
 		etatPower= 1;
 			if ( etatAngus == 1 ) {//Bascule sur l'aide Bouton après l'allumage
-				document.getElementById('angusPower').style.opacity= 0;
-				document.getElementById('angusBouton1').style.opacity= 1;
-				document.getElementById('angusBouton2').style.opacity= 0;
+				document.getElementById('angusBouton1').style.opacity= 0;
+				document.getElementById('angusBouton2').style.opacity= 1;
+				document.getElementById('angusBouton3').style.opacity= 0;
 			}
 		}
 		else {// Eteindre
@@ -65,9 +63,9 @@
 			shadow[i].style.textShadow = "0px 0px 0px transparent";
 			}
 		if ( etatAngus == 1 ) {//Conserve l'aide sur le bouton Power
-				document.getElementById('angusPower').style.opacity= 1;
-				document.getElementById('angusBouton1').style.opacity= 0;
+				document.getElementById('angusBouton1').style.opacity= 1;
 				document.getElementById('angusBouton2').style.opacity= 0;
+				document.getElementById('angusBouton3').style.opacity= 0;
 			}		
 		etatPower= 0;
 		cBo1=-10;
@@ -183,9 +181,9 @@
 			}			
 			helpb= helpb + 1;// incrémente l'état de l'aide à chaque click
 			if ( etatAngus == 1 && helpb == 1) {//Permet d'afficher la suite de l'aide
-				document.getElementById('angusPower').style.opacity= 0;
 				document.getElementById('angusBouton1').style.opacity= 0;
-				document.getElementById('angusBouton2').style.opacity= 1;
+				document.getElementById('angusBouton2').style.opacity= 0;
+				document.getElementById('angusBouton3').style.opacity= 1;
 			}	
 			menu1();// Appel de la fonction affichant la position
 			console.log(cBo1);
@@ -274,7 +272,6 @@
 	}
 	
 	function menu1() {//Fonction permettant l'affichage avec une rotation et un bruit en fonction de la position du bouton 1
-	document.getElementById('angusExpress').style.opacity= 1;//allumage du menu express
 	if ( helpb == 3 && etatAngus == 1){//desactive l'aide après 2 clicks ou scrolls
 					demandeAide();
 					helpb=1;
@@ -285,37 +282,36 @@
 	document.getElementById('halo2').style.opacity="0";	//initialisation des 3 autres boutons
 	document.getElementById('halo3').style.opacity="0";	
 	document.getElementById('halo4').style.opacity="0";	
-
 	switch ( cBo1 ) {//affiche le bouton et le contenu des textes et documents en fonction de la position
 		case 0 :
 			document.getElementById('halo1').style.opacity="1";	
 			document.getElementById('bouton1').style.transform = "rotate(0deg)";
 			document.getElementById('bruitBouton').play();
-			text.scrollTop= intro.offsetTop;
-			doc.scrollTop= introD.offsetTop;
+			text.scrollTop= doc11.offsetTop;
+			doc.scrollTop= hm11d.offsetTop;
 			break;
 		case 1 :
 			document.getElementById('halo1').style.opacity="1";
 			document.getElementById('bouton1').style.transform = "rotate(60deg)";
 			document.getElementById('bruitBouton').play();
-			text.scrollTop= pourquoi.offsetTop;
-			doc.scrollTop= introD.offsetTop;		
+			text.scrollTop= doc12.offsetTop;
+			doc.scrollTop= hm12d.offsetTop;		
 			cBom1=cBo1;				
 			break;
 		case 2 :
 			document.getElementById('halo1').style.opacity="1";
 			document.getElementById('bouton1').style.transform = "rotate(180deg)";
 			document.getElementById('bruitBouton').play();
-			text.scrollTop= comment.offsetTop;
-			doc.scrollTop= introD.offsetTop;				
+			text.scrollTop= doc13.offsetTop;
+			doc.scrollTop= hm13d.offsetTop;				
 			cBom1=cBo1;		
 			break;
 		case 3 :
 			document.getElementById('halo1').style.opacity="1";
 			document.getElementById('bouton1').style.transform = "rotate(270deg)";
 			document.getElementById('bruitBouton').play();
-			text.scrollTop= metier.offsetTop;
-			doc.scrollTop= introD.offsetTop;				
+			text.scrollTop= doc14.offsetTop;
+			doc.scrollTop= hm14d.offsetTop;				
 			cBom1=cBo1;		
 			break;			
 		case 4 :
@@ -348,42 +344,40 @@
 	}
 		
 	function menu2() {//Fonction permettant l'affichage avec une rotation et un bruit en fonction de la position du bouton 2
-	document.getElementById('angusExpress').style.opacity= 1;//allumage du menu express	
 	document.getElementById('halo1').style.opacity="0";	
 	document.getElementById('halo3').style.opacity="0";	
 	document.getElementById('halo4').style.opacity="0";	
-
 	switch ( cBo2 ) {
 		case 0 :
 			document.getElementById('halo2').style.opacity="1";	
 			document.getElementById('bouton2').style.transform = "rotate(0deg)";
 			document.getElementById('bruitBouton').play();	
-			text.scrollTop= formation.offsetTop;
-			doc.scrollTop= introD.offsetTop;			
+			text.scrollTop= doc21.offsetTop;
+			doc.scrollTop= hm21d.offsetTop;			
 			cBom2=cBo2;
 			break;
 		case 1 :
 			document.getElementById('halo2').style.opacity="1";
 			document.getElementById('bouton2').style.transform = "rotate(60deg)";
 			document.getElementById('bruitBouton').play();	
-			text.scrollTop= diplomes.offsetTop;
-			doc.scrollTop= introD.offsetTop;								
+			text.scrollTop= doc22.offsetTop;
+			doc.scrollTop= hm22d.offsetTop;								
 			cBom2=cBo2;
 			break;
 		case 2 :
 			document.getElementById('halo2').style.opacity="1";
 			document.getElementById('bouton2').style.transform = "rotate(180deg)";
 			document.getElementById('bruitBouton').play();	
-			text.scrollTop= certificas.offsetTop;
-			doc.scrollTop= angusguitare.offsetTop;
+			text.scrollTop= doc23.offsetTop;
+			doc.scrollTop= hm23d.offsetTop;
 			cBom2=cBo2;
 			break;
 		case 3 :
 			document.getElementById('halo2').style.opacity="1";
 			document.getElementById('bouton2').style.transform = "rotate(240deg)";
 			document.getElementById('bruitBouton').play();	
-			text.scrollTop= solo.offsetTop;
-			doc.scrollTop= introD.offsetTop;
+			text.scrollTop= doc24.offsetTop;
+			doc.scrollTop= hm24d.offsetTop;
 			cBom2=cBo2;
 			break;			
 		case 4 :
@@ -416,7 +410,7 @@
 	}
 	
 	function menu3() {//Fonction permettant l'affichage avec une rotation et un bruit en fonction de la position du bouton 3
-	document.getElementById('angusExpress').style.opacity= 1;//allumage du menu express
+
 	document.getElementById('halo1').style.opacity="0";	
 	document.getElementById('halo2').style.opacity="0";	
 	document.getElementById('halo4').style.opacity="0";	
@@ -426,32 +420,32 @@
 			document.getElementById('halo3').style.opacity="1";	
 			document.getElementById('bouton3').style.transform = "rotate(0deg)";
 			document.getElementById('bruitBouton').play();	
-			text.scrollTop= competences.offsetTop;
-			doc.scrollTop= introD.offsetTop;								
+			text.scrollTop= doc31.offsetTop;
+			doc.scrollTop= hm31d.offsetTop;								
 			cBom3=cBo3;				
 			break;
 		case 1 :
 			document.getElementById('halo3').style.opacity="1";
 			document.getElementById('bouton3').style.transform = "rotate(60deg)";
 			document.getElementById('bruitBouton').play();	
-			text.scrollTop= savoir.offsetTop;
-			doc.scrollTop= introD.offsetTop;								
+			text.scrollTop= doc32.offsetTop;
+			doc.scrollTop= hm32d.offsetTop;								
 			cBom3=cBo3;						
 			break;
 		case 2 :
 			document.getElementById('halo3').style.opacity="1";
 			document.getElementById('bouton3').style.transform = "rotate(180deg)";
 			document.getElementById('bruitBouton').play();	
-			text.scrollTop= savoirfaire.offsetTop;
-			doc.scrollTop= introD.offsetTop;			
+			text.scrollTop= doc33.offsetTop;
+			doc.scrollTop= hm33d.offsetTop;			
 			cBom3=cBo3;		
 			break;
 		case 3 :
 			document.getElementById('halo3').style.opacity="1";
 			document.getElementById('bouton3').style.transform = "rotate(240deg)";
 			document.getElementById('bruitBouton').play();	
-			text.scrollTop= refrain.offsetTop;
-			doc.scrollTop= introD.offsetTop;			
+			text.scrollTop= doc34.offsetTop;
+			doc.scrollTop= hm34d.offsetTop;			
 			cBom3=cBo3;
 			break;
 		case 4 :
@@ -484,7 +478,6 @@
 	}
 	
 	function menu4() {//Fonction permettant l'affichage avec une rotation et un bruit en fonction de la position du bouton4
-	document.getElementById('angusExpress').style.opacity= 1;//allumage du menu express
 	document.getElementById('halo1').style.opacity="0";	
 	document.getElementById('halo2').style.opacity="0";	
 	document.getElementById('halo3').style.opacity="0";	
@@ -494,32 +487,32 @@
 			document.getElementById('halo4').style.opacity="1";	
 			document.getElementById('bouton4').style.transform = "rotate(0deg)";
 			document.getElementById('bruitBouton').play();	
-			text.scrollTop= contact.offsetTop;
-			doc.scrollTop= introD.offsetTop;							
+			text.scrollTop= doc41.offsetTop;
+			doc.scrollTop= hm41d.offsetTop;							
 			cBom4=cBo4;						
 			break;
 		case 1 :
 			document.getElementById('halo4').style.opacity="1";
 			document.getElementById('bouton4').style.transform = "rotate(90deg)";
 			document.getElementById('bruitBouton').play();	
-			text.scrollTop= savoirPlus.offsetTop;
-			doc.scrollTop= introD.offsetTop;					
+			text.scrollTop= doc42.offsetTop;
+			doc.scrollTop= hm42d.offsetTop;					
 			cBom4=cBo4;					
 			break;
 		case 2 :
 			document.getElementById('halo4').style.opacity="1";
 			document.getElementById('bouton4').style.transform = "rotate(180deg)";
 			document.getElementById('bruitBouton').play();	
-			text.scrollTop= telechargement.offsetTop;
-			doc.scrollTop= introD.offsetTop;			
+			text.scrollTop= doc43.offsetTop;
+			doc.scrollTop= hm43d.offsetTop;			
 			cBom4=cBo4;	
 			break;
 		case 3 :
 			document.getElementById('halo4').style.opacity="1";
 			document.getElementById('bouton4').style.transform = "rotate(240deg)";
 			document.getElementById('bruitBouton').play();	
-			text.scrollTop= final.offsetTop;
-			doc.scrollTop= introD.offsetTop;			
+			text.scrollTop= doc44.offsetTop;
+			doc.scrollTop= hm44d.offsetTop;			
 			cBom4=cBo4;	
 			break;			
 		case 4 :
@@ -620,46 +613,29 @@
 			etatAngus=1;
 			document.getElementById('haloAngus').style.opacity= 1;
 			if ( etatPower == 0 ) {
-				document.getElementById('angusPower').style.opacity= 1;
-				document.getElementById('angusBouton1').style.opacity= 0;
-				document.getElementById('angusBouton2').style.opacity=0;
+				document.getElementById('angusBouton1').style.opacity= 1;
+				document.getElementById('angusBouton2').style.opacity= 0;
+				document.getElementById('angusBouton3').style.opacity=0;
 			}
 			else {
 				if (helpb == 1) {
-					document.getElementById('angusPower').style.opacity= 0;
 					document.getElementById('angusBouton1').style.opacity= 0;
-					document.getElementById('angusBouton2').style.opacity= 1;
+					document.getElementById('angusBouton2').style.opacity= 0;
+					document.getElementById('angusBouton3').style.opacity= 1;
 				}
 				else {
-					document.getElementById('angusPower').style.opacity= 0;
-					document.getElementById('angusBouton1').style.opacity= 1;
-					document.getElementById('angusBouton2').style.opacity= 0;
+					document.getElementById('angusBouton1').style.opacity= 0;
+					document.getElementById('angusBouton2').style.opacity= 1;
+					document.getElementById('angusBouton3').style.opacity= 0;
 				}	
 			}
 		}
 		else {// Interruption de l'aide
-			document.getElementById('angusPower').style.opacity= 0;
 			document.getElementById('angusBouton1').style.opacity= 0;
 			document.getElementById('angusBouton2').style.opacity= 0;
+			document.getElementById('angusBouton3').style.opacity= 0;
 			etatAngus= 0;
 			document.getElementById('haloAngus').style.opacity= 0;
 			}
 		console.log(helpb);	
 	}
-	
-document.onclick=function(event){//efface le menu déroulant pour tout autre click que le bouton angus Express
-    if (event.target.className !== 'EA') {
-        var menubtn=document.getElementsByClassName('angusExpressMenu');
-        for (i=0; i< menubtn.length; i++) {
-            var OpenMenu= menubtn[i];
-            if ( OpenMenu.classList.contains ('show')) {
-                OpenMenu.classList.remove('show');
-
-            }
-        }
-    }
-}
-
-function menuDeroulant() {// active/ désactive le menu déroulant
-    document.getElementById('angusExpressBtn').classList.toggle("show");
-}
