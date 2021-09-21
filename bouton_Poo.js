@@ -163,7 +163,7 @@ bouton1.oncontextmenu = bouton2.oncontextmenu = bouton3.oncontextmenu = bouton4.
                 this.menu(cBoG);// Appel de la fonction affichant la position  
                 }
             }	
-            if (etatAngus == 0) {
+            if (etatAngus == 0) {//maintient le compteur d'aide à 1 si l'aide est désactivée
                 helpb=1;
             }
             else {
@@ -218,9 +218,6 @@ bouton1.oncontextmenu = bouton2.oncontextmenu = bouton3.oncontextmenu = bouton4.
         if ( helpb == 3 && etatAngus == 1){//desactive l'aide après 2 clicks ou scrolls
                     demandeAide();
                     helpb=1;
-        }
-        if ( etatAngus == 0 ) {//maintient le compteur d'aide à 1 si l'aide est désactivée
-        helpb=1;
         }
         if ( document.getElementById("halo" + this.num).style.opacity == 1 ) {// Si le bouton est actif
             for (i=0;i<shadow.length;i++) {//raz des text-shadows au changement d'état
