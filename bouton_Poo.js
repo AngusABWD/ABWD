@@ -163,14 +163,20 @@ bouton1.oncontextmenu = bouton2.oncontextmenu = bouton3.oncontextmenu = bouton4.
                 this.menu(cBoG);// Appel de la fonction affichant la position  
                 }
             }	
+            if (etatAngus == 0) {
+                helpb=1;
+            }
+            else {
             helpb= helpb + 1;// incrémente l'état de l'aide à chaque click
+            }
             if ( etatAngus == 1 && helpb == 1) {//Permet d'afficher la suite de l'aide
                 Opa.opacifier(3, "angusBouton");
             }
             if ( etatAngus == 1 && helpb == 2) {//Permet d'afficher la suite de l'aide
                 Opa.opacifier(4, "angusBouton");
             }              
-        }	
+        }
+        console.log(helpb);	
         }
     }
     var selection_1 = new Selection(menu1);
