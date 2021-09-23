@@ -6,17 +6,42 @@ body
 	background-size: var(--m-v);
 
 }
+audio {
+	display: none;
+}
+figcaption
+{
+	font-size: 8;
+	text-align: center;
+	color: #E3C880;
+}
+h1
+{
+	display: none;
+}
+h2,h3
+{
+		color: #E3C880;
+}
+a
+{
+	color: yellow;
+	text-decoration: none;
+}
+a:hover
+{
+	color: green;
+	text-decoration: underline;
+}
+a:visited 
+{
+	color: red;
+}
 figure
 {
 	margin: 0px;
 }
-#paysage 
-{
-	display: none;
-	position: absolute;
-	top: 0px;
-	left: -950px;	
-}
+
 .block
 {
 	position: absolute;
@@ -24,6 +49,13 @@ figure
 	left: 50%; 
 	-moz-transform:  scale(var(--zoom));
 	zoom: var(--zoom);
+}
+
+#bouton1,#bouton2,#bouton3,#bouton4
+{
+	position: absolute;
+	z-index: 2;
+	top: 123px;
 }
 #bouton1
 {
@@ -43,11 +75,11 @@ figure
 	left:650px;
 }
 
-#bouton1,#bouton2,#bouton3,#bouton4
+#boutonText1 ,#boutonText2 ,#boutonText3 ,#boutonText4
 {
 	position: absolute;
-	z-index: 2;
-	top: 123px;
+	top: 95px;
+	z-index: 1;
 }
 #boutonText1
 {
@@ -65,13 +97,6 @@ figure
 {
 	right:-854px;
 }
-#boutonText1 ,#boutonText2 ,#boutonText3 ,#boutonText4
-{
-	position: absolute;
-	top: 95px;
-	z-index: 1;
-}
-
 
 .bText
 {
@@ -171,6 +196,23 @@ figure
 	z-index: 2;
 
 }
+#haloPower
+{
+	opacity: 0;
+	position: absolute;
+	top:136px;
+	right:746px;
+	z-index: 1;
+}
+
+#halo1,#halo2,#halo3,#halo4
+{
+	position: absolute;
+	opacity: 0;
+	top: 123px;
+	z-index: 1;
+	
+}
 #halo1
 {	
 	right:0px;
@@ -188,22 +230,12 @@ figure
 	left:650px;
 }
 	
-#halo1,#halo2,#halo3,#halo4
+#angusBouton4,#angusBouton1,#angusBouton2,#haloAngus,#angusBouton3
 {
 	position: absolute;
 	opacity: 0;
-	top: 123px;
-	z-index: 1;
-	
-}
-#haloPower
-{
-	opacity: 0;
-	position: absolute;
-	top:136px;
-	right:746px;
-	z-index: 1;
-}
+	z-index:2;
+}	
 #angusBouton1
 {
 	right: 280px;
@@ -217,14 +249,8 @@ figure
 {
 	top: 410px;
 	left: 340px;
-	opacity: 1;	
 }
-#angusBouton4,#angusBouton1,#angusBouton2,#haloAngus,#angusBouton3
-{
-	position: absolute;
-	opacity: 0;
-	z-index:2;
-}	
+
 #angus_help
 {
 	position: absolute;
@@ -232,6 +258,35 @@ figure
 	top: 795px;
 	right: 560px;
 	z-index: 3;
+}
+#haloAngus
+{
+	top: 800px;
+	right: 560px;
+	width:150px;
+}
+
+#text
+{
+	display: inline-block;
+	border-radius: 20px;
+	border: 2px solid #E3C880;
+	box-shadow: 3px 3px 3px #E3C880;
+	width: 1200px;
+	position: absolute;
+	top:340px;
+	right: -360px;
+	overflow: hidden;
+	height:410px;
+	padding:15px;
+	opacity: 0;
+	word-wrap: break-word;
+	
+}
+#bienvenue
+{
+	position: relative;
+	left: 12%;
 }
 #angusExpress
 {
@@ -273,53 +328,7 @@ figure
 {
 	display: block;
 }
-#haloAngus
-{
-	top: 800px;
-	right: 560px;
-	width:150px;
-}
-audio {
-	display: none;
-}
 
-h1
-{
-	display: none;
-}
-
-
-a
-{
-	color: yellow;
-	text-decoration: none;
-}
-a:hover
-{
-	color: green;
-	text-decoration: underline;
-}
-a:visited 
-{
-	color: red;
-}
-#text
-{
-	display: inline-block;
-	border-radius: 20px;
-	border: 2px solid #E3C880;
-	box-shadow: 3px 3px 3px #E3C880;
-	width: 1200px;
-	position: absolute;
-	top:340px;
-	right: -360px;
-	overflow: hidden;
-	height:410px;
-	padding:15px;
-	opacity: 0;
-	word-wrap: break-word;
-	
-}
 #doc
 {
 	display: inline-block;
@@ -334,44 +343,6 @@ a:visited
 	height:410px;
 	padding:15px;
 	opacity: 0;
-}
-footer
-{
-	display: flex;
-	justify-content: space-between;
-	border-radius: 20px;
-	border: 2px solid #E3C880;
-	box-shadow: 3px 3px 3px #E3C880;
-	position:absolute;
-	left: -717px;
-	top: 800px;
-	overflow: auto;
-	width: 1317px;
-	height: 77px;
-	padding-left: 160px;
-	padding-right: 100px;
-	padding-top: 3px;
-	z-index: 2;
-}
-
-.angusText
-{ 
-	font-family: "Comic Sans MS",serif;
-	text-align: justify;
-	color: yellow;
-}
-
-figcaption
-{
-	font-size: 8;
-	text-align: center;
-	color: #E3C880;
-}
-
-#bienvenue
-{
-	position: relative;
-	left: 12%;
 }
 .docimage
 {
@@ -391,10 +362,32 @@ figcaption
 	left: 7%;
 }
 
-h1,h2,h3
+footer
 {
-		color: #E3C880;
+	display: flex;
+	justify-content: space-between;
+	border-radius: 20px;
+	border: 2px solid #E3C880;
+	box-shadow: 3px 3px 3px #E3C880;
+	position:absolute;
+	left: -717px;
+	top: 800px;
+	overflow: auto;
+	width: 1317px;
+	height: 77px;
+	padding-left: 160px;
+	padding-right: 100px;
+	padding-top: 3px;
+	z-index: 2;
 }
+.angusText
+{ 
+	font-family: "Comic Sans MS",serif;
+	text-align: justify;
+	color: yellow;
+}
+
+
 .angusChantier
 {
 	position: relative;
@@ -407,6 +400,15 @@ h1,h2,h3
 	text-align: center;
 	color: #E3C880;
 	font-size: 40px;
+}
+
+
+#paysage 
+{
+	display: none;
+	position: absolute;
+	top: 0px;
+	left: -950px;	
 }
 @media all and (max-width: 1800px )
 {
