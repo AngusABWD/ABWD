@@ -3,8 +3,14 @@ body
 	background: url("Image/Baffle.png") no-repeat top center fixed black;
 	overflow:hidden;
 	color: white;
-	background-size: var(--m-v);
+	background-size: 100%;
 
+}
+.container
+{
+	position: absolute;
+	top: 0px;
+	left: 50%; 
 }
 audio {
 	display: none;
@@ -42,63 +48,54 @@ figure
 	margin: 0px;
 }
 
-.block
-{
-	position: absolute;
-	top: 0px;
-	left: 50%; 
-	-moz-transform:  scale(var(--zoom));
-	zoom: var(--zoom);
-}
-
-#bouton1,#bouton2,#bouton3,#bouton4
+.head-btn__btn
 {
 	position: absolute;
 	z-index: 2;
 	top: 123px;
 }
-#bouton1
+.head-btn__btn--position1
 {
 	right:0px;
 }
 
-#bouton2
+.head-btn__btn--position2
 {
 	left:150px;
 }
-#bouton3
+.head-btn__btn--position3
 {
 	left:400px;
 }
-#bouton4
+.head-btn__btn--position4
 {
 	left:650px;
 }
 
-#boutonText1 ,#boutonText2 ,#boutonText3 ,#boutonText4
+.head-btn__traits
 {
 	position: absolute;
 	top: 95px;
 	z-index: 1;
 }
-#boutonText1
+.head-btn__traits--position1
 {
 	right: -83px;
 }
-#boutonText2
+.head-btn__traits--position2
 {
 	right:-326px;
 }
-#boutonText3
+.head-btn__traits--position3
 {
 	right:-558px;
 }
-#boutonText4
+.head-btn__traits--position4
 {
 	right:-854px;
 }
 
-.bText
+.head-btn__text
 {
 	position: absolute;
 	font-family: 'segoe-ui-semibold-regular', sans-serif;
@@ -106,88 +103,88 @@ figure
 	font-weight: bold;
 	color: black;
 }
-#hm11
+.head-btn__text--position1
 {
 	top: 79px;
 	right: 26px;
 }
-#hm12
+.head-btn__text--position2
 {
 	top: 120px;
 	right: -88px;
 }
-#hm13
+.head-btn__text--position3
 {
 	top: 220px;
 	right: 13px;
 }
-#hm14
+.head-btn__text--position4
 {
 	top: 150px;
 	right: 116px;
 }
-#hm21
+.head-btn__text--position5
 {
 	top: 79px;
 	right: -242px;
 }
-#hm22
+.head-btn__text--position6
 {
 	top: 120px;
 	right: -335px;
 }
-#hm23
+.head-btn__text--position7
 {
 	top: 220px;
 	right: -250px;
 }
-#hm24
+.head-btn__text--position8
 {
 	top: 186px;
 	right: -143px;
 }
-#hm31
+.head-btn__text--position9
 {
 	top: 79px;
 	right: -502px;
 }
-#hm32
+.head-btn__text--position10
 {
 	top: 120px;
 	right: -565px;
 }
-#hm33
+.head-btn__text--position11
 {
 	top: 220px;
 	right: -503px;
 }
-#hm34
+.head-btn__text--position12
 {
 	top: 186px;
 	right: -392px;
 }
-#hm41
+.head-btn__text--position13
 {
 	top: 79px;
 	right: -732px;
 }
-#hm42
+.head-btn__text--position14
 {
 	top: 153px;
 	right: -861px;
 }
-#hm43
+.head-btn__text--position15
 {
 	top: 220px;
 	right: -775px;
 }
-#hm44
+.head-btn__text--position16
 {
 	top: 186px;
 	right: -646px;
 }
 
-#boutonPower
+.head-btn__btnPower
 {
 	opacity: 0.6;
 	position: absolute;
@@ -196,7 +193,7 @@ figure
 	z-index: 2;
 
 }
-#haloPower
+.head-btn__btnHalo
 {
 	opacity: 0;
 	position: absolute;
@@ -205,7 +202,7 @@ figure
 	z-index: 1;
 }
 
-#halo1,#halo2,#halo3,#halo4
+.head-btn__halo
 {
 	position: absolute;
 	opacity: 0;
@@ -213,60 +210,64 @@ figure
 	z-index: 1;
 	
 }
-#halo1
+.head-btn__halo--position1
 {	
 	right:0px;
 }
-#halo2
+.head-btn__halo--position2
 {
 	left:150px;
 }
-#halo3
+.head-btn__halo--position3
 {
 	left:400px;
 }
-#halo4
+.head-btn__halo--position4
 {
 	left:650px;
 }
 	
-#angusBouton4,#angusBouton1,#angusBouton2,#haloAngus,#angusBouton3
+.head-flot__help
 {
 	position: absolute;
 	opacity: 0;
 	z-index:2;
 }	
-#angusBouton1
+.head-flot__help--position1
 {
+
 	right: 280px;
 }
-#angusBouton2, #angusBouton3
+.head-flot__help--position2
 {
 	top: 80px;
 	right: 110px;
 }
-#angusBouton4
+.head-flot__help--position3
 {
 	top: 410px;
 	left: 340px;
 }
 
-#angus_help
+.footer__angusHelp
 {
 	position: absolute;
 	width:150px;
-	top: 795px;
-	right: 560px;
+	top: -7px;
+	left: 0px;
 	z-index: 3;
 }
-#haloAngus
+.footer__haloAngus
 {
-	top: 800px;
-	right: 560px;
+	position: absolute;
+	opacity: 0;
+	z-index:2;
+	top: -7px;
+	left: 0px;
 	width:150px;
 }
 
-#text
+.text
 {
 	display: inline-block;
 	border-radius: 20px;
@@ -283,12 +284,12 @@ figure
 	word-wrap: break-word;
 	
 }
-#bienvenue
+.text__bienvenue
 {
 	position: relative;
 	left: 12%;
 }
-#angusExpress
+.head-flot__angusExpress
 {
 	position: absolute;
 	z-index: 3;
@@ -296,7 +297,7 @@ figure
 	top: 720px;
 	opacity: 0;
 }
-.angusExpressMenu
+.head-flot__angusExpressMenu
 {
  	display: none;
  	position: absolute;
@@ -307,7 +308,7 @@ figure
 	z-index: 3;
 	border-radius: 10px;
 }
-.angusExpressMenu input
+.head-flot__angusExpressMenu input
 {
 	border-radius: 8px;
 	color: black;
@@ -320,7 +321,7 @@ figure
 	display: block;
 	width: 100%;
 }
-.angusExpressMenu input:hover
+.head-flot__angusExpressMenu input:hover
 {
 	text-shadow: 0px 0px 4px red;
 }
@@ -329,7 +330,7 @@ figure
 	display: block;
 }
 
-#doc
+.doc
 {
 	display: inline-block;
 	border-radius: 20px;
@@ -344,7 +345,7 @@ figure
 	padding:15px;
 	opacity: 0;
 }
-.docimage
+.doc__image
 {
 	position: relative;
 	height: 400px;
@@ -353,7 +354,7 @@ figure
 	padding-top: 20px;
 }
 
-#hm11d
+.doc__image--hm11d
 {
 	width: 400px;
 	height: auto;
@@ -373,18 +374,20 @@ footer
 	left: -717px;
 	top: 800px;
 	overflow: auto;
-	width: 1317px;
+	width: 1077px;
 	height: 77px;
-	padding-left: 160px;
+	padding-left: 400px;
 	padding-right: 100px;
 	padding-top: 3px;
 	z-index: 2;
 }
-.angusText
+.footer__angusText
 { 
 	font-family: "Comic Sans MS",serif;
 	text-align: justify;
 	color: yellow;
+	position: absolute;
+	left: 160px;
 }
 
 
@@ -403,82 +406,13 @@ footer
 }
 
 
-#paysage 
+.head-flot__maj
 {
 	display: none;
 	position: absolute;
 	top: 0px;
 	left: -950px;	
 }
-@media all and (max-width: 1800px )
-{
-	:root { --m-v: 1800px}
-	:root { --zoom: 0.947}
-
-}
-@media all and (max-width: 1700px )
-{
-	:root { --m-v: 1700px}
-	:root { --zoom: 0.895}
-
-}
-@media all and (max-width: 1600px )
-{
-	:root { --m-v: 1600px}
-	:root { --zoom: 0.842}
-
-}
-@media all and (max-width: 1500px )
-{
-	:root { --m-v: 1500px}
-	:root { --zoom: 0.789}
-
-}
-@media all and (max-width: 1400px )
-{
-	:root { --m-v: 1400px}
-	:root { --zoom: 0.737}
-
-}
-@media all and (max-width: 1300px )
-{
-	:root { --m-v: 1300px}
-	:root { --zoom: 0.684}
-
-}
-@media all and (max-width: 1200px )
-{
-	:root { --m-v: 1200px}
-	:root { --zoom: 0.631}
-
-}
-@media all and (max-width: 1100px )
-{
-	:root { --m-v: 1100px}
-	:root { --zoom: 0.579}
-
-}
-@media all and (max-width: 1000px )
-{
-	:root { --m-v: 1000px}
-	:root { --zoom: 0.526}
-
-}
-@media all and (max-width: 800px )
-{
-	:root { --m-v: 800px}
-	:root { --zoom: 0.421}
-
-}
-@media all and (max-device-width: 480px )
-{	
-	#paysage
-	{
-		display: block;
-		z-index: 4;
-	}
-}
-
 .ie9 a, a:hover, a:visited
 {
 	color: transparent;
@@ -491,4 +425,28 @@ footer
 	margin-right: 100px;
 	display: inline;
 	zoom: 1;
+}
+.ie9 .container
+{
+	top: -7px;
+}
+.moz .container
+{
+	top: -10px;
+}
+@media all and (max-width: 1100px )
+{
+	.moz .container
+	{
+		top: -20px;
+	}	
+
+}
+@media all and (max-device-width: 480px )
+{	
+	.head-flot__maj
+	{
+		display: block;
+		z-index: 4;
+	}
 }

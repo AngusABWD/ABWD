@@ -1,0 +1,20 @@
+Liste des ID utilisés par JS
+
+angusPowerSon
+boutonPower
+haloPower
+haloAngus
+angusBouton 1 2 3 4
+halo 1 2 3 4
+bruitBouton
+angusExpress
+angusExpressBtn
+bouton 1 2 3 4
+hm (all)
+hm (all) d
+doc
+text
+bienvenue
+
+
+

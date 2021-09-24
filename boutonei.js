@@ -31,6 +31,14 @@
 	var helpb=0;//Permet de savoir si Angus vous a déja expliquer la sélection du bouton
 	var opacite=0;//variable permettant de faire des "fondu"
 
+	
+	resize(); //pour avoir la bonne dimension à l'ouverture du navigateur
+    window.onresize = resize; // changement de taille de la fenêtre pour EI
+    function resize() {
+        let scale = window.innerWidth/1900;
+        document.body.style.msTransform = "scale("+ scale +")";
+	}
+
 	function power() {//Fonction permettant l'actionnement du bouton power et d'identifier son état
 		if ( etatPower == 0 ) {//test pour la procédure "Allumage"
         text.scrollTop= bienvenue.offsetTop;
