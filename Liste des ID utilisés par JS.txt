@@ -16,5 +16,68 @@ doc
 text
 bienvenue
 
-
+        &--position1 {
+	    top: 79px;
+	    right: 26px;
+        }
+        &--position2 {
+	    top: 120px;
+	    right: -88px;
+        }
+        &--position3 {
+	    top: 220px;
+	    right: 13px;
+        }
+        &--position4 {
+	    top: 150px;
+	    right: 116px;
+        }
+        &--position5 {
+	    top: 79px;
+	    right: -242px;
+        }
+        &--position6 {
+	    top: 120px;
+	    right: -335px;
+        }
+        &--position7 {
+	    top: 220px;
+	    right: -250px;
+        }
+        &--position8 {
+	    top: 186px;
+	    right: -143px;
+        }
+        &--position9 {
+    	top: 79px;
+	    right: -502px;
+        }
+        &--position10 {
+	    top: 120px;
+	    right: -565px;
+        }
+        &--position11 {
+	    top: 220px;
+	    right: -503px;
+        }
+        &--position12 {
+	    top: 186px;
+	    right: -392px;
+        }
+        &--position13 {
+    	top: 79px;
+	    right: -732px;
+        }
+        &--position14 {
+	    top: 153px;
+	    right: -861px;
+        }
+        &--position15 {
+	    top: 220px;
+	    right: -775px;
+        }
+        &--position16 {
+	    top: 186px;
+	    right: -646px;
+        }
 

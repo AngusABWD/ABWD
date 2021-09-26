@@ -1,0 +1,39 @@
+.footer {
+display: flex;
+justify-content: space-between;
+border-radius: 20px;
+border: 2px solid $primary_color;
+box-shadow: 3px 3px 3px $primary_color;
+position:absolute;
+left: -717px;
+top: 800px;
+overflow: auto;
+width: 1081px;
+height: 77px;
+padding-left: 400px;
+padding-right: 100px;
+padding-top: 5px;
+z-index: 2;
+    &__angusText { 
+    font-family: $font_Angus,serif;
+    text-align: justify;
+    color: $highlight_color;
+    position: absolute;
+    left: 160px;
+    }
+    &__angusHelp {
+    position: absolute;
+    width:150px;
+    top: -7px;
+    left: 0px;
+    z-index: 3;
+    }
+    &__haloAngus {
+    position: absolute;
+    opacity: 0;
+    z-index:2;
+    top: 0px;
+    left: 0px;
+    width:150px;
+    }
+}

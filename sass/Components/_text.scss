@@ -1,0 +1,34 @@
+.text
+{
+	display: inline-block;
+	border-radius: 20px;
+	border: 2px solid $primary_color;
+	box-shadow: 3px 3px 3px $primary_color;
+	width: 1200px;
+	position: absolute;
+	top:340px;
+	right: -360px;
+	overflow: hidden;
+	height:410px;
+	padding:15px;
+	opacity: 0;
+	word-wrap: break-word;
+    &__bienvenue
+        {
+	    position: relative;
+	    left: 12%;
+    }
+}
+.angusChantier
+{
+	position: relative;
+	left: 20%;
+	height: 80%;
+	padding-bottom: 30px;
+}
+.titreChantier
+{
+	text-align: center;
+	color: $primary_color;
+	font-size: 40px;
+}

@@ -1,0 +1,57 @@
+.head {
+    &__btn {
+    position: absolute;
+    z-index: 2;
+    @include position_boutons($position_boutons);
+    }
+    &__traits {
+	position: absolute;
+	z-index: 1;
+    @include position_traits($position_boutons);
+    }
+    &__text {
+	position: absolute;
+	font-family: $font_menu, sans-serif;
+	font-size: 14px;
+	font-weight: bold;
+	color: $secondary_color;
+    @include position_text($position_texts);
+    }
+    &__btnPower {
+	opacity: 0.6;
+	position: absolute;
+	top: 149px;
+	right: 760px;
+	z-index: 2;
+        &__halo{
+	    opacity: 0;
+	    position: absolute;
+	    top:136px;
+	    right:746px;
+	    z-index: 1;
+        }
+    }
+    &__halo {
+	position: absolute;
+	opacity: 0;
+    @include position_boutons($position_boutons);
+    }
+    &__flot {
+        &__help{
+        position: absolute;
+        opacity: 0;
+        z-index:2;
+        @include position_help($positions_help);
+        }
+        &__maj {
+            display: none;
+            position: absolute;
+            top: 0px;
+            left: -950px;
+            @include media(mobile) {	
+                display: block;
+                z-index: 4;
+            }
+        }	        
+    }      
+}

@@ -13,14 +13,53 @@
 	<h1>Andermann Boris Web Development</h1>
 	
 
-	<header> <!-- Console de boutons interactifs sur la page -->
-	<figure class="head-flot"><!--Element "flottants" sur toute la page-->
-		<img id="paysage" class="head-flot__maj" src="Image/paysage.png" alt="paysage"/>
-		<img id="angusBouton1" class="head-flot__help head-flot__help--position1" src="Image/angusPower.png" alt="angusPower"/><!--Image d'aide sur le bouton power-->
-		<img id="angusBouton2" class="head-flot__help head-flot__help--position2" src="Image/angusBouton1.png" alt="angusBouton1"/> <!--Image d'aide sur sélectionner un bouton-->
-		<img id="angusBouton3" class="head-flot__help head-flot__help--position2" src="Image/angusBouton2.png" alt="angusBouton2"/> <!--Image d'aide sur l'utilisation du bouton-->
-		<img id="angusBouton4" class="head-flot__help head-flot__help--position3" src="Image/angusBouton3.png" alt="angusBouton3"/> <!--Image d'aide sur l'utilisation du bouton Express-->
-		<div class="head-flot__angusExpressMenu" id=angusExpressBtn>
+	<header class="head"> <!-- Console de boutons interactifs sur la page -->
+	<figure class="head__flot"><!--Element "flottants" sur toute la page-->
+		<img id="paysage" class="head__flot__maj" src="Image/paysage.png" alt="paysage"/>
+		<img id="angusBouton1" class="head__flot__help head__flot__help--position1" src="Image/angusPower.png" alt="angusPower"/><!--Image d'aide sur le bouton power-->
+		<img id="angusBouton2" class="head__flot__help head__flot__help--position2" src="Image/angusBouton1.png" alt="angusBouton1"/> <!--Image d'aide sur sélectionner un bouton-->
+		<img id="angusBouton3" class="head__flot__help head__flot__help--position2" src="Image/angusBouton2.png" alt="angusBouton2"/> <!--Image d'aide sur l'utilisation du bouton-->
+		<img id="angusBouton4" class="head__flot__help head__flot__help--position3" src="Image/angusBouton3.png" alt="angusBouton3"/> <!--Image d'aide sur l'utilisation du bouton Express-->
+	</figure>
+	<input class="head__btn head__btn--position1" id="bouton1" type="image" src="Image/Bouton_selection.png" alt="boutonMarshall1" onmousedown="selection1()" /> <!-- Image du bouton + id et fonction click-->
+	<img class="head__traits head__traits--position1" src="Image/Bouton_text1.png " alt="bouton1text"/>
+	<input class="head__btn head__btn--position2" id="bouton2" type="image" src="Image/Bouton_selection.png" alt="boutonMarshall2" onmousedown="selection2()" /> <!-- Image du bouton + id et fonction click-->
+	<img class="head__traits head__traits--position2" src="Image/Bouton_text2.png " alt="bouton2text"/>
+	<input class="head__btn head__btn--position3" id="bouton3" type="image" src="Image/Bouton_selection.png" alt="boutonMarshall3" onmousedown="selection3()" /> <!-- Image du bouton + id et fonction click-->
+	<img class="head__traits head__traits--position3" src="Image/Bouton_text2.png " alt="bouton3text"/>
+	<input class="head__btn head__btn--position4" id="bouton4" type="image" src="Image/Bouton_selection.png" alt="boutonMarshall4" onmousedown="selection4()" /> <!-- Image du bouton + id et fonction click-->
+	<img class="head__traits head__traits--position4" src="Image/Bouton_text4.png " alt="bouton4text"/>
+	<input class="head__btnPower" id="boutonPower" type="image" src="Image/Power2.png" alt="boutonPower" onclick="power()" /> <!-- Image du bouton POWER + id et fonction click -->
+	<figure class="head__btnPower__halo" id="haloPower"><img src="Image/haloPower3.png" alt="haloPower"/></figure><!--Eclairage power "on"-->
+	<figure class="head__halo head__halo--position1" id="halo1"><img  src="Image/halo_Rouge.png" alt="halorouge1"/></figure><!--Image du halo qui apparaitra quand le bouton est fonctionnel-->
+	<figure class="head__halo head__halo--position2" id="halo2"><img  src="Image/halo_Rouge.png" alt="halorouge2"/></figure><!--Image du halo qui apparaitra quand le bouton est fonctionnel-->
+	<figure class="head__halo head__halo--position3" id="halo3"><img  src="Image/halo_Rouge.png" alt="halorouge3"/></figure><!--Image du halo qui apparaitra quand le bouton est fonctionnel-->
+	<figure class="head__halo head__halo--position4" id="halo4"><img  src="Image/halo_Rouge.png" alt="halorouge4"/></figure><!--Image du halo qui apparaitra quand le bouton est fonctionnel-->
+	<audio id='bruitBouton' src="Son/interupteur_off.mp3"></audio><!--Son de l'action sur le bouton-->
+	<audio id="angusPowerSon" src="Son/angusPower.mp3"></audio><!--Rift qui tue-->
+
+	<p class="head__text head__text--position1"  id="hm11" >INTRO</p><!--Texte du bouton1-->
+	<p class="head__text head__text--position2"  id="hm12" >POURQUOI</p><!--Texte du bouton1-->
+	<p class="head__text head__text--position3"  id="hm13" >COMMENT</p><!--Texte du bouton1-->
+	<p class="head__text head__text--position4"  id="hm14" >METIER</p><!--Texte du bouton1-->
+
+	<p class="head__text head__text--position5"  id="hm21" >FORMATION</p><!--Texte du bouton2-->
+	<p class="head__text head__text--position6"  id="hm22" >DIPLOMES</p><!--Texte du bouton2-->
+	<p class="head__text head__text--position7"  id="hm23" >CERTIFICATS</p><!--Texte du bouton2-->
+	<p class="head__text head__text--position8"  id="hm24" >SOLO</p><!--Texte du bouton2-->
+	
+	<p class="head__text head__text--position9"  id="hm31" >COMPETENCES</p><!--Texte du bouton3-->
+	<p class="head__text head__text--position10"  id="hm32" >SAVOIR</p><!--Texte du bouton3-->
+	<p class="head__text head__text--position11"  id="hm33" >SAVOIR_FAIRE</p><!--Texte du bouton3-->
+	<p class="head__text head__text--position12"  id="hm34" >REFRAIN</p><!--Texte du bouton3-->
+	
+	<p class="head__text head__text--position13"  id="hm41" >CONTACT</p><!--Texte du bouton4-->
+	<p class="head__text head__text--position14"  id="hm42" >SAVOIR_PLUS</p><!--Texte du bouton4-->
+	<p class="head__text head__text--position15"  id="hm43" >TELECHARGEMENT</p><!--Texte du bouton4-->
+	<p class="head__text head__text--position16"  id="hm44" >FINAL</p><!--Texte du bouton4-->	
+	</header>
+	<nav>
+		<div class="nav__angusExpressMenu" id=angusExpressBtn>
 			<input type="button" value="Intro" onclick="menu1(cBoG=0)" />
 			<input type="button" value="Pourquoi" onclick="menu1(cBoG=1)" />
 			<input type="button" value="Comment" onclick="menu1(cBoG=2)" />
@@ -38,46 +77,8 @@
 			<input type="button" value="Téléchargement" onclick="menu4(cBoG=2)" />
 			<input type="button" value="Final" onclick="menu4(cBoG=3)" />
 		</div>		
-		<input id="angusExpress" class="head-flot__angusExpress" type="image" src="Image/angus_Express.png" alt="angus_Express " onclick="menuDeroulant()" /><!--Menu déroulant rapide-->
-	</figure>
-	<input class="head-btn__btn head-btn__btn--position1" id="bouton1" type="image" src="Image/Bouton_selection1.png" alt="boutonMarshall1" onmousedown="selection1()" /> <!-- Image du bouton + id et fonction click-->
-	<img class="head-btn__traits head-btn__traits--position1" src="Image/Bouton_text1.png " alt="bouton1text"/>
-	<input class="head-btn__btn head-btn__btn--position2" id="bouton2" type="image" src="Image/Bouton_selection1.png" alt="boutonMarshall2" onmousedown="selection2()" /> <!-- Image du bouton + id et fonction click-->
-	<img class="head-btn__traits head-btn__traits--position2" src="Image/Bouton_text2.png " alt="bouton2text"/>
-	<input class="head-btn__btn head-btn__btn--position3" id="bouton3" type="image" src="Image/Bouton_selection1.png" alt="boutonMarshall3" onmousedown="selection3()" /> <!-- Image du bouton + id et fonction click-->
-	<img class="head-btn__traits head-btn__traits--position3" src="Image/Bouton_text3.png " alt="bouton3text"/>
-	<input class="head-btn__btn head-btn__btn--position4" id="bouton4" type="image" src="Image/Bouton_selection1.png" alt="boutonMarshall4" onmousedown="selection4()" /> <!-- Image du bouton + id et fonction click-->
-	<img class="head-btn__traits head-btn__traits--position4" src="Image/Bouton_text4s.png " alt="bouton4text"/>
-	<input class="head-btn__btnPower" id="boutonPower" type="image" src="Image/Power2.png" alt="boutonPower" onclick="power()" /> <!-- Image du bouton POWER + id et fonction click -->
-	<figure class="head-btn__btnHalo" id="haloPower"><img src="Image/haloPower3.png" alt="haloPower"/></figure><!--Eclairage power "on"-->
-	<figure class="head-btn__halo head-btn__halo--position1" id="halo1"><img  src="Image/halo_Rouge.png" alt="halorouge1"/></figure><!--Image du halo qui apparaitra quand le bouton est fonctionnel-->
-	<figure class="head-btn__halo head-btn__halo--position2" id="halo2"><img  src="Image/halo_Rouge.png" alt="halorouge2"/></figure><!--Image du halo qui apparaitra quand le bouton est fonctionnel-->
-	<figure class="head-btn__halo head-btn__halo--position3" id="halo3"><img  src="Image/halo_Rouge.png" alt="halorouge3"/></figure><!--Image du halo qui apparaitra quand le bouton est fonctionnel-->
-	<figure class="head-btn__halo head-btn__halo--position4" id="halo4"><img  src="Image/halo_Rouge.png" alt="halorouge4"/></figure><!--Image du halo qui apparaitra quand le bouton est fonctionnel-->
-	<audio id='bruitBouton' src="Son/interupteur_off.mp3"></audio><!--Son de l'action sur le bouton-->
-	<audio id="angusPowerSon" src="Son/angusPower.mp3"></audio><!--Rift qui tue-->
-
-	<p class="head-btn__text head-btn__text--position1"  id="hm11" >INTRO</p><!--Texte du bouton1-->
-	<p class="head-btn__text head-btn__text--position2"  id="hm12" >POURQUOI</p><!--Texte du bouton1-->
-	<p class="head-btn__text head-btn__text--position3"  id="hm13" >COMMENT</p><!--Texte du bouton1-->
-	<p class="head-btn__text head-btn__text--position4"  id="hm14" >METIER</p><!--Texte du bouton1-->
-
-	<p class="head-btn__text head-btn__text--position5"  id="hm21" >FORMATION</p><!--Texte du bouton2-->
-	<p class="head-btn__text head-btn__text--position6"  id="hm22" >DIPLOMES</p><!--Texte du bouton2-->
-	<p class="head-btn__text head-btn__text--position7"  id="hm23" >CERTIFICATS</p><!--Texte du bouton2-->
-	<p class="head-btn__text head-btn__text--position8"  id="hm24" >SOLO</p><!--Texte du bouton2-->
-	
-	<p class="head-btn__text head-btn__text--position9"  id="hm31" >COMPETENCES</p><!--Texte du bouton3-->
-	<p class="head-btn__text head-btn__text--position10"  id="hm32" >SAVOIR</p><!--Texte du bouton3-->
-	<p class="head-btn__text head-btn__text--position11"  id="hm33" >SAVOIR-FAIRE</p><!--Texte du bouton3-->
-	<p class="head-btn__text head-btn__text--position12"  id="hm34" >REFRAIN</p><!--Texte du bouton3-->
-	
-	<p class="head-btn__text head-btn__text--position13"  id="hm41" >CONTACT</p><!--Texte du bouton4-->
-	<p class="head-btn__text head-btn__text--position14"  id="hm42" >SAVOIR-PLUS</p><!--Texte du bouton4-->
-	<p class="head-btn__text head-btn__text--position15"  id="hm43" >TELECHARGEMENT</p><!--Texte du bouton4-->
-	<p class="head-btn__text head-btn__text--position16"  id="hm44" >FINAL</p><!--Texte du bouton4-->	
-	</header>
-	
+		<input id="angusExpress" class="nav__angusExpress" type="image" src="Image/angus_Express.png" alt="angus_Express " onclick="menuDeroulant()" /><!--Menu déroulant rapide-->
+	</nav>
 	<aside class="doc" id="doc" ><!--Bloc de documentation-->
 	<h2>Bloc de documentation</h2>
 	<figure>
@@ -160,20 +161,20 @@
 	</article>
 
 	
-	<footer><!--Bloc bas de page-->
+	<footer class= "footer"><!--Bloc bas de page-->
 	<input class="footer__angusHelp" type="image" src="Image/angus_help.png" alt="angusTete" onclick="demandeAide()"> <!--Icone d'aide--> 
 	<div ><img class="footer__haloAngus" id="haloAngus" src="Image/haloAngus.png" alt="haloangus" /></div><!--eclairage Aide "on"-->
 	<div class="footer__angusText" >Angus est un taureau sympa !<br /> si vous avez des difficultés pour naviguer<br /> demandez lui son aide en cliquant dessus.</div>
-	<figure>
+	<figure class="footer__icones">
 	<a href="mailto:angusabwd@gmail.com"> <img src="Image/Mail-icon7.png" alt="iconeMail" title="Envoyer un mail"/></a><figcaption>Mail</figcaption>
 	</figure>
-	<figure>
-	<a href="https://github.com/AngusABWD"> <img src="Image/iconeGithub.png" alt="iconeGithub" title="Github"/></a><figcaption>Github</figcaption>
-	</figure>
-	<figure>
+	<figure class="footer__icones">
+	<a  href="https://github.com/AngusABWD"> <img src="Image/iconeGithub.png" alt="iconeGithub" title="Github"/></a><figcaption>Github</figcaption>
+	</figure >
+	<figure class="footer__icones">
 	<a href="https://www.linkedin.com/in/boris-andermann-122086219/"> <img src="Image/iconeLinkedin.png" alt="iconeLinkedin" title="Linkedin"/></a><figcaption>Linkedin</figcaption>
 	</figure>
-	<figure>
+	<figure class="footer__icones">
 	<a href="https://twitter.com/AngusAbwd"> <img src="Image/iconeTwitter.png" alt="iconeTwitter" title="Twitter"/></a><figcaption>Twitter</figcaption>
 	</figure>
 	</footer>	

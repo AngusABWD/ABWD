@@ -1,0 +1,29 @@
+.doc {
+	display: inline-block;
+	border-radius: 20px;
+	border: 2px solid $primary_color;
+	box-shadow: 3px 3px 3px $primary_color;
+	position:absolute;
+	left: 373px;
+	top: 340px;
+	overflow: hidden;
+	width: 460px;
+	height:410px;
+	padding:15px;
+	opacity: 0;
+    &__image {
+        position: relative;
+        height: 400px;
+        left: 10%;
+        padding-bottom: 30px;
+        padding-top: 20px;     
+        &--hm11d {
+            width: 400px;
+            height: auto;
+            padding-bottom: 80px;
+            padding-top: 100px;	
+            left: 7%;
+        }
+    }
+
+}

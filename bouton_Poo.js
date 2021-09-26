@@ -1,5 +1,5 @@
     
-    var shadow=document.getElementsByClassName('head-btn__text');//variable permettant de reinitialiser le text-shadow
+    var shadow=document.getElementsByClassName('head__text');//variable permettant de reinitialiser le text-shadow
     var cBo1=cBo2=cBo3=cBo4=-10;// Variable de départ de la position de sélection supérieur au nombre de positions
     var cBom1=cBom2=cBom3=cBom4=0;// Variable de mémoire de la position du bouton 1
     var cBoG=0;// Variable de retour pour l'objet Selection
@@ -396,8 +396,8 @@
             }
     }  
     function showAngusExpress(event){//Fonction qui efface le menu déroulant pour tout autre click que le bouton angus Express
-        if (event.target.className !== 'head-flot__angusExpress') {
-            var menubtn=document.getElementsByClassName('head-flot__angusExpressMenu');
+        if (event.target.className !== 'nav__angusExpress') {
+            var menubtn=document.getElementsByClassName('nav__angusExpressMenu');
             for (i=0; i< menubtn.length; i++) {
                 var OpenMenu= menubtn[i];
                 if ( OpenMenu.classList.contains ('show')) {

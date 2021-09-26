@@ -35,7 +35,7 @@
 	resize(); //pour avoir la bonne dimension à l'ouverture du navigateur
     window.onresize = resize; // changement de taille de la fenêtre pour EI
     function resize() {
-        let scale = window.innerWidth/1900;
+        var scale = window.innerWidth/1900;
         document.body.style.msTransform = "scale("+ scale +")";
 	}
 
