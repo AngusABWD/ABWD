@@ -1,0 +1,21 @@
+.ie9 {
+    a, a:hover, a:visited{
+	color: transparent;
+    }
+    .footer__angusText {
+	margin-right: 100px;
+	display: inline;
+	zoom: 1;
+    }
+    .container {
+	top: -7px;
+    }
+}
+.moz {
+    .container {
+        top: -10px;
+        @include media(moz) {
+            top: -20px;
+        }
+    }	
+}
