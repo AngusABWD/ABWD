@@ -1,4 +1,11 @@
 .head {
+    display: inline-block;
+    width: 100%;
+    height: 325px;
+
+@include media(mobile){
+    display: none;
+}
     &__btn {
     position: absolute;
     z-index: 2;
@@ -21,13 +28,13 @@
 	opacity: 0.6;
 	position: absolute;
 	top: 149px;
-	right: 760px;
+	left: 142px;
 	z-index: 2;
         &__halo{
 	    opacity: 0;
 	    position: absolute;
 	    top:136px;
-	    right:746px;
+	    left:130px;
 	    z-index: 1;
         }
     }
@@ -42,16 +49,6 @@
         opacity: 0;
         z-index:2;
         @include position_help($positions_help);
-        }
-        &__maj {
-            display: none;
-            position: absolute;
-            top: 0px;
-            left: -950px;
-            @include media(mobile) {	
-                display: block;
-                z-index: 4;
-            }
         }	        
     }      
 }

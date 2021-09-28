@@ -4,7 +4,8 @@
 		<meta charset="utf-8" />
 		<link rel="stylesheet" href="ABWDStyle.css"/>
 		<title>AB Developpeur Web</title>
-
+<!--meta Tag à ajouter-->
+<!--balise sémantiques à travailler-->
 	</head>
 	
 	<body> 
@@ -15,7 +16,6 @@
 
 	<header class="head"> <!-- Console de boutons interactifs sur la page -->
 	<figure class="head__flot"><!--Element "flottants" sur toute la page-->
-		<img id="paysage" class="head__flot__maj" src="Image/paysage.png" alt="paysage"/>
 		<img id="angusBouton1" class="head__flot__help head__flot__help--position1" src="Image/angusPower.png" alt="angusPower"/><!--Image d'aide sur le bouton power-->
 		<img id="angusBouton2" class="head__flot__help head__flot__help--position2" src="Image/angusBouton1.png" alt="angusBouton1"/> <!--Image d'aide sur sélectionner un bouton-->
 		<img id="angusBouton3" class="head__flot__help head__flot__help--position2" src="Image/angusBouton2.png" alt="angusBouton2"/> <!--Image d'aide sur l'utilisation du bouton-->
@@ -58,7 +58,7 @@
 	<p class="head__text head__text--position15"  id="hm43" >TELECHARGEMENT</p><!--Texte du bouton4-->
 	<p class="head__text head__text--position16"  id="hm44" >FINAL</p><!--Texte du bouton4-->	
 	</header>
-	<nav>
+	<nav class= "nav">
 		<div class="nav__angusExpressMenu" id=angusExpressBtn>
 			<input type="button" value="Intro" onclick="menu1(cBoG=0)" />
 			<input type="button" value="Pourquoi" onclick="menu1(cBoG=1)" />
@@ -78,33 +78,14 @@
 			<input type="button" value="Final" onclick="menu4(cBoG=3)" />
 		</div>		
 		<input id="angusExpress" class="nav__angusExpress" type="image" src="Image/angus_Express.png" alt="angus_Express " onclick="menuDeroulant()" /><!--Menu déroulant rapide-->
+		<p class="nav__titre1">ABWD</p>
+		<p class="nav__titre2">For those about the web we salute you</p>
+		<p class="nav__titre3">utilisez le "Angus Express" pour naviguer</p>
 	</nav>
-	<aside class="doc" id="doc" ><!--Bloc de documentation-->
-	<h2>Bloc de documentation</h2>
-	<figure>
-	<img class="doc__image" id="angusguitare" src="Image/AngusGuitare.png" alt="angus guitare" />
-	<img class="doc__image doc__image--hm11d" id="hm11d" src="Image/AngusWarning.png" alt="site exemple "/><!--src="Image/siteexemple.png"-->
-	<img class="doc__image" id="hm12d" src="Image/cone.png" alt="cone" />
-	<img class="doc__image" id="hm13d" src="Image/cone.png" alt="cone" />
-	<img class="doc__image" id="hm14d" src="Image/cone.png" alt="cone" />
-	<img class="doc__image" id="hm21d" src="Image/cone.png" alt="cone" />
-	<img class="doc__image" id="hm22d" src="Image/cone.png" alt="cone" />
-	<img class="doc__image" id="hm23d" src="Image/cone.png" alt="cone" />
-	<img class="doc__image" id="hm24d" src="Image/cone.png" alt="cone" />
-	<img class="doc__image" id="hm31d" src="Image/cone.png" alt="cone" />
-	<img class="doc__image" id="hm32d" src="Image/cone.png" alt="cone" />
-	<img class="doc__image" id="hm33d" src="Image/cone.png" alt="cone" />
-	<img class="doc__image" id="hm34d" src="Image/cone.png" alt="cone" />
-	<img class="doc__image" id="hm41d" src="Image/cone.png" alt="cone" />
-	<img class="doc__image" id="hm42d" src="Image/cone.png" alt="cone" />
-	<img class="doc__image" id="hm43d" src="Image/cone.png" alt="cone" />
-	<img class="doc__image" id="hm44d" src="Image/cone.png" alt="cone" />
-	</figure>
-	</aside >
 
 	<article class="text" id="text"><!--Bloc de contenu-->
 
-	<h2>Contenu du bloc text</h2>
+	
 	<figure><img class="text__bienvenue" id="bienvenue" src="Image/bienvenue.png" alt="bienvenue" /></figure>
 		<h2 id="doc11">Avant propos :</h2>
 		<figure><img class="angusChantier" src="Image/AngusChantier.png" alt="chantier"/><figcaption class="titreChantier" >Site en Construction 1B1</figcaption></figure>
@@ -160,6 +141,28 @@
 		<figure><img class="angusChantier" src="Image/AngusChantier.png" alt="chantier"/><figcaption class="titreChantier" >Site en Construction 4B4</figcaption></figure>
 	</article>
 
+	<aside class="doc" id="doc" ><!--Bloc de documentation-->
+		<h3>Bloc de documentation</h3>
+		<figure>
+		<img class="doc__image" id="angusguitare" src="Image/AngusGuitare.png" alt="angus guitare" />
+		<img class="doc__image doc__image--hm11d" id="hm11d" src="Image/AngusWarning.png" alt="site exemple "/><!--src="Image/siteexemple.png"-->
+		<img class="doc__image" id="hm12d" src="Image/cone.png" alt="cone" />
+		<img class="doc__image" id="hm13d" src="Image/cone.png" alt="cone" />
+		<img class="doc__image" id="hm14d" src="Image/cone.png" alt="cone" />
+		<img class="doc__image" id="hm21d" src="Image/cone.png" alt="cone" />
+		<img class="doc__image" id="hm22d" src="Image/cone.png" alt="cone" />
+		<img class="doc__image" id="hm23d" src="Image/cone.png" alt="cone" />
+		<img class="doc__image" id="hm24d" src="Image/cone.png" alt="cone" />
+		<img class="doc__image" id="hm31d" src="Image/cone.png" alt="cone" />
+		<img class="doc__image" id="hm32d" src="Image/cone.png" alt="cone" />
+		<img class="doc__image" id="hm33d" src="Image/cone.png" alt="cone" />
+		<img class="doc__image" id="hm34d" src="Image/cone.png" alt="cone" />
+		<img class="doc__image" id="hm41d" src="Image/cone.png" alt="cone" />
+		<img class="doc__image" id="hm42d" src="Image/cone.png" alt="cone" />
+		<img class="doc__image" id="hm43d" src="Image/cone.png" alt="cone" />
+		<img class="doc__image" id="hm44d" src="Image/cone.png" alt="cone" />
+		</figure>
+		</aside >
 	
 	<footer class= "footer"><!--Bloc bas de page-->
 	<input class="footer__angusHelp" type="image" src="Image/angus_help.png" alt="angusTete" onclick="demandeAide()"> <!--Icone d'aide--> 
@@ -179,7 +182,7 @@
 	</figure>
 	</footer>	
 	</section>
-    <script type="text/javascript">// Detection de Firefox ou de internet explorer et de sa version et appel du script adapté
+    <script>// Detection de Firefox ou de internet explorer et de sa version et appel du script adapté
 		var trident=0;
 		var version=0;
 		var firefox=0;

@@ -1,23 +1,34 @@
 .text
 {
 	display: inline-block;
-	border-radius: 20px;
-	border: 2px solid $primary_color;
-	box-shadow: 3px 3px 3px $primary_color;
+	@include bordures;
 	width: 1200px;
-	position: absolute;
-	top:340px;
-	right: -360px;
+	margin: 15px;
+	margin-left: 80px;
 	overflow: hidden;
 	height:410px;
-	padding:15px;
+	padding:10px;
 	opacity: 0;
 	word-wrap: break-word;
-    &__bienvenue
-        {
-	    position: relative;
+    &__bienvenue{
+		display: inline-block;
+		position: relative;
 	    left: 12%;
+		padding-top: 350px;
+		@include media(mobile){
+			width: 100%;
+			left: 0%;
+			padding-bottom: 500px;
+		}
     }
+	@include media(mobile){
+		opacity: 1;
+		width: 100%;
+		height: 50%;
+		overflow: auto;
+		margin: 20px;
+		@include bordures_mobile;
+	}
 }
 .angusChantier
 {
@@ -25,10 +36,20 @@
 	left: 20%;
 	height: 80%;
 	padding-bottom: 30px;
+	@include media(mobile){
+		width: 100%;
+		left: 0%;
+		height: auto;
+		padding-top: 300px;
+	}
 }
 .titreChantier
 {
 	text-align: center;
 	color: $primary_color;
 	font-size: 40px;
+	@include media(mobile){
+		font-size: 100px;
+		padding-bottom: 350px;
+	}
 }

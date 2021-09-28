@@ -1,29 +1,51 @@
 .doc {
 	display: inline-block;
-	border-radius: 20px;
-	border: 2px solid $primary_color;
-	box-shadow: 3px 3px 3px $primary_color;
-	position:absolute;
-	left: 373px;
-	top: 340px;
+    @include bordures;
+    margin-bottom: 15px;
 	overflow: hidden;
 	width: 460px;
-	height:410px;
+	height:400px;
 	padding:15px;
 	opacity: 0;
+    @include media(mobile){
+        width: 100%;
+        opacity: 1;
+        margin: 20px;
+        @include bordures_mobile;
+        overflow: auto;
+        height: 30%;
+    }
     &__image {
         position: relative;
         height: 400px;
         left: 10%;
         padding-bottom: 30px;
-        padding-top: 20px;     
+        padding-top: 350px; 
+        @include media(mobile){
+            display: block;
+            width: 45%;
+            height: auto;
+            margin: auto;
+            left: 0%;
+            padding-top: 2700px;
+        }    
         &--hm11d {
             width: 400px;
             height: auto;
-            padding-bottom: 80px;
-            padding-top: 100px;	
+            padding-top: 450px;
             left: 7%;
+            @include media(mobile){
+                width: 100%;
+                left:0%;
+                padding-top: 2500px;
+            
+            }
         }
     }
 
+}
+#angusguitare {
+    @include media(mobile){
+    padding-top: 200px;
+    }
 }

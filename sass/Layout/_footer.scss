@@ -1,39 +1,37 @@
 .footer {
 display: flex;
 justify-content: space-between;
-border-radius: 20px;
-border: 2px solid $primary_color;
-box-shadow: 3px 3px 3px $primary_color;
-position:absolute;
-left: -717px;
-top: 800px;
+@include bordures;
 overflow: auto;
-width: 1081px;
+width: 80%;
 height: 77px;
-padding-left: 400px;
+margin-left: 240px;
+padding-left: 20px;
 padding-right: 100px;
 padding-top: 5px;
 z-index: 2;
+@include media(mobile){
+    display: none;
+}
     &__angusText { 
+    position: relative;
+    left: -230px;
     font-family: $font_Angus,serif;
     text-align: justify;
     color: $highlight_color;
-    position: absolute;
-    left: 160px;
     }
     &__angusHelp {
-    position: absolute;
-    width:150px;
-    top: -7px;
-    left: 0px;
+    width: auto;
+    height: 70px;
+    left: 0%;
     z-index: 3;
     }
     &__haloAngus {
     position: absolute;
     opacity: 0;
     z-index:2;
-    top: 0px;
-    left: 0px;
+    top: 795px;
+    left: 260px;
     width:150px;
     }
 }
