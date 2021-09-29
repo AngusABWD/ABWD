@@ -24,57 +24,57 @@
 	</head>
 	
 	<body> 
-<section class="container"><!--balise permettant de conserver les propotions dans le navigateur-->
+<section class="container"><!--tag used to keep the rates in the browser-->
 	
 	<h1>Andermann Boris Web Development</h1>
 	
 
-	<header class="head"> <!-- Console de boutons interactifs sur la page -->
-	<figure class="head__flot"><!--Element "flottants" sur toute la page-->
-		<img id="angusBouton1" class="head__flot__help head__flot__help--position1" src="Image/angusPower.png" alt="angusPower"/><!--Image d'aide sur le bouton power-->
-		<img id="angusBouton2" class="head__flot__help head__flot__help--position2" src="Image/angusBouton1.png" alt="angusBouton1"/> <!--Image d'aide sur sélectionner un bouton-->
-		<img id="angusBouton3" class="head__flot__help head__flot__help--position2" src="Image/angusBouton2.png" alt="angusBouton2"/> <!--Image d'aide sur l'utilisation du bouton-->
-		<img id="angusBouton4" class="head__flot__help head__flot__help--position3" src="Image/angusBouton3.png" alt="angusBouton3"/> <!--Image d'aide sur l'utilisation du bouton Express-->
+	<header class="head"> <!--Interactive button console on the page -->
+	<figure class="head__flot"><!--Floating elements on the page-->
+		<img id="angusBouton1" class="head__flot__help head__flot__help--position1" src="Image/angusPower.png" alt="angusPower"/><!--Help image on the Power button-->
+		<img id="angusBouton2" class="head__flot__help head__flot__help--position2" src="Image/angusBouton1.png" alt="angusBouton1"/> <!--Help image on a select button-->
+		<img id="angusBouton3" class="head__flot__help head__flot__help--position2" src="Image/angusBouton2.png" alt="angusBouton2"/> <!--Help image to use select button-->
+		<img id="angusBouton4" class="head__flot__help head__flot__help--position3" src="Image/angusBouton3.png" alt="angusBouton3"/> <!--Help image to use Express button-->
 	</figure>
-	<input class="head__btn head__btn--position1" id="bouton1" type="image" src="Image/Bouton_selection.png" alt="boutonMarshall1" onmousedown="selection1()" /> <!-- Image du bouton + id et fonction click-->
+	<input class="head__btn head__btn--position1" id="bouton1" type="image" src="Image/Bouton_selection.png" alt="boutonMarshall1" onmousedown="selection1()" /> <!-- Image Id and click function for select button1-->
 	<img class="head__traits head__traits--position1" src="Image/Bouton_text1.png " alt="bouton1text"/>
-	<input class="head__btn head__btn--position2" id="bouton2" type="image" src="Image/Bouton_selection.png" alt="boutonMarshall2" onmousedown="selection2()" /> <!-- Image du bouton + id et fonction click-->
+	<input class="head__btn head__btn--position2" id="bouton2" type="image" src="Image/Bouton_selection.png" alt="boutonMarshall2" onmousedown="selection2()" />  <!-- Image Id and click function for select button2-->
 	<img class="head__traits head__traits--position2" src="Image/Bouton_text2.png " alt="bouton2text"/>
-	<input class="head__btn head__btn--position3" id="bouton3" type="image" src="Image/Bouton_selection.png" alt="boutonMarshall3" onmousedown="selection3()" /> <!-- Image du bouton + id et fonction click-->
+	<input class="head__btn head__btn--position3" id="bouton3" type="image" src="Image/Bouton_selection.png" alt="boutonMarshall3" onmousedown="selection3()" />  <!-- Image Id and click function for select button3-->
 	<img class="head__traits head__traits--position3" src="Image/Bouton_text2.png " alt="bouton3text"/>
-	<input class="head__btn head__btn--position4" id="bouton4" type="image" src="Image/Bouton_selection.png" alt="boutonMarshall4" onmousedown="selection4()" /> <!-- Image du bouton + id et fonction click-->
+	<input class="head__btn head__btn--position4" id="bouton4" type="image" src="Image/Bouton_selection.png" alt="boutonMarshall4" onmousedown="selection4()" />  <!-- Image Id and click function for select button4-->
 	<img class="head__traits head__traits--position4" src="Image/Bouton_text4.png " alt="bouton4text"/>
-	<input class="head__btnPower" id="boutonPower" type="image" src="Image/Power2.png" alt="boutonPower" onclick="power()" /> <!-- Image du bouton POWER + id et fonction click -->
-	<figure class="head__btnPower__halo" id="haloPower"><img src="Image/haloPower3.png" alt="haloPower"/></figure><!--Eclairage power "on"-->
-	<figure class="head__halo head__halo--position1" id="halo1"><img  src="Image/halo_Rouge.png" alt="halorouge1"/></figure><!--Image du halo qui apparaitra quand le bouton est fonctionnel-->
-	<figure class="head__halo head__halo--position2" id="halo2"><img  src="Image/halo_Rouge.png" alt="halorouge2"/></figure><!--Image du halo qui apparaitra quand le bouton est fonctionnel-->
-	<figure class="head__halo head__halo--position3" id="halo3"><img  src="Image/halo_Rouge.png" alt="halorouge3"/></figure><!--Image du halo qui apparaitra quand le bouton est fonctionnel-->
-	<figure class="head__halo head__halo--position4" id="halo4"><img  src="Image/halo_Rouge.png" alt="halorouge4"/></figure><!--Image du halo qui apparaitra quand le bouton est fonctionnel-->
-	<audio id='bruitBouton' src="Son/interupteur_off.mp3"></audio><!--Son de l'action sur le bouton-->
-	<audio id="angusPowerSon" src="Son/angusPower.mp3"></audio><!--Rift qui tue-->
+	<input class="head__btnPower" id="boutonPower" type="image" src="Image/Power2.png" alt="boutonPower" onclick="power()" /><!--Image Id and click function for Power button--> 
+	<figure class="head__btnPower__halo" id="haloPower"><img src="Image/haloPower3.png" alt="haloPower"/></figure><!--Power light "on"-->
+	<figure class="head__halo head__halo--position1" id="halo1"><img  src="Image/halo_Rouge.png" alt="halorouge1"/></figure><!--Halo's image that will appear when the button1 is functional-->
+	<figure class="head__halo head__halo--position2" id="halo2"><img  src="Image/halo_Rouge.png" alt="halorouge2"/></figure><!--Halo's image that will appear when the button2 is functional-->
+	<figure class="head__halo head__halo--position3" id="halo3"><img  src="Image/halo_Rouge.png" alt="halorouge3"/></figure><!--Halo's image that will appear when the button3 is functional-->
+	<figure class="head__halo head__halo--position4" id="halo4"><img  src="Image/halo_Rouge.png" alt="halorouge4"/></figure><!--Halo's image that will appear when the button4 is functional-->
+	<audio id='bruitBouton' src="Son/interupteur_off.mp3"></audio><!--Button sound-->
+	<audio id="angusPowerSon" src="Son/angusPower.mp3"></audio><!--The killing Riff-->
 
-	<p class="head__text head__text--position1"  id="hm11" >INTRO</p><!--Texte du bouton1-->
-	<p class="head__text head__text--position2"  id="hm12" >POURQUOI</p><!--Texte du bouton1-->
-	<p class="head__text head__text--position3"  id="hm13" >COMMENT</p><!--Texte du bouton1-->
-	<p class="head__text head__text--position4"  id="hm14" >METIER</p><!--Texte du bouton1-->
+	<p class="head__text head__text--position1"  id="hm11" >INTRO</p><!--Button1's Text-->
+	<p class="head__text head__text--position2"  id="hm12" >POURQUOI</p><!--Button1's Text-->
+	<p class="head__text head__text--position3"  id="hm13" >COMMENT</p><!--Button1's Text-->
+	<p class="head__text head__text--position4"  id="hm14" >METIER</p><!--Button1's Text-->
 
-	<p class="head__text head__text--position5"  id="hm21" >FORMATION</p><!--Texte du bouton2-->
-	<p class="head__text head__text--position6"  id="hm22" >DIPLOMES</p><!--Texte du bouton2-->
-	<p class="head__text head__text--position7"  id="hm23" >CERTIFICATS</p><!--Texte du bouton2-->
-	<p class="head__text head__text--position8"  id="hm24" >SOLO</p><!--Texte du bouton2-->
+	<p class="head__text head__text--position5"  id="hm21" >FORMATION</p><!--Button2's Text-->
+	<p class="head__text head__text--position6"  id="hm22" >DIPLOMES</p><!--Button2's Text-->
+	<p class="head__text head__text--position7"  id="hm23" >CERTIFICATS</p><!--Button2's Text-->
+	<p class="head__text head__text--position8"  id="hm24" >SOLO</p><!--Button2's Text-->
 	
-	<p class="head__text head__text--position9"  id="hm31" >COMPETENCES</p><!--Texte du bouton3-->
-	<p class="head__text head__text--position10"  id="hm32" >SAVOIR</p><!--Texte du bouton3-->
-	<p class="head__text head__text--position11"  id="hm33" >SAVOIR_FAIRE</p><!--Texte du bouton3-->
-	<p class="head__text head__text--position12"  id="hm34" >REFRAIN</p><!--Texte du bouton3-->
+	<p class="head__text head__text--position9"  id="hm31" >COMPETENCES</p><!--Button3's Text-->
+	<p class="head__text head__text--position10"  id="hm32" >SAVOIR</p><!--Button3's Text-->
+	<p class="head__text head__text--position11"  id="hm33" >SAVOIR_FAIRE</p><!--Button3's Text-->
+	<p class="head__text head__text--position12"  id="hm34" >REFRAIN</p><!--Button3's Text-->
 	
-	<p class="head__text head__text--position13"  id="hm41" >CONTACT</p><!--Texte du bouton4-->
-	<p class="head__text head__text--position14"  id="hm42" >SAVOIR_PLUS</p><!--Texte du bouton4-->
-	<p class="head__text head__text--position15"  id="hm43" >TELECHARGEMENT</p><!--Texte du bouton4-->
-	<p class="head__text head__text--position16"  id="hm44" >FINAL</p><!--Texte du bouton4-->	
+	<p class="head__text head__text--position13"  id="hm41" >CONTACT</p><!--Button4's Text-->
+	<p class="head__text head__text--position14"  id="hm42" >SAVOIR_PLUS</p><!--Button4's Text-->
+	<p class="head__text head__text--position15"  id="hm43" >TELECHARGEMENT</p><!--Button4's Text-->
+	<p class="head__text head__text--position16"  id="hm44" >FINAL</p><!--Button4's Text-->	
 	</header>
 	<nav class= "nav">
-		<div class="nav__angusExpressMenu" id=angusExpressBtn>
+		<div class="nav__angusExpressMenu" id=angusExpressBtn><!--AngusExpress Button system, for a quicker navigation or for cellphone-->
 			<input type="button" value="Intro" onclick="menu1(cBoG=0)" />
 			<input type="button" value="Pourquoi" onclick="menu1(cBoG=1)" />
 			<input type="button" value="Comment" onclick="menu1(cBoG=2)" />
@@ -92,13 +92,13 @@
 			<input type="button" value="Téléchargement" onclick="menu4(cBoG=2)" />
 			<input type="button" value="Final" onclick="menu4(cBoG=3)" />
 		</div>		
-		<input id="angusExpress" class="nav__angusExpress" type="image" src="Image/angus_Express.png" alt="angus_Express " onclick="menuDeroulant()" /><!--Menu déroulant rapide-->
+		<input id="angusExpress" class="nav__angusExpress" type="image" src="Image/angus_Express.png" alt="angus_Express " onclick="menuDeroulant()" /><!--Quick drop-down menu-->
 		<p class="nav__titre1">ABWD</p>
 		<p class="nav__titre2">For those about the web we salute you</p>
 		<p class="nav__titre3">utilisez le "Angus Express" pour naviguer</p>
 	</nav>
 
-	<article class="text" id="text"><!--Bloc de contenu-->
+	<article class="text" id="text"><!--Text block, each id is a block for the select buttons ( Menu object for JS)-->
 
 	
 	<figure><img class="text__bienvenue" id="bienvenue" src="Image/bienvenue.png" alt="bienvenue" /></figure>
@@ -158,7 +158,7 @@
 		<figure><img class="angusChantier" src="Image/AngusChantier.png" alt="chantier"/><figcaption class="titreChantier" >Site en Construction 4B4</figcaption></figure>
 	</article>
 
-	<aside class="doc" id="doc" ><!--Bloc de documentation-->
+	<aside class="doc" id="doc" ><!--Documents block,  each id is a block for the select buttons ( Menu object for JS)-->
 		<h3>Bloc de documentation</h3>
 		<figure>
 		<img class="doc__image" id="angusguitare" src="Image/AngusGuitare.png" alt="angus guitare" />
@@ -181,9 +181,9 @@
 		</figure>
 		</aside >
 	
-	<footer class= "footer"><!--Bloc bas de page-->
-	<input class="footer__angusHelp" type="image" src="Image/angus_help.png" alt="angusTete" onclick="demandeAide()"> <!--Icone d'aide--> 
-	<div ><img class="footer__haloAngus" id="haloAngus" src="Image/haloAngus.png" alt="haloangus" /></div><!--eclairage Aide "on"-->
+	<footer class= "footer"><!--Footer block with contact elements-->
+	<input class="footer__angusHelp" type="image" src="Image/angus_help.png" alt="angusTete" onclick="demandeAide()"> <!--Help Icons--> 
+	<div ><img class="footer__haloAngus" id="haloAngus" src="Image/haloAngus.png" alt="haloangus" /></div><!--Help light "on"-->
 	<div class="footer__angusText" >Angus est un taureau sympa !<br /> si vous avez des difficultés pour naviguer<br /> demandez lui son aide en cliquant dessus.</div>
 	<figure class="footer__icones">
 	<a href="mailto:angusabwd@gmail.com"> <img src="Image/Mail-icon7.png" alt="iconeMail" title="Envoyer un mail"/></a><figcaption>Mail</figcaption>
@@ -199,34 +199,34 @@
 	</figure>
 	</footer>	
 	</section>
-    <script>// Detection de Firefox ou de internet explorer et de sa version et appel du script adapté
-		var trident=0;
-		var version=0;
-		var firefox=0;
-		var js = document.createElement('script');
+    <script>// Detection of Firefox or Internet Explorer and its version and call of the adapted script
+		var trident=0;// key for Internet Explorer
+		var version=0;// key for internet Explorer version
+		var firefox=0;// key for Firefox
+		var js = document.createElement('script');// To call the choosen script 
 
-		firefox=navigator.userAgent.indexOf("Firefox");//Detection de Fire fox
+		firefox=navigator.userAgent.indexOf("Firefox");//Detection of Firefox
 		if (firefox > 0) {
 			document.body.className= 'moz';
 		}
-		trident=navigator.userAgent.indexOf("Trident");// Detection de EI
+		trident=navigator.userAgent.indexOf("Trident");// Detection of Internet Explorer
 		if ( trident > 0 ) {
-			version=navigator.userAgent.indexOf("5.0");// Dectection de la version
+			version=navigator.userAgent.indexOf("5.0");// Detection of EI version
 			if ( version > 0 ) {
-				alert("Navigation optimisée pour Edge/Chrome/FireFox/Opera");// si version supérieur ou égale à 9
+				alert("Navigation optimisée pour Edge/Chrome/FireFox/Opera");//If EI version is 9 or later
 				js.src = "boutonei.js" ;
 				document.body.className= "ie9";
 
 			}
 			else {
-				window.location.href=("ei_inf9.html");// si version inférieur à 9
+				window.location.href=("ei_inf9.html");//If EI version is before 9
 			}
 		}
 		else {
-			js.src = "bouton_Poo.js" ;
+			js.src = "bouton_Poo.js" ;//For Edge / Chrome / Safari and Opera Browser
 		}
 		js.type = "text/javascript";
-		document.body.appendChild(js);
+		document.body.appendChild(js);//Choosen script calling
     </script>
 	</body>
 </html>
