@@ -1,0 +1,49 @@
+@mixin position_boutons($position_boutons) {
+    top: calc( $position_top_boutons + 25px);
+    @each $position, $ecart in $position_boutons {
+        &#{$position}{
+        left : calc( $position_left_boutons + 49px + $ecart_boutons * $ecart );
+        }
+    }
+}
+@mixin position_traits($position_boutons) {
+    top: $position_top_boutons;
+    @each $position, $ecart in $position_boutons {
+        &#{$position}{
+        left : calc( $position_left_boutons + $ecart_boutons * $ecart );
+        }
+    }
+}
+@mixin position_text($position_texts) {
+    @each $position, $ecart in $position_texts {
+        &#{$position}{
+        top : calc($position_top_boutons + map-get($position_top_text, $position));       
+        left : calc( $position_left_boutons + $ecart );
+        }
+    }
+}
+@mixin position_help($positions_help) {
+    @each $position, $pixel in $positions_help {
+        &#{$position}{
+        top : map-get($positions_helptop, $position);
+        left : map-get($positions_help, $position);
+        }
+    }
+}
+@mixin media($device) {
+    @media screen and ( max-device-width: map-get($breakpoints, $device) ) {
+        @content;
+    }
+    
+}
+@mixin bordures {
+    border-radius: 20px;
+	border: 2px solid $primary_color;
+	box-shadow: 3px 3px 3px $primary_color;
+}
+@mixin bordures_mobile {
+    border-radius: 20px;
+	border: 6px solid $primary_color;
+	box-shadow: 0px 0px 0px $primary_color;
+}
+

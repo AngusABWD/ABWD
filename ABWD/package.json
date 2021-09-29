@@ -1,0 +1,21 @@
+{
+  "name": "abwd",
+  "version": "1.0.0",
+  "description": "Page de présentation ABWD",
+  "main": "bouton_Poo.js",
+  "scripts": {
+    "sass": "sass --watch ./sass/main.scss:./ABWDStyle.css --style compressed",
+    "prefix": "postcss ./css/ABWDStyle.css --use autoprefixer -d ./css/prefixed/"
+  },
+  "browserslist": "last 4 versions",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AngusABWD/ABWD.git"
+  },
+  "author": "Boris Andermann",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AngusABWD/ABWD/issues"
+  },
+  "homepage": "https://github.com/AngusABWD/ABWD#readme"
+}
