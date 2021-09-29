@@ -107,7 +107,6 @@
                 Opa.opacifier(4, "angusBouton");
             }              
         }
-        console.log(helpb);	
         }
     }
     var selection_1 = new Selection(menu1);

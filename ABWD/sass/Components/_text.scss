@@ -9,6 +9,9 @@
 	padding:10px;
 	opacity: 0;
 	word-wrap: break-word;
+	&__intro {
+		font-size: 25px;
+	}
     &__bienvenue{
 		position: relative;
 	    left: 12%;
