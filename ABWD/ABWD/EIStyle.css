@@ -1,0 +1,12 @@
+body
+{
+     background: url("Image/AngusChantier.png") no-repeat top center black;
+}
+
+p
+{
+    color: white;
+    font-size: 50px;
+    margin-top: 350px;
+    margin-left: 30%;
+}
