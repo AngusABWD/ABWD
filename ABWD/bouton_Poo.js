@@ -327,8 +327,8 @@
             top: angusguitare.offsetTop,
         });
         let bruitB = document.getElementById('angusPowerSon');
-        bruitB.volume=0.1;
-        console.log(bruitB.volume);//diminution du volume du Riff
+        bruitB.volume=0.2;
+        bruitB.play();//diminution du volume du Riff
         document.getElementById('boutonPower').style.transform = "rotate(180deg)";
         document.getElementById('boutonPower').style.opacity = 1;
         document.getElementById('haloPower').style.opacity = 1;
