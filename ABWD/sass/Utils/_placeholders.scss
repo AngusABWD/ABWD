@@ -1,0 +1,6 @@
+%mobile_image_resize {
+    @include media(mobile){
+        width: 45%;
+        margin-top: 200px; 
+    }
+}

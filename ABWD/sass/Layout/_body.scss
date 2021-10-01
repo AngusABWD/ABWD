@@ -25,9 +25,13 @@ h1 {
 }
 h2 {
 	padding-top: 350px;
+	color: $primary_color;
 	@include media(mobile){
-		padding-top: 800px;
+		padding-top: 600px;
 	}
+}
+h3 {
+	display: none;
 }
 a {
 	color: $highlight_color;
@@ -38,7 +42,7 @@ a:hover {
 	text-decoration: underline;
 }
 a:visited {
-	color: $selection_color;
+	color: $primary_color;
 }
 
 .container {

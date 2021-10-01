@@ -410,6 +410,12 @@
     } 
     function menuDeroulant() {// Fonction qui active/ désactive le menu déroulant
         helpb= helpb + 1;// incrémente l'état de l'aide à chaque click
+        etatPower=1;//Unable for a cellphone portrait use to switch on a landscape use with power "on"
+        document.getElementById('boutonPower').style.transform = "rotate(180deg)";
+        document.getElementById('boutonPower').style.opacity = 1;
+        document.getElementById('haloPower').style.opacity = 1;
+        text.style.opacity= 1;
+        doc.style.opacity= 1;
         document.getElementById('angusExpressBtn').classList.toggle("show");
     }
     function False() { // Fonction qui permet de supprimer le menu droit pour les boutons de selection, qui permettra un deffilement bouton droit/gauche

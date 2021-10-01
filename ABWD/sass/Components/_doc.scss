@@ -27,25 +27,34 @@
             height: auto;
             margin: auto;
             left: 0%;
-            padding-top: 2700px;
+            padding-top: 2200px;
         }    
         &--hm11d {
-            width: 400px;
-            height: auto;
-            padding-top: 450px;
-            left: 7%;
+            padding-top: 340px;
+            left: 12%;
             @include media(mobile){
-                width: 100%;
-                left:0%;
-                padding-top: 2600px;
-            
+                left: 5%;
+                display: inline;
+                padding-top: 2800px;           
+            }
+        }
+        &--hm11d1 {
+            @extend %mobile_image_resize;
+        }
+        &--hm11d2 {
+            @extend %mobile_image_resize;
+        }
+        &--hm12d {
+            left: 1%;
+            @include media(mobile){
+            width: 60%;
             }
         }
     }
 
 }
-#angusguitare {
+.angusguitare {
     @include media(mobile){
-    padding-top: 200px;
+    padding-top: 150px;
     }
 }

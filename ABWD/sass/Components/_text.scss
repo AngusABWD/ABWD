@@ -1,5 +1,6 @@
 .text {
 	display: inline-block;
+	text-align: justify;
 	@include bordures;
 	width: 1200px;
 	margin: 15px;
@@ -9,8 +10,28 @@
 	padding:10px;
 	opacity: 0;
 	word-wrap: break-word;
+	color: $text_color;
+	&__btn {
+		background: transparent;
+		cursor: pointer;
+		color: $primary_color;
+		font-size: 20px;
+		border: none;
+		@include media(mobile){
+			font-size: $font_size_mobile;
+		}
+	}
 	&__intro {
 		font-size: 25px;
+		@include media(mobile){
+			font-size: $font_size_mobile;
+		}
+	}
+	&__pourquoi {
+		font-size: 23px;
+		@include media(mobile){
+			font-size: $font_size_mobile;
+		}
 	}
     &__bienvenue{
 		position: relative;
@@ -41,7 +62,7 @@
 		width: 100%;
 		left: 0%;
 		height: auto;
-		padding-top: 300px;
+		padding-top: 150px;
 	}
 }
 .titreChantier
