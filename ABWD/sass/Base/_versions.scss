@@ -7,15 +7,36 @@
 	display: inline;
 	zoom: 1;
     }
-    .container {
-	top: -7px;
-    }
 }
-.moz {
+.moz, .ie9 {
     .container {
         top: -10px;
-        @include media(moz) {
+        left: -10px;
+        @media screen and ( max-width: map-get($breakpoints, moz)) {
             top: -20px;
+            left: -20px;
         }
+    }
+    .doc {
+        position: absolute;
+        top: 320px;
+        right: -500px;
     }	
+    .footer {
+        width: 110%;
+    }
+    .doc__image {
+        padding-top: 30px;
+    }
+    .doc__titre {
+        padding-top: 10px;
+    }
+    .nav__angusExpress {
+        right: 20px;
+        top: 700px;
+    }
+    .nav__angusExpressMenu {
+       top: 330px;
+       right: 100px;
+    }
 }

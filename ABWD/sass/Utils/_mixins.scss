@@ -34,7 +34,6 @@
     @media screen and ( max-device-width: map-get($breakpoints, $device) ) {
         @content;
     }
-    
 }
 @mixin bordures {
     border-radius: 20px;
@@ -46,4 +45,9 @@
 	border: 6px solid $primary_color;
 	box-shadow: 0px 0px 0px $primary_color;
 }
-
+@mixin text_size($size) {
+    font-size: $size;
+    @include media(mobile){
+        font-size: $font_size_mobile;
+    }
+}

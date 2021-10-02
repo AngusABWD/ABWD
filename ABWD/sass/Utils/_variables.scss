@@ -2,7 +2,7 @@ $primary_color: #E3C880;
 $secondary_color: black;
 $selection_color: red;
 $highlight_color: yellow;
-$text_color: white;
+$text_color: #efe4b0;
 
 $font_menu: 'segoe-ui-semibold-regular';
 $font_Angus: 'Comic Sans MS';
@@ -23,5 +23,5 @@ $positions_helptop: (--position1: 0px, --position2: 80px, --position3: 400px );
 $positions_help: (--position1: 230px, --position2: 310px, --position3: 1280px );
 
 /* media queries Break points */
-$breakpoints: ( moz: 1100px, mobile: 599px); 
+$breakpoints: ( moz: 1100px, mobile: 599px, tablette: 990px); 
 

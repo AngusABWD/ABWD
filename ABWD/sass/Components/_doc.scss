@@ -1,10 +1,10 @@
 .doc {
 	display: inline-block;
     @include bordures;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
 	overflow: hidden;
 	width: 460px;
-	height:400px;
+	height:410px;
 	padding:15px;
 	opacity: 0;
     @include media(mobile){
@@ -14,6 +14,19 @@
         @include bordures_mobile;
         overflow: auto;
         height: 30%;
+    }
+    &__titre {
+        padding-top: 330px;
+        font-size: 15px;
+        @include media(mobile) {
+            padding-top: 2500px;
+            font-size: $font_size_mobile;
+        }
+    }
+    &__text {
+        text-align: justify;
+        color: $text_color;
+        @include text_size(12px);
     }
     &__image {
         position: relative;
@@ -45,6 +58,12 @@
             @extend %mobile_image_resize;
         }
         &--hm12d {
+            left: 1%;
+            @include media(mobile){
+            width: 60%;
+            }
+        }
+        &--hm41d {
             left: 1%;
             @include media(mobile){
             width: 60%;
