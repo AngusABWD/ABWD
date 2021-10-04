@@ -16,7 +16,7 @@ audio {
 	display: none;
 }
 figcaption {
-	font-size: 8;
+	font-size: 16px;
 	text-align: center;
 }
 figure {
@@ -43,6 +43,7 @@ a {
 
 a:hover {
 	text-decoration: underline;
+	outline: none;
 }
 a:visited {
 	color: $primary_color;

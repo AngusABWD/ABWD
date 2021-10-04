@@ -28,6 +28,34 @@
         color: $text_color;
         @include text_size(12px);
     }
+    &__certificats {
+        figcaption {
+            text-align: left;
+            font-size: 14px;
+        }
+        &__image {         
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            padding-top: 350px;
+            a {
+                padding-bottom: 20px;
+            }
+            @include media(mobile){
+                display: flex;
+                justify-content: space-between;
+                width: 100%;
+                padding-top: 2200px;
+                a {
+                    width: 45%;
+                }
+                figcaption {
+                    font-size: $font_size_mobile;
+                }
+            }
+
+        }
+    }
     &__image {
         position: relative;
         height: 400px;
@@ -41,6 +69,11 @@
             margin: auto;
             left: 0%;
             padding-top: 2200px;
+        &__student {
+            @include media(mobile){
+                width: 80%;
+            }
+        }
         }    
         &--hm11d {
             padding-top: 340px;
@@ -62,6 +95,30 @@
             @include media(mobile){
             width: 60%;
             }
+        }
+        &--hm23d{
+            left: 0;
+            height: auto;
+            padding-bottom: 0px;
+            width: 80%;
+            margin-right: 100px;
+            @include media(mobile){
+                width: 100%;
+            }
+        }
+        &--hm23d4{
+            left: 0;
+            height: auto;
+            margin-right: 20px;
+            @include media(mobile){
+                width: 100%;
+            }
+        }
+        &--hm23d6{
+            left: 0;
+            height: auto;
+            width: 65%;
+            margin-right: 20px;
         }
         &--hm41d {
             left: 1%;

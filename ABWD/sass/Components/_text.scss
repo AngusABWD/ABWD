@@ -22,6 +22,11 @@
 	@include media(tablette){
 		overflow: auto;
 	}
+	&__logo {
+		@include media(mobile){
+			width: 10%;
+		}
+	}
 	&__btn {
 		background: transparent;
 		cursor: pointer;
@@ -66,7 +71,25 @@
 			font-size: $font_size_mobile;
 		}
 	}
-	
+	&__certificat {
+		display: flex;
+		justify-content: space-around;
+		flex-wrap: wrap;
+		&__logo {
+			@include bordures();
+			padding: 20px;
+			margin-right: 150px;
+			margin-bottom: 20px;
+			@include media(mobile){
+				width: 20%;
+			}
+			&--input {
+			@include media(mobile){
+				width: 100%;
+			}
+			}
+		}
+	}
 }
 .angusChantier
 {

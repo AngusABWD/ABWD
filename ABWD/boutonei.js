@@ -30,7 +30,7 @@
 	var etatAngus=0;//Permet de savoir si Angus est utilliser
 	var helpb=0;//Permet de savoir si Angus vous a déja expliquer la sélection du bouton
 	var opacite=0;//variable permettant de faire des "fondu"
-
+	var certif=0;//variable for certificat in document aside  
 	
 	resize(); //pour avoir la bonne dimension à l'ouverture du navigateur
     window.onresize = resize; // changement de taille de la fenêtre pour EI
@@ -645,5 +645,33 @@
 			etatAngus= 0;
 			document.getElementById('haloAngus').style.opacity= 0;
 			}
-		console.log(helpb);	
 	}
+	function certificat() {
+        console.log(certif);
+        switch ( certif ) {
+            case 1 :
+			doc.scrollTop= certif1.offsetTop;	
+            break;
+            case 2 :
+            doc.scrollTop= certif2.offsetTop;	
+            break;
+            case 3 :
+            doc.scrollTop= certif3.offsetTop;	
+            break;
+            case 4 :
+            doc.scrollTop= certif4.offsetTop;	
+            break;
+            case 5 :
+            doc.scrollTop= certif5.offsetTop;	
+            break;
+            case 6 :
+            doc.scrollTop= certif6.offsetTop;	
+            break;
+            case 7 :
+            doc.scrollTop= certif7.offsetTop;	
+            break;
+            case 8 :
+			doc.scrollTop= certif8.offsetTop;	
+            break;        
+        }
+    }

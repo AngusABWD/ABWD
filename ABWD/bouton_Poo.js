@@ -9,7 +9,20 @@
     var etatAngus=0;//Permet de savoir si Angus est utilliser
     var helpb=0;//Permet de savoir si Angus vous a déja expliquer la sélection du bouton
     var opacite=0;//variable permettant de faire des "fondu"
-
+    var certif=0;//variable for certificat in document aside  
+    class Scrollto { // Object for scrolling from a DOM element to an Id
+        constructor(elem) { //DOM element
+            this.elem = elem;
+        }
+        scrollto(element) { //ID
+                this.elem.scrollTo({
+                    top: document.getElementById(element).offsetTop,
+                    behavior: 'smooth',
+                    });	
+        }
+    }
+    var docscroll = new Scrollto(doc);// For scrolling in Doc container
+    var textscroll = new Scrollto(text);// For scrolling in Text container
     class Opacite {// Définition d'un Objet permettant d'opacifier une série d'elements
         opacifier(num, element) {//opacifier tous les elements determinés sauf celui choisi
             let tab = [1,2,3,4];// création d'un tableau pour la boucle permettant de les désactiver 
@@ -142,14 +155,8 @@
         case 0 :
             document.getElementById("bouton"+this.num).style.transform = "rotate(0deg)";           
             document.getElementById('hm'+ this.num + "1").style.textShadow = "0px 0px 4px red";
-            text.scrollTo({
-                            top: document.getElementById('doc'+ this.num + "1").offsetTop,
-                            behavior: 'smooth',
-                            });
-            doc.scrollTo({
-                            top: document.getElementById('hm'+ this.num + "1d").offsetTop,
-                            behavior: 'smooth',
-                            });				
+            textscroll.scrollto('doc'+ this.num + "1");
+            docscroll.scrollto('hm'+ this.num + "1d");			
             cBomG= this.cBo;			
             break;
         case 1 :
@@ -160,27 +167,15 @@
             document.getElementById("bouton"+this.num).style.transform = "rotate(60deg)";
             }
             document.getElementById('hm'+ this.num + "2").style.textShadow = "0px 0px 4px red";	
-            text.scrollTo({
-                            top: document.getElementById('doc'+ this.num + "2").offsetTop,
-                            behavior: 'smooth',
-                            });
-            doc.scrollTo({
-                            top: document.getElementById('hm'+ this.num + "2d").offsetTop,
-                            behavior: 'smooth',
-                            });			
+            textscroll.scrollto('doc'+ this.num + "2");
+            docscroll.scrollto('hm'+ this.num + "2d");			
             cBomG= this.cBo;			
             break;
         case 2 :
             document.getElementById("bouton"+this.num).style.transform = "rotate(180deg)";
             document.getElementById('hm'+ this.num + "3").style.textShadow = "0px 0px 4px red";	
-            text.scrollTo({
-                            top: document.getElementById('doc'+ this.num + "3").offsetTop,
-                            behavior: 'smooth',
-                            });
-            doc.scrollTo({
-                            top: document.getElementById('hm'+ this.num + "3d").offsetTop,
-                            behavior: 'smooth',
-                            });					
+            textscroll.scrollto('doc'+ this.num + "3");
+            docscroll.scrollto('hm'+ this.num + "3d");					
             cBomG= this.cBo;	
             break;
         case 3 :
@@ -191,14 +186,8 @@
             document.getElementById("bouton"+this.num).style.transform = "rotate(240deg)";
             }
             document.getElementById('hm'+ this.num + "4").style.textShadow = "0px 0px 4px red";	
-            text.scrollTo({
-                            top: document.getElementById('doc'+ this.num + "4").offsetTop,
-                            behavior: 'smooth',
-                            });
-            doc.scrollTo({
-                            top: document.getElementById('hm'+ this.num + "4d").offsetTop,
-                            behavior: 'smooth',
-                            });					
+            textscroll.scrollto('doc'+ this.num + "4");
+            docscroll.scrollto('hm'+ this.num + "4d");					
             cBomG= this.cBo;	
             break;			
         case 4 :
@@ -259,6 +248,8 @@
     var init_2 = new Init(2, MouseScroll2);
     var init_3 = new Init(3, MouseScroll3);
     var init_4 = new Init(4, MouseScroll4);
+    
+    
 
     function initScroll() {// Fonction initialisant les scrolls bouton par l'objet Init
         inittab = [init_1, init_2, init_3, init_4];//Boucle initialisant les scrolls
@@ -417,6 +408,35 @@
         text.style.opacity= 1;
         doc.style.opacity= 1;
         document.getElementById('angusExpressBtn').classList.toggle("show");
+    }
+    function certificat() {
+        console.log(certif);
+        switch ( certif ) {
+            case 1 :
+            docscroll.scrollto("certif1");
+            break;
+            case 2 :
+            docscroll.scrollto("certif2");
+            break;
+            case 3 :
+            docscroll.scrollto("certif3");
+            break;
+            case 4 :
+            docscroll.scrollto("certif4");
+            break;
+            case 5 :
+            docscroll.scrollto("certif5");
+            break;
+            case 6 :
+            docscroll.scrollto("certif6");
+            break;
+            case 7 :
+            docscroll.scrollto("certif7");
+            break;
+            case 8 :
+            docscroll.scrollto("certif8");
+            break;        
+        }
     }
     function False() { // Fonction qui permet de supprimer le menu droit pour les boutons de selection, qui permettra un deffilement bouton droit/gauche
         return false;
