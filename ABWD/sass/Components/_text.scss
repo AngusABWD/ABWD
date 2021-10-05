@@ -37,13 +37,7 @@
 			font-size: $font_size_mobile;
 		}
 	}
-	&__intro {
-		@include text_size(19px);
-	}
-	&__pourquoi {
-		@include text_size(19px);
-	}
-    &__bienvenue {
+	&__bienvenue {
 		position: relative;
 	    left: 12%;
 		padding-top: 350px;
@@ -53,23 +47,20 @@
 			padding-bottom: 500px;
 		}
     }
+	&__intro {
+		@include text_size(19px);
+	}
+	&__pourquoi {
+		@include text_size(19px);
+	}
 	&__comment {
 		@include text_size(19px);
 	}
-	&__contact {
-		figcaption {
-			text-align: left;
-		}
-		font-size: 20px;
-		&--position {
-			margin-left: 150px;
-			@include media(mobile){
-				margin-left: 300px;
-			}
-		}
-		@include media(mobile){
-			font-size: $font_size_mobile;
-		}
+	&__metier {
+		@include text_size(19px);
+	}
+	&__diplomes {
+		@include text_size(19px);
 	}
 	&__certificat {
 		display: flex;
@@ -90,6 +81,35 @@
 			}
 		}
 	}
+	&__solo {
+		@include text_size(19px);
+	}
+	&__savoirs {
+		position: relative;
+		top: -80px;
+		left: 200px;
+		@include media(mobile) {
+			width : 100%;
+			top: 200px;
+			left: 0;
+		}
+	}
+	&__contact {
+		figcaption {
+			text-align: left;
+		}
+		font-size: 20px;
+		&--position {
+			margin-left: 150px;
+			@include media(mobile){
+				margin-left: 300px;
+			}
+		}
+		@include media(mobile){
+			font-size: $font_size_mobile;
+		}
+	}
+
 }
 .angusChantier
 {

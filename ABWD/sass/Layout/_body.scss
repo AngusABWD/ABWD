@@ -40,10 +40,8 @@ a {
 	color: $text_color;
 	text-decoration: none;
 }
-
 a:hover {
 	text-decoration: underline;
-	outline: none;
 }
 a:visited {
 	color: $primary_color;
