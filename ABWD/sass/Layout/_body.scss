@@ -7,7 +7,7 @@ body {
 	transform-origin: 0 0;
 	@include media(mobile){
 		background: url("Image/Tete2.jpg" ) no-repeat top left fixed $secondary_color;
-		background-size: 97%;
+		background-size: 98%;
 		height: 500px;
 	}
 
@@ -38,10 +38,10 @@ h3 {
 }
 a {
 	color: $text_color;
-	text-decoration: none;
+	text-decoration: underline;
 }
 a:hover {
-	text-decoration: underline;
+	color: $highlight_color;
 }
 a:visited {
 	color: $primary_color;

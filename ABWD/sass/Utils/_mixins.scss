@@ -53,3 +53,9 @@
         font-size: $font_size_mobile;
     }
 }
+@mixin block_portrait($size) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:flex-start;
+    width: $size;
+}

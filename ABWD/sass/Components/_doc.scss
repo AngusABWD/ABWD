@@ -23,12 +23,27 @@
             font-size: $font_size_mobile;
         }
     }
+    &__final {
+        padding-top: 760px;
+        text-align: center;
+        scroll-behavior: smooth;
+        @include media(mobile){
+            font-size: $font_size_mobile;
+        }
+    }
+    &__fin {
+        text-align: center;
+        margin-left: 115px;
+    }
     &__text {
         &--S {
             @include text_size(12px);
         }
         &--M {
             @include text_size(14px);    
+        }
+        &--center {
+            text-align: center;
         }
     }
     &__certificats {
@@ -160,6 +175,15 @@
             @include media(mobile){
             width: 60%;
             }
+        }
+        &--hm42d {
+            width: 50%;
+            height: auto;
+            margin-left: 115px;
+            padding-bottom: 0;
+            @include media(mobile){
+            width: 60%;
+            }   
         }
         &--link1 {
             display: block;

@@ -9,6 +9,9 @@
     var etatAngus=0;//Permet de savoir si Angus est utilliser
     var helpb=0;//Permet de savoir si Angus vous a déja expliquer la sélection du bouton
     var opacite=0;//variable permettant de faire des "fondu"
+    var pas=0;//variable for scroll size in final generic
+    var stoptest=0;//Variable to know is fonction menu is calling from generique function
+    var stop=0;//variable to stop generique function
     var certif=0;//variable for certificat in document aside  
     class Scrollto { // Object for scrolling from a DOM element to an Id
         constructor(elem) { //DOM element
@@ -78,7 +81,7 @@
         this.menu = menu;
         }
         selectionner(cBo, cBom) {
-        cBo1=cBo2=cBo3=cBo4=-10; //initialisation des boutons
+        cBo1=cBo2=cBo3=cBo4=-10; //initialisation des boutons     
         this.cBo = cBo;
         this.cBom = cBom;
         if ( etatPower == 1 ) {	//Test si l'ampli est sur "on"
@@ -133,12 +136,17 @@
         this.menu = menu;
         this.cBom = cBom;
         }
-        menuf(cBo, cBom) {
+        menuf(cBo) {
         this.cBo = cBo;
         let mouseClick = window.event;
-        if ( mouseClick.button != 2 ) {
-            Opa.opacifier(this.num, "halo");
+        if ( stoptest == 0 ) {
+            if ( mouseClick.button != 2 ) {
+                 Opa.opacifier(this.num, "halo");
+                 stop=this.num;//to stop in case of generique running 
+            }
         }
+        stop=this.num;//to stop in case of generique running 
+        stoptest=0;
         document.getElementById('angusExpress').style.opacity= 1;//allumage du menu express
         if ( helpb == 3 && etatAngus == 1){//desactive l'aide après 2 clicks ou scrolls
                     demandeAide();
@@ -149,8 +157,7 @@
             shadow[i].style.textShadow = "0px 0px 0px transparent";
             }
         }
-        document.getElementById('bruitBouton').play();
-            
+        document.getElementById('bruitBouton').play();   
         switch ( this.cBo ) {//affiche le bouton et le contenu des textes et documents en fonction de la position
         case 0 :
             document.getElementById("bouton"+this.num).style.transform = "rotate(0deg)";           
@@ -187,7 +194,11 @@
             }
             document.getElementById('hm'+ this.num + "4").style.textShadow = "0px 0px 4px red";	
             textscroll.scrollto('doc'+ this.num + "4");
-            docscroll.scrollto('hm'+ this.num + "4d");					
+            docscroll.scrollto('hm'+ this.num + "4d");
+            if ( this.cBo == cBo4) {// call "generique" fonction to scroll-down the doc block for the final
+                pas=0;
+                generique(stop=0);
+            }					
             cBomG= this.cBo;	
             break;			
         case 4 :
@@ -289,23 +300,23 @@
 
     }
     function menu1() {//Fonction permettant l'affichage avec une rotation et un bruit en fonction de la position du bouton 1
-        cBo1=cBoG;  
-        menu_1.menuf(cBo1, cBom1);
-        cBom1=cBomG;
-        }     
+    cBo1=cBoG;  
+    menu_1.menuf(cBo1);
+    cBom1=cBomG;
+    }     
     function menu2() {//Fonction permettant l'affichage avec une rotation et un bruit en fonction de la position du bouton 2
     cBo2=cBoG;  
-    menu_2.menuf(cBo2, cBom2);
+    menu_2.menuf(cBo2);
     cBom2=cBomG;
     }
     function menu3() {//Fonction permettant l'affichage avec une rotation et un bruit en fonction de la position du bouton 3
     cBo3=cBoG;  
-    menu_3.menuf(cBo3, cBom3);
+    menu_3.menuf(cBo3);
     cBom3=cBomG;
     }
     function menu4() {//Fonction permettant l'affichage avec une rotation et un bruit en fonction de la position du bouton 4
     cBo4=cBoG;  
-    menu_4.menuf(cBo4, cBom4);
+    menu_4.menuf(cBo4);
     cBom4=cBomG;
     }    
     function power() {//Fonction permettant l'actionnement du bouton power et d'identifier son état
@@ -410,7 +421,6 @@
         document.getElementById('angusExpressBtn').classList.toggle("show");
     }
     function certificat() {
-        console.log(certif);
         switch ( certif ) {
             case 1 :
             docscroll.scrollto("certif1");
@@ -440,6 +450,33 @@
     }
     function False() { // Fonction qui permet de supprimer le menu droit pour les boutons de selection, qui permettra un deffilement bouton droit/gauche
         return false;
+    }
+    function generique() {
+        setTimeout( function () {
+            doc.scrollTo(0,(17500 + pas));
+            pas++;   
+            if ( stop != 0) {// to stop scroll if another menu is selected
+                switch (stop) {
+                    case 1 :
+                    menu1(stoptest=1);// to go to the menu without window.event
+                    break;
+                    case 2 :
+                    menu2(stoptest=1);
+                    break; 
+                    case 3 :
+                    menu3(stoptest=1);
+                    break;  
+                    case 4 :
+                    menu4(stoptest=1);
+                    break;
+                }
+                return;       
+            }
+            if ( pas<1850 ) {
+                generique();
+            }
+        },20)
+        
     }
     bouton1.oncontextmenu = bouton2.oncontextmenu = bouton3.oncontextmenu = bouton4.oncontextmenu = False;// Suppression du menu droit pour bouton, qui permettra un deffilement bouton droit/gauche
     initScroll();//initialisation des scrolls boutons de sélection

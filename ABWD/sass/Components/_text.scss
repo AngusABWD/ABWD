@@ -22,6 +22,7 @@
 	@include media(tablette){
 		overflow: auto;
 	}
+
 	&__logo {
 		@include media(mobile){
 			width: 10%;
@@ -118,27 +119,56 @@
 			font-size: $font_size_mobile;
 		}
 	}
+	&__savoir_plus {
+		padding-top: 320px;
+		display: flex;
+		justify-content: flex-start;
+		margin: 0;
+		flex-wrap: wrap;
+		align-content: space-around;
+		&--block {
+			@include block_portrait(177px);
+		}
+		&--block133 {
+			@include block_portrait(133px);
+		}
+		&--block297 {
+			@include block_portrait(297px);
+		}
+		&--block140 {
+			@include block_portrait(140px);
+		}
+		&--block300 {
+			@include block_portrait(300px);
+		}
+		&__zoom {
+			&:hover {
+				cursor: pointer;
+				width: 25%;
+				height: auto;
+			}
+		}
+	}
+	&__telechargement {
+		@include text_size(19px);
+		&--image {
+			position: relative;
+			top: 80px;
+			left: 400px;
+		}
+	}
+	&__final {
+		@include text_size(19px);
+		&--image {
+			position: relative;
+			top: -70px;
+			left: 700px;
+		}	
+	}
 
 }
-.angusChantier
-{
-	position: relative;
-	left: 20%;
-	height: 80%;
-	@include media(mobile){
-		width: 100%;
-		left: 0%;
-		height: auto;
-		padding-top: 150px;
-	}
-}
-.titreChantier
-{
-	text-align: center;
-	color: $primary_color;
-	font-size: 30px;
-	@include media(mobile){
-		font-size: 100px;
-		padding-bottom: 350px;
+.block {
+	&:hover {
+	width: 100%;
 	}
 }
