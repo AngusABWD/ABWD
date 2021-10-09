@@ -59,3 +59,12 @@
     justify-content:flex-start;
     width: $size;
 }
+@mixin text_formation($size) {
+    font-family: $font_formation, sans-serif;
+    text-align: center;
+    font-size: $size;
+    @include media(mobile) {
+        font-size: $size*2.5;
+    }
+    
+}

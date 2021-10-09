@@ -57,3 +57,8 @@ a:visited {
 	}
 
 }
+.block {
+	&:hover {
+	width: 100%;
+	}
+}

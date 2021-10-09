@@ -60,6 +60,20 @@
 	&__metier {
 		@include text_size(19px);
 	}
+	&__formation {	
+		&--1 {	
+			margin: 0;
+			@include text_formation(100px);
+		}
+		&--2 {
+			@include text_formation(50px);
+		}
+		&--3 {
+			@include text_size(20px);
+			text-align: center;
+		}
+		
+	}
 	&__diplomes {
 		@include text_size(19px);
 	}
@@ -126,6 +140,12 @@
 		margin: 0;
 		flex-wrap: wrap;
 		align-content: space-around;
+		@include media(mobile) {
+			width: 50%;
+			padding-top: 1200px;
+			margin-left: auto;
+			margin-right: auto;		 
+		}
 		&--block {
 			@include block_portrait(177px);
 		}
@@ -166,9 +186,4 @@
 		}	
 	}
 
-}
-.block {
-	&:hover {
-	width: 100%;
-	}
 }

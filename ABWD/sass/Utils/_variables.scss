@@ -6,6 +6,7 @@ $text_color: #efe4b0;
 
 $font_menu: 'segoe-ui-semibold-regular';
 $font_Angus: 'Comic Sans MS';
+$font_formation: 'Segoe UI Black';
 $font_size_mobile: 50px;
 
 /* paramétre de la console des boutons */
@@ -19,7 +20,7 @@ $position_top_text: (--position1: -19px, --position2: 22px, --position3: 122px, 
 $position_texts: (--position1: 80px, --position2: 162px, --position3: 66px, --position4: -18px, --position5: calc( $ecart_boutons + 58px), --position6: calc($ecart_boutons + 159px), --position7: calc($ecart_boutons + 59px), --position8: calc($ecart_boutons + 3px), --position9: calc($ecart_boutons * 2 + 46px), --position10: calc($ecart_boutons * 2 + 159px), --position11: calc($ecart_boutons * 2 + 55px), --position12: calc($ecart_boutons * 2 - 20px), --position13: calc($ecart_boutons * 3 + 66px), --position14: calc($ecart_boutons * 3 + 167px), --position15: calc($ecart_boutons * 3 + 40px), --position16: calc($ecart_boutons * 3 + 3px));
 
 /* position des images d'aide */
-$positions_helptop: (--position1: 0px, --position2: 80px, --position3: 400px );
+$positions_helptop: (--position1: 0px, --position2: 60px, --position3: 385px );
 $positions_help: (--position1: 230px, --position2: 310px, --position3: 1280px );
 
 /* media queries Break points */

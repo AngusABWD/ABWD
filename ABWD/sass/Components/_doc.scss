@@ -145,6 +145,13 @@
                 margin-left: 0;
             }
         }
+        &--hm21d {
+            margin-left: 50px;
+            @include media(mobile){
+                width: 30%;
+                margin-left: 35%;
+            }
+        }
         &--hm24d {
             width: 100%;
             height: auto;
@@ -182,7 +189,8 @@
             margin-left: 115px;
             padding-bottom: 0;
             @include media(mobile){
-            width: 60%;
+                width: 30%;
+                float: left;
             }   
         }
         &--link1 {
