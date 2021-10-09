@@ -1,11 +1,16 @@
 .ie9 {
-    a, a:hover, a:visited{
-	color: transparent;
-    }
     .footer__angusText {
 	margin-right: 100px;
 	display: inline;
 	zoom: 1;
+    a, a:hover, a:visited{
+        color: transparent;
+        }
+    }
+    .doc {
+        &:hover {
+            overflow: auto;
+        }
     }
 }
 .moz, .ie9 {
@@ -25,15 +30,15 @@
     .footer {
         width: 110%;
     }
-    .doc__image {
-        padding-top: 30px;
-    }
-    .doc__certificats__image {
+    .doc__certificats__image, .doc__image, .doc__image__link {
         padding-top: 30px;
         margin-bottom: 350px;
     }
-    .doc__titre {
+    .doc__titre, .doc__final {
         padding-top: 10px;
+    }
+    .doc__image--hm33d {
+        width: 80%;
     }
     .nav__angusExpress {
         right: 20px;

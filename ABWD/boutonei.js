@@ -16,7 +16,7 @@
 	bouton4.oncontextmenu = function() { // Suppression du menu droit pour bouton, qui permettra un deffilement bouton droit/gauche
 	return false;
 	}
-	
+	var shadow=document.getElementsByClassName('head__text');//variable permettant de reinitialiser le text-shadow
 	var cBo1=-10;// Variable de départ de la position de sélection supérieur au nombre de positions
 	var cBo2=-10;// Variable de départ de la position de sélection supérieur au nombre de positions
 	var cBo3=-10;// Variable de départ de la position de sélection supérieur au nombre de positions

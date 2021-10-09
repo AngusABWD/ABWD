@@ -453,7 +453,13 @@
     }
     function generique() {
         setTimeout( function () {
+            firefox=navigator.userAgent.indexOf("Firefox");//Detection of Firefox
+            if (firefox > 0) {
+                doc.scrollTo(0,(16450 + pas));//origin for firefox
+            }
+            else {
             doc.scrollTo(0,(17500 + pas));
+            }
             pas++;   
             if ( stop != 0) {// to stop scroll if another menu is selected
                 switch (stop) {
