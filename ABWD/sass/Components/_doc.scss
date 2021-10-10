@@ -34,6 +34,9 @@
     &__fin {
         text-align: center;
         margin-left: 115px;
+        @include media(mobile) {
+            margin-left: 33%;     
+        }
     }
     &__text {
         &--S {
@@ -196,20 +199,16 @@
                 float: left;
             }   
         }
-        &--link1 {
-            display: block;
-            position: relative;
-            margin-left: 80px;
-            top: -10px;
-            @include media(mobile){
-                width: 100%;
-                left: 50%;
+        &--link317 {
+            @include link(317px);
             }
+        &--link290 {
+            @include link(290px);
         }
         &--link2 {
             left: 0;
             height: auto;
-            width: 80%;
+            width: 220px;
             margin-left: 100px;
             @include media(mobile){
                 width: 100%;
@@ -218,6 +217,7 @@
         }
         &--link4{
             left: 0;
+            width: 200px;
             height: auto;
             margin-right: 20px;
             @include media(mobile){
@@ -227,7 +227,7 @@
         &--link6{
             left: 0;
             height: auto;
-            width: 65%;
+            width: 130px;
             margin-right: 20px;
         }
 

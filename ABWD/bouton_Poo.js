@@ -167,7 +167,7 @@
             cBomG= this.cBo;			
             break;
         case 1 :
-            if ( this.cBo == cBo4) {
+            if ( this.num == 4) {
                 document.getElementById("bouton"+this.num).style.transform = "rotate(90deg)";
             }
             else {
@@ -186,7 +186,7 @@
             cBomG= this.cBo;	
             break;
         case 3 :
-            if ( this.cBo == cBo1) {
+            if ( this.num == 1) {
                 document.getElementById("bouton"+this.num).style.transform = "rotate(270deg)";
             }
             else {
@@ -195,7 +195,7 @@
             document.getElementById('hm'+ this.num + "4").style.textShadow = "0px 0px 4px red";	
             textscroll.scrollto('doc'+ this.num + "4");
             docscroll.scrollto('hm'+ this.num + "4d");
-            if ( this.cBo == cBo4) {// call "generique" fonction to scroll-down the doc block for the final
+            if ( this.num == 4 ) {// call "generique" fonction to scroll-down the doc block for the final
                 pas=0;
                 generique(stop=0);
             }					
@@ -455,11 +455,16 @@
         setTimeout( function () {
             firefox=navigator.userAgent.indexOf("Firefox");//Detection of Firefox
             if (firefox > 0) {
-                doc.scrollTo(0,(16450 + pas));//origin for firefox
+                doc.scrollTo(0,(16300 + pas));//origin for firefox
             }
             else {
-            doc.scrollTo(0,(17500 + pas));
-            }
+                if ( window.screen.availWidth < 599 ) {// origin for cellphones
+                    doc.scrollTo(0,(72300 + pas*2.9));//"pas" coeficient for cellphone height
+                }
+                else {
+                    doc.scrollTo(0,(17350 + pas));
+                }
+            }    
             pas++;   
             if ( stop != 0) {// to stop scroll if another menu is selected
                 switch (stop) {

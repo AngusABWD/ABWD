@@ -175,6 +175,11 @@
 			position: relative;
 			top: 80px;
 			left: 400px;
+			@include media(mobile) {
+				width: 50%;
+				padding-top: 300px;
+				padding-bottom: 350px;
+			}
 		}
 	}
 	&__final {

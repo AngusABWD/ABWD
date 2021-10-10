@@ -68,3 +68,16 @@
     }
     
 }
+@mixin link($size) {
+    display: block;
+    position: relative;
+    margin-left: 80px;
+    top: -10px;
+    width: $size;
+    height: auto;
+    @include media(mobile){
+        width: 100%;
+        left: 50%;
+    }
+    
+}
