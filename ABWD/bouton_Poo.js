@@ -328,7 +328,7 @@
             top: angusguitare.offsetTop,
         });
         let bruitB = document.getElementById('angusPowerSon');
-        bruitB.volume=0.2;//diminution du volume du Riff
+        bruitB.volume=0.01;//diminution du volume du Riff
         bruitB.play();
         document.getElementById('boutonPower').style.transform = "rotate(180deg)";
         document.getElementById('boutonPower').style.opacity = 1;
@@ -455,14 +455,14 @@
         setTimeout( function () {
             firefox=navigator.userAgent.indexOf("Firefox");//Detection of Firefox
             if (firefox > 0) {
-                doc.scrollTo(0,(16300 + pas));//origin for firefox
+                doc.scrollTo(0,(16500 + pas));//origin for firefox
             }
             else {
                 if ( window.screen.availWidth < 599 ) {// origin for cellphones
-                    doc.scrollTo(0,(72300 + pas*2.9));//"pas" coeficient for cellphone height
+                    doc.scrollTo(0,(72550 + pas*2.9));//"pas" coeficient for cellphone height
                 }
                 else {
-                    doc.scrollTo(0,(17350 + pas));
+                    doc.scrollTo(0,(17600 + pas));
                 }
             }    
             pas++;   

@@ -149,8 +149,14 @@
             }
         }
         &--hm21d {
-            margin-left: 50px;
+            margin-left: 100px;
+            width: 40%;
+            height: auto;
+            padding-top: 460px;
+            transform-origin: bottom;
+            animation: bond 500ms infinite alternate-reverse;
             @include media(mobile){
+                padding-top: 2300px;
                 width: 30%;
                 margin-left: 35%;
             }
@@ -185,8 +191,11 @@
         }
         &--hm41d {
             left: 1%;
+            transform-origin: 50% 70%;
+            animation: cartoon 6s infinite alternate-reverse;
             @include media(mobile){
             width: 60%;
+            transform-origin: 50% 85%;
             }
         }
         &--hm42d {
