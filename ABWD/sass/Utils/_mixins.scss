@@ -81,3 +81,16 @@
     }
     
 }
+@mixin raquette($margin,$delay) {
+    display: block;
+    left:0;
+    width: 69px;
+    height: auto;
+    margin-top: $margin;
+    animation: raquettepc 2s $delay infinite alternate-reverse;
+    @include media(mobile){
+    animation: raquettemobile 2s $delay infinite alternate-reverse;
+    width: 30%;
+    margin-top: $margin * 2;
+    }
+}

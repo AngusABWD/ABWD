@@ -147,7 +147,7 @@
         }
         stop=this.num;//to stop in case of generique running 
         stoptest=0;
-        document.getElementById('angusExpress').style.opacity= 1;//allumage du menu express
+        document.getElementById('angusExpress2').style.opacity= 1;//allumage du menu express
         if ( helpb == 3 && etatAngus == 1){//desactive l'aide après 2 clicks ou scrolls
                     demandeAide();
                     helpb=1;
@@ -399,18 +399,18 @@
             }
     }  
     function showAngusExpress(event){//Fonction qui efface le menu déroulant pour tout autre click que le bouton angus Express
-        if (event.target.className !== 'nav__angusExpress') {
+        if (event.target.className !== 'nav__angusExpress') {   
+            document.getElementById("angusExpress2").classList.remove("nav__angusExpress2--anim");//to reset menu animation          
             var menubtn=document.getElementsByClassName('nav__angusExpressMenu');
             for (i=0; i< menubtn.length; i++) {
                 var OpenMenu= menubtn[i];
                 if ( OpenMenu.classList.contains ('show')) {
-                    OpenMenu.classList.remove('show');
-    
+                    OpenMenu.classList.remove('show');    
                 }
             }
-        }
+        }     
     } 
-    function menuDeroulant() {// Fonction qui active/ désactive le menu déroulant
+    function menuDeroulant() {// Fonction qui active/ désactive le menu déroulant     
         helpb= helpb + 1;// incrémente l'état de l'aide à chaque click
         etatPower=1;//Unable for a cellphone portrait use to switch on a landscape use with power "on"
         document.getElementById('boutonPower').style.transform = "rotate(180deg)";
@@ -419,6 +419,7 @@
         text.style.opacity= 1;
         doc.style.opacity= 1;
         document.getElementById('angusExpressBtn').classList.toggle("show");
+        document.getElementById("angusExpress2").classList.add("nav__angusExpress2--anim");//to call menu animation      
     }
     function certificat() {
         switch ( certif ) {

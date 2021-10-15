@@ -26,3 +26,9 @@ $positions_help: (--position1: 230px, --position2: 310px, --position3: 1280px );
 /* media queries Break points */
 $breakpoints: ( moz: 1100px, mobile: 599px, tablette: 990px); 
 
+/*Animation pin pong */
+
+$balle_origin: (pc:0px, mobile:-400px);
+$balleX: (pc: 200px, mobile: 500px);
+$balleY: (pc: 352px, mobile: 730px);
+

@@ -116,9 +116,24 @@
             @extend %mobile_image_resize;
         }
         &--hm12d {
-            left: 1%;
+            display: block;
+            left:0;
+        }
+        &--hm12d1 {
+            @include raquette(0px,0s);
+            }
+        &--hm12d2 {
+            @include raquette(350px,2s);
+            }
+        &--hm12d3 {
+            display: block;
+            left:0;
+            width: 20px;
+            height: auto;
+            animation: ballepc 2s infinite alternate-reverse;
             @include media(mobile){
-            width: 60%;
+            width: 8%;
+            animation: ballemobile 2s infinite alternate-reverse;
             }
         }
         &--hm14d {

@@ -13,22 +13,42 @@
 }
     &__angusExpress {
 	position: absolute;
-	z-index: 3;
 	right: 520px;
 	top: 690px;
 	opacity: 0;
+    z-index: 3;
     @include media(mobile){
         position: relative;
         float: left;
-        opacity: 1;     
+        opacity: 0;     
         left: 0%;
         width: 16%;
         height: auto;
         top: 0%;
         margin-right: 30px;
+        }
     }
+    &__angusExpress2 {
+        position: absolute;
+        right: 520px;
+        top: 690px;
+        opacity: 0;
+        z-index: 1;
+            &--anim {
+            transform: rotateY(5turn);
+            transform-style: preserve-3d;
+            transform-origin: center center 0px;
+            transition: transform 3s cubic-bezier(.05,.47,.34,.99);
+            }
+        @include media(mobile){
+            position: absolute;
+            top: 130px;
+            left: 100px;
+            opacity: 1;     
+            width: 16%;
+            height: auto;    
+        }
     }
-
     &__angusExpressMenu {
  	display: none;
  	position: absolute;
