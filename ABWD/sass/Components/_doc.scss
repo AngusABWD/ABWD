@@ -164,17 +164,15 @@
             }
         }
         &--hm21d {
-            margin-left: 100px;
-            width: 40%;
+            left: 20%;
+            Width: 60%;
             height: auto;
-            padding-top: 460px;
-            transform-origin: bottom;
-            animation: bond 500ms infinite alternate-reverse;
+            animation: rotation 2s infinite;
             @include media(mobile){
-                padding-top: 2300px;
-                width: 30%;
-                margin-left: 35%;
+                left: 0;
+                width: 100%;
             }
+            
         }
         &--hm24d {
             width: 100%;
@@ -263,3 +261,4 @@
     padding-top: 150px;
     }
 }
+

@@ -456,7 +456,7 @@
         setTimeout( function () {
             firefox=navigator.userAgent.indexOf("Firefox");//Detection of Firefox
             if (firefox > 0) {
-                doc.scrollTo(0,(16500 + pas));//origin for firefox
+                doc.scrollTo(0,(16150 + pas));//origin for firefox
             }
             else {
                 if ( window.screen.availWidth < 599 ) {// origin for cellphones
