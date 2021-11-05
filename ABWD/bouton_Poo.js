@@ -345,7 +345,7 @@
         document.getElementById('boutonPower').style.transform = "rotate(0deg)";
         document.getElementById('boutonPower').style.opacity = 0.6;
         document.getElementById('haloPower').style.opacity = 0;
-        document.getElementById('angusExpress').style.opacity= 0;
+        document.getElementById('angusExpress2').style.opacity= 0;
         text.style.opacity= 0;
         doc.style.opacity= 0;
         for (i=0;i<shadow.length;i++) {
