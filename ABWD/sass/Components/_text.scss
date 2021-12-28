@@ -62,22 +62,20 @@
 	}
 	&__formation {
 		&--img {
-			float: right;
-			width: 10%;
+			margin-left: 25%;
+			width: 50%;
 			height: auto;
-			transform-origin: bottom;
-			animation: bond 500ms infinite alternate-reverse;
-			margin-top: 100px;
 			@include media(mobile){
-    			width: 30%;
+				margin-left: 0;
+    			width: 100%;
 			}
 		}	
 		&--1 {	
 			margin: 0;
-			@include text_formation(50px);
+			@include text_formation(40px);
 		}
 		&--2 {
-			@include text_formation(40px);
+			@include text_formation(30px);
 		}
 		&--3 {
 			@include text_size(20px);
