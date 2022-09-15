@@ -446,8 +446,20 @@
             break;
             case 8 :
             docscroll.scrollto("certif8");
-            break;        
-        }
+            break;  
+            case 9 :
+                docscroll.scrollto("certif9");
+                break;    
+            case 10 :
+                docscroll.scrollto("certif10");
+                break;   
+            case 11 :
+                docscroll.scrollto("certif11");
+                break;   
+            case 12 :
+                docscroll.scrollto("certif12");
+                break;    
+    }
     }
     function False() { // Fonction qui permet de supprimer le menu droit pour les boutons de selection, qui permettra un deffilement bouton droit/gauche
         return false;
@@ -495,3 +507,4 @@
     resize(); //pour avoir la bonne dimension à l'ouverture du navigateur
     window.onresize = resize; // changement de taille de la fenêtre pour Edge, Chrome, Firefox et Opera
     document.onclick=showAngusExpress;//Referme le menu déroulant
+    demandeAide();

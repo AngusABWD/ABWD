@@ -1,12 +1,12 @@
 body {
-	background: url("Image/Baffle.jpg") no-repeat top center fixed $secondary_color;
+	background: url("../Image/Baffle.jpg") no-repeat top center fixed $secondary_color;
 	overflow:hidden;
 	color: $primary_color;
 	background-size: 100%;
 	font-family: "Montserrat",sans-serif;
 	transform-origin: 0 0;
 	@include media(mobile){
-		background: url("Image/Tete2.jpg" ) no-repeat top left fixed $secondary_color;
+		background: url("../Image/Tete2.jpg" ) no-repeat top left fixed $secondary_color;
 		background-size: 98%;
 		height: 500px;
 	}
@@ -39,6 +39,7 @@ h3 {
 a {
 	color: $text_color;
 	text-decoration: underline;
+	z-index: 5;
 }
 a:hover {
 	color: $highlight_color;

@@ -98,9 +98,9 @@
 		flex-wrap: wrap;
 		&__logo {
 			@include bordures();
-			padding: 20px;
-			margin-right: 150px;
-			margin-bottom: 20px;
+			padding: 15px;
+			margin-right: 50px;
+			margin-bottom: 15px;
 			@include media(mobile){
 				width: 20%;
 				figcaption {
